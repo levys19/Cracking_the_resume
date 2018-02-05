@@ -4,7 +4,7 @@ A web application where users can upload their resumes and have it reviewed by o
 
 # MVP: 
 1) Users create a user account with the web application or log in to the exisiting account:
-  These are the fieds they are required to fill out:
+  These are the fields they are required to fill out:
     * Name 
     * Email
     * Major/year 
@@ -13,7 +13,7 @@ A web application where users can upload their resumes and have it reviewed by o
 2) Upload their Resume 
 3) User uploads their resume (.pdf files only) 
 4) Other users can upvote, downvote or comment (comments can be upvoted or downvoted) on the user’s resume & user can review other users’ resume. 
-5) Users will get notified whenever someone comments their resume
+5) Users will get notified whenever someone comments/upvote & downvote their resume
 
 # User Story:
 We wants to have our resumes reviewed </br>
