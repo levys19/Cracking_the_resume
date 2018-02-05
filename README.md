@@ -24,4 +24,4 @@ A web application where users can upload their resumes and have it reviewed by o
   * Resume Template Maker 
   
 # User Story:
-We wants to have our resumes reviewed </br>
+I want to have my resume reviewed </br>
