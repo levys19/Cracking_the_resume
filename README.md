@@ -1,4 +1,4 @@
-# Cracking The Resume
+# Cracking The Resume [![Gitter](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/CSE_442/Cracking_the_resume)
 
 A web application where users can upload their resumes and have it reviewed by other users (specific to CS majors). Users also have the ability to upvote, downvote, and comment on other users’ resumes. 
 
@@ -25,4 +25,3 @@ A web application where users can upload their resumes and have it reviewed by o
   
 # User Story:
 We wants to have our resumes reviewed </br>
-[![Gitter](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/CSE_442/Cracking_the_resume)
