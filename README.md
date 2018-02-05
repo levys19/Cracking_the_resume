@@ -17,9 +17,9 @@ A web application where users can upload their resumes and have it reviewed by o
 
 # Add-on Features 
   * Making your resume anonymous
-  * Meet up with other users (virtually) and practice interviews.
-  * Include other communities/majors. 
-  * Rank top 10 resume into top resume page. 
+  * Meet up with other users (virtually) and practice interviews
+  * Include other communities/majors 
+  * Rank top 10 resume into top resume page 
   * Best algorithm to allow all resumes to be reviewed 
   * Resume Template Maker 
   
