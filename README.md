@@ -22,4 +22,4 @@ A web application where users can upload their resumes and have it reviewed by o
   * Incorporate a Resume Template Maker that will automatically create a resume for the user once they fill in their information. 
   
 # User Story:
-I want to have my resume reviewed by other people in my major. I also want to be able to look at other people’s resumes and give them valuable feedback in a quick manner. </br>
+I want to have my resume reviewed by other people in my major/field. I also want to be able to look at other people’s resumes and give them valuable feedback in a quick manner. </br>
