@@ -3,25 +3,23 @@
 A web application where users can upload their resumes and have it reviewed by other users (specific to CS majors). Users also have the ability to upvote, downvote, and comment on other users’ resumes. 
 
 # MVP: 
-1) Users create a user account with the web application or log in to the exisiting account:
-  These are the fields they are required to fill out:
+1) Users will first create a user account with the web application or log into their exisiting account:
+  These are the fields they are required to fill out(when they first create an account):
     * Name 
     * Email
     * Major/year 
     * City 
-    * What are you looking for? Internship/full-time…
-2) Upload their Resume 
-3) User uploads their resume (.pdf files only) 
-4) Other users can upvote, downvote or comment (comments can be upvoted or downvoted) on the user’s resume & user can review other users’ resume. 
-5) Users will get notified whenever someone comments/upvote & downvote their resume
+    * What are you looking for? Internship/full-time
+2) Then, user uploads their resume to the web app (.pdf files only) 
+3) After the user uploads their resume, he/she can upvote, downvote or comment (comments can be upvoted or downvoted) on other users'      resumes.  
+4) Users will get notified whenever someone comments/upvote & downvote their resume
 
 # Add-on Features 
   * Making your resume anonymous
-  * Meet up with other users (virtually) and practice interviews
+  * Meet up with other users (virtually) and practice for interviews together
   * Include other communities/majors 
-  * Rank top 10 resume into top resume page 
-  * Best algorithm to allow all resumes to be reviewed 
-  * Resume Template Maker 
+  * Rank top 10 resumes into top resume page so others can the best resumes  
+  * Incorporate a Resume Template Maker that will automatically create a resume for the user once they fill in their information. 
   
 # User Story:
-I want to have my resume reviewed </br>
+I want to have my resume reviewed and get feedback </br>
