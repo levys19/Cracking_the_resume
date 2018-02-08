@@ -15,10 +15,10 @@ A web application where users can upload their resumes and have it reviewed by o
 4) Users will get notified whenever someone comments/upvote & downvote their resume
 
 # Add-on Features 
-  * Making your resume anonymous
-  * Meet up with other users (virtually) and practice for interviews together
+  * Making the resume anonymous so users do not see eath other's personal information
+  * Meet up with other users (virtually) and practice for interviews 
   * Include other communities/majors 
-  * Rank top 10 resumes into top resume page so others can the best resumes  
+  * Rank top 10 resumes into top resume page so others can see the best resumes and gain inspiration from them
   * Incorporate a Resume Template Maker that will automatically create a resume for the user once they fill in their information. 
   
 # User Story:
