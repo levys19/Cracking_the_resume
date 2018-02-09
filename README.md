@@ -16,10 +16,10 @@ A web application where users can upload their resumes and have it reviewed by o
 
 # Add-on Features 
   * Making the resume anonymous so users do not see eath other's personal information
-  * Meet up with other users (virtually) and practice for interviews 
-  * Include other communities/majors 
+  * Meet up with other users (virtually) and practice for coding interviews through the web app
+  * Include other communities/majors instead of just computer science
   * Rank top 10 resumes into top resume page so others can see the best resumes and gain inspiration from them
-  * Incorporate a Resume Template Maker that will automatically create a resume for the user once they fill in their information. 
+  * Incorporate a Resume Template Maker that will automatically create a resume for the user once they fill in their information about     education, work experience, etc. 
   
 # User Story:
 I want to have my resume reviewed by other people in my major/field. I also want to be able to look at other people’s resumes and give them valuable feedback in a quick manner. </br>
