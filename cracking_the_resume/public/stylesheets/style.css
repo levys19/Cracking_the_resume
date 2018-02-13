@@ -1,8 +1,20 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body{
+  overflow: hidden;
 }
 
-a {
-  color: #00B7FF;
+.formRight{
+  padding-top: 35%;
+}
+
+.rightSide{
+  background-color: #007EFF;
+  height:1000px;
+}
+
+.col-md-6{
+  padding:0;
+}
+
+.bottomTextSize > ul > li {
+  font-size: 10px;
 }
