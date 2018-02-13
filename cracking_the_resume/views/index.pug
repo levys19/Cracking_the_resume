@@ -1,5 +1,69 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+doctype html
+html
+  head
+    script(src='https://code.jquery.com/jquery.min.js')
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', rel='stylesheet', type='text/css')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+    script(src='https://code.jquery.com/jquery-3.1.0.js')
+    link(rel='stylesheet', type='text/css', href='styles/homepage.css')
+    script(src='javascript/homepage.js')
+  body
+    .row.theWhole(style='')
+      .col-md-6.leftSide
+        img.img-responsive.leftPic(src='https://previews.123rf.com/images/viktorijareut/viktorijareut1601/viktorijareut160100504/51458453-vector-illustration-curriculum-vitae-with-woman-polaroid-photo-cv-on-blue-background-job-interview-c.jpg', alt='')
+        // <img class="img-responsive leftPic" src="https://previews.123rf.com/images/mamanamsai/mamanamsai1506/mamanamsai150600565/41139381-resume-and-businessman-info-graphic-design-on-white-background.jpg" alt="">
+      .col-md-6.rightSide
+        .row
+          .col-md-3
+          .col-md-6(style='text-align:center;')
+            form.formRight
+              .form-group
+                label(for='username')
+                input#username1.form-control(type='username', placeholder='Enter username')
+              .form-group
+                label(for='password')
+                input#password1.form-control(type='password', placeholder='Enter password')
+              button.btn.btn-primary
+                | Login
+            h1 New to CTR?
+            button.btn.btn-success.btn-lg(onclick="window.location='formpage.html';")
+              | Get Started
+          .col-md-3
+    .navbar.navbar-default.navbar-fixed-bottom
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.bottom-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          // <a class="navbar-brand" href="#">Resume</a>
+        .navbar-collapse.collapse.bottom-collapse.centerIt
+          .row
+            .col-md-2
+            .col-mid-8.bottomTextSize
+              ul.nav.navbar-nav
+                li
+                  a(href='#') Info
+                li
+                  a(href='#') About
+                li
+                  a(href='#') Contact
+                li
+                  a(href='#') Privacy
+                li
+                  a(href='#') Businesses
+                li
+                  a(href='#') Developers
+                li
+                  a(href='#') Settings
+                li
+                  a(href='#') Advertisements
+                li
+                  a(href='#') Applications
+                li
+                  a(href='#') Marketing
+                li
+                  a(href='#') Directory
+                li
+                  a(href='#') 2018 Cracking Resume
+            .col-mid-2
