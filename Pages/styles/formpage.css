@@ -1,5 +1,5 @@
 body {
-    background-color: #007EFF;
+    background-color: #C4BDAC;
 }
 
 .conForm{
@@ -17,4 +17,12 @@ body {
 *[role="form"] h2 {
     margin-left: 5em;
     margin-bottom: 1em;
+}
+
+.btn-register{
+  background-color: #E8E6D9;
+}
+
+.form-horizontal{
+  width:50%;
 }
