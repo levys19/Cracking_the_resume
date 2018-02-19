@@ -17,8 +17,28 @@
       <file leaf-file-name="comments.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Models/comments.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upvote.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Models/upvote.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="downvote.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Models/downvote.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="60" lean-forward="true" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -34,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="resume.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="resume.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Models/resume.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
@@ -60,6 +80,8 @@
         <option value="$PROJECT_DIR$/Models/user.js" />
         <option value="$PROJECT_DIR$/Models/comments.js" />
         <option value="$PROJECT_DIR$/Models/resume.js" />
+        <option value="$PROJECT_DIR$/Models/upvote.js" />
+        <option value="$PROJECT_DIR$/Models/downvote.js" />
       </list>
     </option>
   </component>
@@ -98,17 +120,6 @@
             <path>
               <item name="Cracking_the_resume" type="b2602c69:ProjectViewProjectNode" />
               <item name="Cracking_the_resume" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cracking_the_resume" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cracking_the_resume" type="462c0819:PsiDirectoryNode" />
-              <item name="cracking_the_resume" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cracking_the_resume" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cracking_the_resume" type="462c0819:PsiDirectoryNode" />
-              <item name="cracking_the_resume" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Cracking_the_resume" type="b2602c69:ProjectViewProjectNode" />
@@ -154,12 +165,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519059321235</updated>
-      <workItem from="1519059324135" duration="3034000" />
+      <workItem from="1519059324135" duration="3759000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3034000" />
+    <option name="totallyTimeSpent" value="3759000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -195,10 +206,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Models/comments.js">
+    <entry file="file://$PROJECT_DIR$/Models/resume.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        <state relative-caret-position="285">
+          <caret line="19" column="56" lean-forward="true" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -211,10 +222,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/resume.js">
+    <entry file="file://$PROJECT_DIR$/Models/comments.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="56" lean-forward="true" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/upvote.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/downvote.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="60" lean-forward="true" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
           <folding />
         </state>
       </provider>
