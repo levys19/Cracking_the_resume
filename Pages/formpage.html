@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles/formpage.css">
+  <script src="javascript/formpage.js"></script>
+</head>
+<body>
+  <div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8 conForm">
+
+            <form class="formBack form-horizontal" role="form">
+                <h2>Let's get started</h2>
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3 control-label">Full Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="firstName" placeholder="Full Name" class="form-control" autofocus>
+                        <span class="help-block">Last Name, First Name, eg.: Smith, Harry</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Email</label>
+                    <div class="col-sm-9">
+                        <input type="email" id="email" placeholder="Email" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">Password</label>
+                    <div class="col-sm-9">
+                        <input type="password" id="password" placeholder="Password" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="birthDate" class="col-sm-3 control-label">Date of Birth</label>
+                    <div class="col-sm-9">
+                        <input type="date" id="birthDate" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="country" class="col-sm-3 control-label">Major</label>
+                    <div class="col-sm-9">
+                        <select id="country" class="form-control">
+                            <option>Computer Science</option>
+                            <option>Computer Engineering</option>
+                            <option>Civil Engineering</option>
+                            <option>Industrial Engineering</option>
+                            <option>Graphic Design</option>
+                            <option>Computer Gamer</option>
+                            <option>Electrical Engineering</option>
+                            <option>Undecided</option>
+                        </select>
+                    </div>
+                </div> <!-- form group -->
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Gender</label>
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" name="radAnswer" id="femaleRadio" value="Female">Female
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" name="radAnswer" id="maleRadio" value="Male">Male
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" name="radAnswer" id="unknownRadio" value="Unknown">Unknown
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- /.form-group -->
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Resume</label>
+                    <div class="col-sm-9">
+                      <label class="custom-file">
+                        <input type="file" id="file" class="custom-file-input">
+                        <span class="custom-file-control"></span>
+                      </label>
+                    </div>
+                </div> <!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox">I accept <a href="#">terms</a>
+                            </label>
+                        </div>
+                    </div>
+                </div> <!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <button type="submit" class="btn btn-register btn-block">Register</button>
+                    </div>
+                </div>
+            </form> <!-- /form -->
+        </div> <!-- ./container -->
+
+    <div class="col-mid-2">
+    </div>
+  </div>
+</div>
+  <div class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".bottom-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- <a class="navbar-brand" href="#">Resume</a> -->
+        </div>
+        <div class="navbar-collapse collapse bottom-collapse centerIt">
+          <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-mid-8 bottomTextSize">
+              <ul class="nav navbar-nav">
+                <li><a href="#">Info</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Businesses</a></li>
+                <li><a href="#">Developers</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Advertisements</a></li>
+                <li><a href="#">Applications</a></li>
+                <li><a href="#">Marketing</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a href="#">2018 Cracking Resume</a></li>
+              </ul>
+            </div>
+            <div class="col-mid-2">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
