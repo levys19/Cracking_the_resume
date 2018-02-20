@@ -3,7 +3,8 @@ body {
 }
 
 .conForm{
-  padding-top: 5%;
+  padding-top: 3%;
+
 }
 
 *[role="form"] {
@@ -20,9 +21,12 @@ body {
 }
 
 .btn-register{
-  background-color: #E8E6D9;
+  background-color: #999999;
 }
 
 .form-horizontal{
-  width:50%;
+  width:100%;
+}
+.bottomTextSize > ul > li {
+  font-size: 10px;
 }
