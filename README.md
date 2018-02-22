@@ -2,6 +2,30 @@
 
 A web application where users can upload their resumes and have it reviewed by other users (specific to CS majors). Users also have the ability to upvote, downvote, and comment on other users’ resumes. 
 
+# How to run the web application on your local machine
+
+Step 1:
+   * Install Node.js on your local machine: https://nodejs.org/en/
+   * Run and execute the file
+   * Now you have npm on your machine
+
+Step2:
+
+In your Mac (Mac) or Windows Terminal:
+
+$ git clone https://github.com/levys19/Cracking_the_resume.git
+
+After you cloned the repository, go to your appropriate local directory
+
+Then run:
+
+$ npm install
+
+to download all the dependencies.
+
+Now, the web app can be launched in your local web browser.
+
+
 # MVP: 
 1) Users will first create a user account with the web application or log into their exisiting account:
   These are the fields they are required to fill out(when they first create an account):
