@@ -3,7 +3,7 @@ if ($_POST){
 
 $name = $_POST['name'];
 $content = $_POST['commentContent'];
-$handle = fopen("comments.html","a");
+$handle = fopen("comments.ejs","a");
 fwrite ($handle,"" . $content . "");
 fclose ($handle);}
 
@@ -55,7 +55,7 @@ fclose ($handle);}
        <form action="" method="POST">Comment: <textarea rows ="2" cols ="65" name="commentContent"></textarea></br>
         <input type = "submit" value = "post"></br></form>
             
-        <?php include "comments.html"; ?><br>
+        <?php include "comments.ejs"; ?><br>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="../routes/account.js"></script>
         
