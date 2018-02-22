@@ -1,0 +1,65 @@
+<?php
+if ($_POST){
+
+$name = $_POST['name'];
+$content = $_POST['commentContent'];
+$handle = fopen("comments.html","a");
+fwrite ($handle,"" . $content . "");
+fclose ($handle);}
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Cracking The Resume</title>
+        <link href="../public/stylesheets/acc.css" rel="stylesheet">
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="split.ejs">Cracking The Resume</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">About</a></li>
+                    <li><a href="../settings.ejs">Account</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav> 
+       <img src="http://www.gfyork.com/wp-content/uploads/2017/09/resume-latex-template-latex-templates-curricula-vitaersums-templates-1.png" height="500" width="350">
+       <div class="container"> 
+            <a class="like"><i class="fa fa-thumbs-o-up"></i>  
+                Like <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
+            </a>
+            <a class="dislike"><i class="fa fa-thumbs-o-down"></i> 
+                Dislike <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
+            </a>
+        </div>
+       <form action="" method="POST">Comment: <textarea rows ="2" cols ="65" name="commentContent"></textarea></br>
+        <input type = "submit" value = "post"></br></form>
+            
+        <?php include "comments.html"; ?><br>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="../routes/account.js"></script>
+        
+        <button type="button" onclick="">Update Resume</button><br><br><br>
+       
+    </body>
+</html>
