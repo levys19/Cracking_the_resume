@@ -13,14 +13,17 @@ Step2:
 
 In your Mac (Mac) or Windows Terminal:
 
-$ git clone https://github.com/levys19/Cracking_the_resume.git
+    ```
+    $ git clone https://github.com/levys19/Cracking_the_resume.git
+    ```
 
 After you cloned the repository, go to your appropriate local directory
 
 Then run:
 
-$ npm install
-
+    ```
+    $ npm install
+    ```
 to download all the dependencies.
 
 Now, the web app can be launched in your local web browser.
