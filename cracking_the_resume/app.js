@@ -7,6 +7,11 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var signup = require('./routes/signup');
 var users = require('./routes/users');
+var accounts = require('./routes/accounts');
+var split = require('./routes/split');
+var resumeViewing = require('./routes/resumeViewing');
+var settings = require('./routes/settings');
+
 
 var app = express();
 
@@ -21,12 +26,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/public')));
-app.use(express.static('public'));
 
 
 app.use('/', index);
 app.use('/signup', signup);
 app.use('/users', users);
+app.use('/accounts', accounts);
+app.use('/split', split);
+app.use('/resumeViewing', resumeViewing);
+app.use('/settings', settings);
+
+
 
 // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
