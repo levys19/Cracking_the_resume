@@ -5,42 +5,32 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-  <link rel="stylesheet" type="text/css" href="styles/homepage.css">
+  <link rel="stylesheet" type="text/css" href="../public/stylesheets/split.css">
   <script src="javascript/homepage.js"></script>
 </head>
 <body>
-  <div style="" class="row theWhole">
+  <div style="text-align:center;" class="row theWhole"></div>
     <div class="col-md-6 leftSide">
-      <!-- <img class="img-responsive leftPic" src="https://img.etsystatic.com/il/48a2c6/914224541/il_fullxfull.914224541_ci1e.jpg" alt=""> -->
-      <img class="img-responsive leftPic" src="https://www.graphicsfuel.com/wp-content/uploads/2016/02/Resume-Template.jpg" alt="">
+        <div class="row">
+            <div class="col-md-3">
+            </div>
+        <div style="text-align:center;" class="col-md-6">
+            <h1>View Your Resume</h1>
+            <button onclick="window.location='account.html';" class="btn btn-signup btn-lg">
+              Get Started
+            </button>
+          </div>
+          </div>  
     </div>
     <div class="col-md-6 rightSide">
       <div class="row">
         <div class="col-md-3">
         </div>
         <div style="text-align:center;" class="col-md-6">
-          <form class="formRight">
-            <div class="form-group">
-             <label for="username"></label>
-             <input type="username" class="form-control" id="username1" placeholder="Enter username">
-            </div>
-
-            <div class="form-group">
-             <label for="password"></label>
-             <input type="password" class="form-control" id="password1" placeholder="Enter password">
-            </div>
-
-            <button class="btn btn-login">
-              Login
-            </button>
-          </form>
-
-          <h1>New to CTR?</h1>
-          <button onclick="window.location='formpage.html';" class="btn btn-signup btn-lg">
+          <h1>Review Other Resumes</h1>
+          <button onclick="window.location='resumeViewing.html';" class="btn btn-signup btn-lg">
             Get Started
           </button>
-        </div>
-        <div class="col-md-3">
         </div>
       </div>
     </div>
