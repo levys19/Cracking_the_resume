@@ -19,9 +19,15 @@ After you cloned the repository, go to your appropriate local directory
 
 Then run:
 
-    $ npm start
-    
+    $ npm install
+
 to download all the dependencies.
+
+Lastly run:
+
+    $npm start
+
+to start the server
 
 Now, the web app can be launched in your local web browser.
 
