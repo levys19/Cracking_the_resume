@@ -2,6 +2,9 @@
 
 A web application where users can upload their resumes and have it reviewed by other users (specific to CS majors). Users also have the ability to upvote, downvote, and comment on other users’ resumes. 
 
+# Youtube link Prototype
+https://www.youtube.com/watch?v=M_qznEGCp30
+
 # How to run the web application on your local machine
 
 Step 1:
