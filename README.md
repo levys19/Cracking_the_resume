@@ -18,7 +18,15 @@ In your Mac (Mac) or Windows Terminal(Powershell):
 
     $ git clone https://github.com/levys19/Cracking_the_resume.git
 
-After you cloned the repository, go to your appropriate local directory
+After you cloned the repository, go inside the directory (~/Cracking_the_resume)
+
+    $ cd Cracking_the_resume
+
+Step 3: 
+
+From the Cracking_the_resume directory, enter the cracking_the_resume directory (~/Cracking_the_resume/cracking_the_resume)
+
+    $ cd cracking_the_resume
 
 Then run:
 
