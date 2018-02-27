@@ -40,7 +40,7 @@ Lastly run:
 
 to start the server
 
-Now, the web app can be launched in your local web browser on localhost://3000
+Now, the web app can be launched in your local web browser on localhost:3000
 
 
 # MVP: 
