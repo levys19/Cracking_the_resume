@@ -14,18 +14,19 @@
     <div class="col-md-2">
     </div>
     <div class="col-md-8 conForm">
-            <form class="form-horizontal" role="form">
+            <form name="userData" action = "/split" class= "form-horizontal" role="form" method="post">
                 <h2>Let's get started</h2>
                 <div class="form-group">
                     <label for="firstName" class="col-sm-3 control-label">First Name</label>
                     <div class="col-sm-9">
-                        <input type="text" id="firstName" placeholder="First Name" class="form-control" autofocus>
+                      <!-- added a name tag to the input  -->
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name" class="form-control" autofocus>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="lastName" class="col-sm-3 control-label">Last Name</label>
                     <div class="col-sm-9">
-                        <input type="text" id="lastName" placeholder="Last Name" class="form-control" autofocus>
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name" class="form-control" autofocus>
                     </div>
                 </div>
                 <div class="form-group">
@@ -90,7 +91,7 @@
                 </div> <!-- /.form-group -->
                 <div class="form-group">
                     <div class="col-sm-9 col-sm-offset-3">
-                        <a href = "/split" class = "btn btn-info" role = "button"> Register </a>
+                      <input type="submit" value="Sign Up"/>
                     </div>
                 </div>
             </form> <!-- /form -->
