@@ -1,3 +1,6 @@
+
+var $ = require('jquery');
+var jsdom = require('jsdom');
 var express = require('express');
 var app = require('express')();
 var router = express.Router();
@@ -9,9 +12,9 @@ router.get('/', function(req, res, next) {
     res.render('account', { title: 'accounts page' });
 });
 
-// app.get('/', function(req, res){
-//   res.sendFile(__dirname + '/account.html');
-// });
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/account.html');
+});
 
 io.on('connection', function(socket){
   console.log('a user connected');
@@ -25,6 +28,9 @@ io.on('connection', function(socket){
     console.log('message: ' + msg);
   });
 });
+
+
+
 //
 // http.listen(port, function(){
 //   console.log('listening on *:' + port);

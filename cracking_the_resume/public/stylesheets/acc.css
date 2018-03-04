@@ -100,3 +100,14 @@ button:hover {
 
 .main-btn{ background:#00b09c; border-color:#00b09c; color:#fff;}
 .main-btn:hover{ background:#00a491;color:#fff;}
+
+#commentsWrapper{
+  overflow: hidden;
+}
+.comments-list{
+  overflow: auto;
+  /* overflow-y: auto;
+  overflow-x: hidden; */
+  height:600px;
+  width: 800px;
+}
