@@ -9,8 +9,6 @@ var input = $(this).find('.qty2');
 input.val(input.val() - 1);
 });
 
-var block = " <div class='media'><p class='pull-right'><small>5 days ago</small></p><a class='media-left' href='#'><img src='http://lorempixel.com/40/40/people/1/'></a><div class='media-body'><h4 class='media-heading user_name'>Liesel Vaidya</h4> Mine is better.<p><small><a href=''>Like</a> - <a href=''>Share</a></small></p></div></div>";
-
 var userName = "Random Dude";
 
 
