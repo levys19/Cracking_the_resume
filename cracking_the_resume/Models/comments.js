@@ -1,6 +1,4 @@
 var mongoose = require("mongoose");
-//connecting to the database
-mongoose.connect("mongodb://localhost/Cracking_the_Resume");
 
 //COMMENTS schema
 var commentSchema = new mongoose.Schema({
