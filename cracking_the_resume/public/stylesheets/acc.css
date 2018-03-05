@@ -1,5 +1,5 @@
 body{
-    text-align: center;
+    /* text-align: center; */
 }
 img{
     margin-top: 20px;
@@ -89,4 +89,25 @@ button:hover {
     border: none;
     width:20px;
     background: transparent;
+}
+.user_name{
+    font-size:14px;
+    font-weight: bold;
+}
+.comments-list .media{
+    border-bottom: 1px dotted #ccc;
+}
+
+.main-btn{ background:#00b09c; border-color:#00b09c; color:#fff;}
+.main-btn:hover{ background:#00a491;color:#fff;}
+
+#commentsWrapper{
+  overflow: hidden;
+}
+.comments-list{
+  overflow: auto;
+  /* overflow-y: auto;
+  overflow-x: hidden; */
+  height:600px;
+  width: 800px;
 }
