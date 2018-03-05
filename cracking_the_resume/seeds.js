@@ -7,7 +7,7 @@ var userData = [
 	    lastName: "Doe",
 	    Email: "jdoe@gmail.com",
 	    UserName: 'jdoe',
-	    Password: 'Test1',
+	    Password: User.hashPassword('Test1'),
 	    Year: "Junior",
 	    Major: "Computer Science",
 	    Seeking:"Internship"
@@ -17,7 +17,7 @@ var userData = [
 	    lastName: "Smith",
 	    Email: "janeSmith@gmail.com",
 	    UserName: 'jSmithy',
-	    Password: 'Test2',
+	    Password: User.hashPassword('Test2'),
 	    Year: "Freshman",
 	    Major: "Computer Engineering",
 	    Seeking:"Internship"
@@ -27,7 +27,7 @@ var userData = [
 	    lastName: "Horton",
 	    Email: "mhorton@gmail.com",
 	    UserName: 'MartyTon',
-	    Password: 'Test3',
+	    Password: User.hashPassword('Test3'),
 	    Year: "Senior",
 	    Major: "Computer Science",
 	    Seeking:"Full-Time"
