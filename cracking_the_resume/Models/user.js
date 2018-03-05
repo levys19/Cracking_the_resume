@@ -2,6 +2,8 @@ var mongoose = require("mongoose");
 var bcrypt = require('bcryptjs');
 
 
+
+//USER schema
 var userSchema = new mongoose.Schema({
     firstName: String,
     lastName: String,
@@ -38,3 +40,4 @@ module.exports.checkValidPassword = function(candidatePassword) {
 
 //exporting module
 module.exports = mongoose.model("User", userSchema);
+

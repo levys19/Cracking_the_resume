@@ -13,6 +13,16 @@ var resumeViewing = require('./routes/resumeViewing');
 var settings = require('./routes/settings');
 
 
+//Database set up: MONGOOSE
+var mongoose = require('mongoose'); 
+mongoose.connect("mongodb://localhost/Cracking_the_Resume");
+
+//Seeds file
+seedDB = require("./seeds")
+
+// Remove all user data from the data 
+seedDB(); 
+
 var app = express();
 
 // view engine setup
