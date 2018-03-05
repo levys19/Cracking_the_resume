@@ -11,9 +11,7 @@
     "debug": "~2.6.9",
     "ejs": "^2.5.7",
     "express": "^4.15.5",
-    "jQuery": "^1.7.4",
-    "jquery": "^3.3.1",
-    "jsdom": "^11.6.2",
+    "mongoose": "^5.0.8",
     "morgan": "~1.9.0",
     "serve-favicon": "~2.4.5",
     "socket.io": "^2.0.4"
