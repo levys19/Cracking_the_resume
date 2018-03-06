@@ -23,6 +23,8 @@ var userSchema = new mongoose.Schema({
     created: {type: Date, default: Date.now}
 });
 
+//exporting module
+module.exports = mongoose.model("User", userSchema);
 
 //get the user by ID
 module.exports.getUserById = function(id, callback){
@@ -30,7 +32,7 @@ module.exports.getUserById = function(id, callback){
 
 //Call this function after creating the user in the database to hash the password
 module.exports.hashPassword = function(password){
-    return bcrypt.hashSync(password, bcrypt.genSaltSync(100), null);
+    return bcrypt.hashSync(password, bcrypt.genSaltSync(10), null);
 };
 
 //checking if the hash password matches the candidate password--given by the user
@@ -38,6 +40,5 @@ module.exports.checkValidPassword = function(candidatePassword) {
     return bcrypt.compareSync(candidatePassword, this.password);
 };
 
-//exporting module
-module.exports = mongoose.model("User", userSchema);
+
 
