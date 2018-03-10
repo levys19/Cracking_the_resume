@@ -3,6 +3,11 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var session = require('express-session');
+var passport = require('passport');
+var local_strategy = require('passport-local').Strategy;
+var flash = require('express-flash');
+
 
 var index = require('./routes/index');
 var signup = require('./routes/signup');
@@ -18,7 +23,7 @@ var mongoose = require('mongoose');
 mongoose.connect("mongodb://localhost/Cracking_the_Resume");
 
 //Seeds file
-seedDB = require("./seeds")
+seedDB = require("./seeds");
 
 // Remove all user data from the data 
 seedDB(); 
@@ -36,6 +41,20 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/public')));
+
+//add session middleware to save session in the database
+app.use(session({
+    secret:'secret',
+    resave:'true',
+    saveUninitialized: 'true'
+    //add line to save to database
+}));
+
+app.use(flash());
+
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 app.use('/', index);
 app.use('/signup', signup);
