@@ -7,6 +7,7 @@ var session = require('express-session');
 var passport = require('passport');
 var local_strategy = require('passport-local').Strategy;
 var flash = require('express-flash');
+var MongoStore = require('connect-mongo')(session);
 
 
 var index = require('./routes/index');
@@ -46,9 +47,14 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use(session({
     secret:'secret',
     resave:'true',
-    saveUninitialized: 'true'
-    //add line to save to database
+    saveUninitialized: 'true',
+    store: new MongoStore({mongooseConnection:mongoose.connection})
 }));
+
+// app.use(function(req, res, next) {
+//     res.locals.user = req.session.user;
+//     next();
+// });
 
 app.use(flash());
 

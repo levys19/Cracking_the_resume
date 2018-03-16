@@ -16,6 +16,95 @@ router.get('/', function(req, res, next) {
     res.render('homePage', { title: 'home page',UsernameError:req.flash('UsernameError'), PasswordError:req.flash('PasswordError')});
 });
 
+// passport.use('local.signup', new local_strategy({
+//     usernameField: 'username',
+//     passwordField: 'password',
+//     passReqToCallback: true
+// }, function(req, username, password, done) {
+//     process.nextTick(function() {
+//     console.log("I am here");
+//
+//     User.findOne({'UserName':username}, function(err,user) {
+//         console.log("I am inside here");
+//
+//         if(err) {
+//             return done(err);
+//         }
+//
+//         if(user) {
+//             console.log("Username not found");
+//             return done(null, false);
+//         }
+//         else {
+//
+//             var password1 = req.body.password;
+//             var ePassword = User.hashPassword(password1);
+//
+//             var newUser = new User();
+//             newUser.firstName = req.body.firstName;
+//             console.log(req.body.firstName);
+//             newUser.lastName = req.body.lastName;
+//             newUser.Email = req.body.email;
+//             newUser.UserName = req.body.userName;
+//             newUser.Password = ePassword;
+//             newUser.Major = req.body.major;
+//             newUser.Seeking = req.body.seeking;
+//
+//             newUser.save(function (err) {
+//                 if (err) {
+//                     return done(err);
+//                 }
+//                 console.log("created a user");
+//                 return done(null, newUser);
+//             })
+//         }
+//
+//     })
+//     })
+//
+// }));
+//
+//
+// router.get('/signUp', function(req,res) {
+//     res.render('signUp');
+// });
+//
+
+//
+// router.post('/signUp',
+//     passport.authenticate('local.signup',
+//         {successRedirect: 'split',
+//             failureRedirect: '/',
+//             failureFlash: true}
+//     ));
+
+
+
+// router.post('/split', function(req, res, next) {
+//     var password1 = req.body.password;
+//     var ePassword = User.hashPassword(password1);
+//
+//     var newUser = new User();
+//     newUser.firstName = req.body.firstName;
+//     newUser.lastName = req.body.lastName;
+//     newUser.Email = req.body.email;
+//     newUser.UserName = req.body.userName;
+//     newUser.Password = ePassword;
+//     newUser.Major = req.body.major;
+//     newUser.Seeking = req.body.seeking;
+//
+//     newUser.save(function(err) {
+//         if(err) {
+//             return err;
+//         }
+//         console.log("created a user");
+//         return newUser;
+//     })
+//
+// });
+
+
+
 
 passport.use('local.login',new local_strategy({
     usernameField: 'username',
@@ -61,7 +150,6 @@ passport.deserializeUser(function(id, done) {
 });
 
 
-
 router.post('/',
     passport.authenticate('local.login',
         {successRedirect: 'split',
@@ -71,14 +159,15 @@ router.post('/',
 
 //Only go the split page if you have access granted.
 router.get('/split', isLoggedIn, function(req, res, next) {
-    res.render('split', {user: req.user});
+    res.render('split', { title: 'Split page', user: req.user});
+
 });
 
 
 //logout
 // router.get('/logout', function(req, res) {
 //     req.logout();
-//     req.redirect('/');
+//     res.redirect('/');
 // });
 
 
