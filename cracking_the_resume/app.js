@@ -17,6 +17,7 @@ var accounts = require('./routes/accounts');
 var split = require('./routes/split');
 var resumeViewing = require('./routes/resumeViewing');
 var settings = require('./routes/settings');
+var redirect = require('./routes/redirect');
 
 
 //Database set up: MONGOOSE
@@ -58,10 +59,11 @@ app.use(session({
 
 app.use(flash());
 
+//intialize passport session
 app.use(passport.initialize());
 app.use(passport.session());
 
-
+//routing all the pages
 app.use('/', index);
 app.use('/signup', signup);
 app.use('/users', users);
@@ -69,6 +71,7 @@ app.use('/accounts', accounts);
 app.use('/split', split);
 app.use('/resumeViewing', resumeViewing);
 app.use('/settings', settings);
+app.use('/redirect', redirect);
 
 
 
