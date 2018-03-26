@@ -260,9 +260,6 @@ button:hover {
 .main-btn{ background:#00b09c; border-color:#00b09c; color:#fff;}
 .main-btn:hover{ background:#00a491;color:#fff;}
 
-#commentsWrapper{
-  overflow: hidden;
-}
 .comments-list{
   overflow: auto;
   /* overflow-y: auto;
@@ -271,6 +268,25 @@ button:hover {
   width: 800px;
 }
 
-.modal-body{
-  width:1000px;
+.modal-xl{
+  margin-right: 500px;
 }
+
+/* #commentsWrapper{
+  overflow: hidden;
+  height:90%;
+  background-color: white;
+  position: absolute;
+  margin-left: 100%;
+  width:90%;
+} */
+
+.modal-dialog {
+  right:20%;
+}
+
+.commentModalD{
+  left:20%;
+}
+
+/* sdasd */
