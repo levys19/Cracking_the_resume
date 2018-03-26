@@ -14,8 +14,8 @@ h1 {
   font-size: 60px;
   z-index: 1;
   position:absolute;
-  text-align: center;
-  align-content: center;
+  /* text-align: center;
+  align-content: center; */
   
 }
 
