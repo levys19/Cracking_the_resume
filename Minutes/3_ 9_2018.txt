@@ -1,0 +1,29 @@
+﻿Date: March 9, 2018
+Time: 2:00PM -  3:00PM
+
+
+Meeting Attendance: Shally Guo, Levy Shi, YongJi Chen, Sravanika Doddi, Liesel Vaidya
+
+
+Meeting Summary: 
+* Talked about what improvements we need to make for the website.
+* Sending emails from a cracking the resume gmail account.
+* Discussed about routing pages
+* Resumes in the database (AWS3)--by Monday
+* Thumbs up and down
+* Comments in the database 
+* Discussed what help wanted issues to give out
+
+
+Accomplishments (since last meeting): 
+   * Liesel: Worked on navigation.
+   * Sravanika: Setup the login authentication system with passport, and created functions for hash password and unhash password. 
+   * Shally: Connect  entries made in the sign up page to the User collection in the database. Created a seed.js file used to populate the database with sample user data at the start of the server 
+   * YongJi: Made comments system and restricted code injection.
+   * Levy: complete some of the routing 
+Tasks (to be completed before next meeting): 
+   * Liesel: Better navigation. Make the comment section work. Make the pop up for the resumes work on the viewing page. Place the thumbs up and down buttons on the resumes. 
+   * Sravanika: User authentication still not 100% working, try to make it work. Work on developer documentation. 
+   * Yongji: Add sign up form validations. 
+   * Shally: Set up AWS S3 for resume storage; Seed the cloud storage with sample resumes;  Display resume from the database to the resume page; connect downvote, upvote, and comment collections from UI to database and vice versa. 
+   * Levy: get the routing from sign up to split page and then sign into their session. And make website live

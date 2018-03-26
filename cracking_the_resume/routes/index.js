@@ -13,7 +13,7 @@ var User = require('../Models/user');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('homePage', { title: 'home page',UsernameError:req.flash('UsernameError'), PasswordError:req.flash('PasswordError')});
+    res.render('homepage.ejs', { title: 'home page',UsernameError:req.flash('UsernameError'), PasswordError:req.flash('PasswordError')});
 });
 
 //Create a local strategy using passport every time a user needs to log in to page
