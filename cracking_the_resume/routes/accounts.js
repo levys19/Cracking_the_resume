@@ -6,7 +6,7 @@ var io = require('socket.io')(http);
 var port = process.env.PORT || 3000;
 
 router.get('/', function(req, res, next) {
-    res.render('account', { title: 'accounts page' });
+    res.render('account.ejs', { title: 'accounts page' });
 });
 
 // app.get('/', function(req, res){
