@@ -45,6 +45,7 @@ app.use('/split', split);
 app.use('/resumeViewing', resumeViewing);
 app.use('/settings', settings);
 app.use(express.static("../resume"));
+app.use(express.static("public"));
 
 
 
