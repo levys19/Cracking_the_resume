@@ -67,15 +67,15 @@ fclose ($handle);}
                      Dislike <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
                  </a>
               <div class="form-group">
-                <textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="Message" data-role="none"></textarea>
+                <form method = "post" action = '/accounts' role = 'form'> <input type = 'text' class="form-control" rows="3" name="Message" id="Message" placeholder="Message">
               </div>
             </div>
             </div>
             <div class="row">
               <div class="col-md-12">
-                <button type="submit" id="postIt" class="btn main-btn">Post Comment</button>
+                <input type="submit" id="postIt" class="btn main-btn" value = "postComment"/>
               </div>
-            </div>
+            </div></form>
             <button type="button" class="pull-left" onclick="">Update Resume</button><br><br><br>
       </div>
       <div class="col-md-6" id="commentsWrapper">
@@ -150,4 +150,4 @@ fclose ($handle);}
 
   </body>
 
-  </html>
+
