@@ -14,7 +14,7 @@ var storage = multer.diskStorage({
         cb(null, '../Resumes')
     },
     filename: function(req, file, db){
-        db(null, file.fieldname + '-' + Date.now() + '.pdf')
+        db(null, file.fieldname + '-' + Date.now() + '.png')
     }
 });
 
