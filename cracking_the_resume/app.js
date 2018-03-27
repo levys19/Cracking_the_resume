@@ -17,6 +17,9 @@ var accounts = require('./routes/accounts');
 var split = require('./routes/split');
 var resumeViewing = require('./routes/resumeViewing');
 var settings = require('./routes/settings');
+
+var multer  = require('multer')
+
 var redirect = require('./routes/redirect');
 
 

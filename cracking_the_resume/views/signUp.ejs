@@ -9,12 +9,12 @@
     <script src="../public/javascript/signup.js"></script>
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-md-2">
-        </div>
-        <div class="col-md-8 conForm">
-            <form name="userData" action = "/redirect" class= "form-horizontal" role="form" method="post">
+  <div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8 conForm">
+            <form name="userData" action = "/redirect" class= "form-horizontal" role="form" method="post" enctype="multipart/form-data">
                 <h2>Let's get started</h2>
                 <div class="form-group">
                     <label for="firstName" class="col-sm-3 control-label">First Name</label>
@@ -74,10 +74,10 @@
                 <div class="form-group">
                     <label class="control-label col-sm-3">Resume</label>
                     <div class="col-sm-9">
-                        <label class="custom-file">
-                            <input type="file" id="file" class="custom-file-input">
-                            <span class="custom-file-control"></span>
-                        </label>
+                      <label class="custom-file">
+                        <input type="file" id="file" class="custom-file-input" name = "resume">
+                        <span class="custom-file-control"></span>
+                      </label>
                     </div>
                 </div> <!-- /.form-group -->
                 <div class="form-group">
