@@ -27,7 +27,6 @@ fclose ($handle);}
   </head>
 
   <body>
-   <h2> <%=user.UserName%></h2>
     <nav class="navbar navbar-inverse navbar-static-top">
       <div class="container">
         <div class="navbar-header">
@@ -37,13 +36,19 @@ fclose ($handle);}
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-          <a class="navbar-brand" href="/split">Cracking The Resume</a>
+          <a class="navbar-brand" href="/split">Cracking The Resume | <%=user.UserName%></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">About</a></li>
-            <li><a href="settings">Settings</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                  <li><a href="resumeViewing">View Other Resumes</a></li>
+                  <li><a href="accounts">View Your Resume</a></li>
+              </ul>
+          </li>
+          <li><a href="settings">Settings</a></li>
+          <li><a href="#">Log Out</a></li>
           </ul>
         </div>
       </div>
@@ -52,12 +57,12 @@ fclose ($handle);}
       <div class="row">
         <div class="col-md-6" style="text-align:center;">
           <img src="http://www.gfyork.com/wp-content/uploads/2017/09/resume-latex-template-latex-templates-curricula-vitaersums-templates-1.png" height="500" width="350">
-            <a class="like"><i class="fa fa-thumbs-o-up"></i>
+            <!-- <a class="like"><i class="fa fa-thumbs-o-up"></i>
                Like <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
            </a>
            <a class="dislike"><i class="fa fa-thumbs-o-down"></i>
                Dislike <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
-           </a>
+           </a> -->
             <div class="row">
               <div class="col-md-12">
                 <a class="like"><i class="fa fa-thumbs-o-up"></i>
