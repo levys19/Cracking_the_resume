@@ -1,0 +1,28 @@
+﻿Date: February 23, 2018
+Time: 2:00PM -  3:00PM
+
+
+Meeting Attendance: Shally Guo, Levy Shi, YongJi Chen, Sravanika Doddi, Liesel Vaidya
+
+
+Meeting Summary: 
+* Talked about what improvements we need to make for the website.
+* Sending emails from a cracking the resume gmail account.
+* Talked about setting up a meeting time for database setup: Monday 2pm. 
+* Talked to Pat(TA) about what we have accomplished so far in the project, and what we plan to do next. 
+
+
+Accomplishments (since last meeting): 
+   * Liesel: Worked on the viewing page, accounts page, added a fake resume, added a thumbs up, thumbs down button and a comments section to the user profile page. JS for the pages. Got familiar with ejs.
+   * Sravanika: Helped fix the routing for some of the pages, make CSS connect with the node.js express framework
+   * Shally: Set up database on node js with mongoose--created the Models directory with the corresponding collections 
+   * YongJi: Change color scheme, change homepage image, Get familiar with ejs, changed html files to ejs.
+   * Levy: routed some more pages and got familiar with mongoose
+
+
+Tasks (to be completed before next meeting): 
+   * Liesel: Better navigation. Make the comment section work. Make the pop up for the resumes work on the viewing page. Place the thumbs up and down buttons on the resumes. 
+   * Sravanika: Help Shally set up the schema and how the users are linked to resumes -- still same as last time, work on creating the authentication for username and password.
+   * Yongji: Work with Shally in javascript to get input values. Get familiar with ejs and node.js, help Liesel with the comment section. 
+   * Shally: Load database with random documents 
+   * Levy: Email notifications when user gets thumbs up and thumbs down, get familiar with mongoose.
