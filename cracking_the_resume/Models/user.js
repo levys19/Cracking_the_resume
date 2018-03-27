@@ -39,6 +39,3 @@ module.exports.hashPassword = function(password){
 module.exports.checkValidPassword = function(candidatePassword) {
     return bcrypt.compareSync(candidatePassword, this.password);
 };
-
-
-
