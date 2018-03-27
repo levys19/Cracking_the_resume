@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 
 //RESUME schema
 var resumeSchema = new mongoose.Schema({
-    resumePDF: String, //NEED TO FIND TYPE OF PDF FILE
+    resumeName: String, //NEED TO FIND TYPE OF PDF FILE
     comments:[
         //Object Reference
         {
