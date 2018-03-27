@@ -3,6 +3,12 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var session = require('express-session');
+var passport = require('passport');
+var local_strategy = require('passport-local').Strategy;
+var flash = require('express-flash');
+var MongoStore = require('connect-mongo')(session);
+
 
 var index = require('./routes/index');
 var signup = require('./routes/signup');
@@ -12,13 +18,17 @@ var split = require('./routes/split');
 var resumeViewing = require('./routes/resumeViewing');
 var settings = require('./routes/settings');
 
+var multer  = require('multer')
+
+var redirect = require('./routes/redirect');
+
 
 //Database set up: MONGOOSE
 var mongoose = require('mongoose'); 
 mongoose.connect("mongodb://localhost/Cracking_the_Resume");
 
 //Seeds file
-seedDB = require("./seeds")
+seedDB = require("./seeds");
 
 // Remove all user data from the data 
 seedDB(); 
@@ -37,6 +47,26 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/public')));
 
+//add session middleware to save session in the database
+app.use(session({
+    secret:'secret',
+    resave:'true',
+    saveUninitialized: 'true',
+    store: new MongoStore({mongooseConnection:mongoose.connection})
+}));
+
+// app.use(function(req, res, next) {
+//     res.locals.user = req.session.user;
+//     next();
+// });
+
+app.use(flash());
+
+//intialize passport session
+app.use(passport.initialize());
+app.use(passport.session());
+
+//routing all the pages
 app.use('/', index);
 app.use('/signup', signup);
 app.use('/users', users);
@@ -44,6 +74,7 @@ app.use('/accounts', accounts);
 app.use('/split', split);
 app.use('/resumeViewing', resumeViewing);
 app.use('/settings', settings);
+app.use('/redirect', redirect);
 
 
 

@@ -2,34 +2,21 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 
-
+//retrieving User and Resume schema from the database
 var User = require('../Models/user')
+var Resume = require('../Models/resume')
+// const host = req.host; 
+// const filePath = req.protocol + '://' + host + '/' + req.file.path; 
+// console.log("this is the file path " + filePath );
 
-router.post('/', function(req, res, next) {
-    res.render('split.ejs', { title: 'Split page' });
+module.exports = router;
 
-    var password = req.body.password
-    var ePassword = User.hashPassword(password)
+var User = require('../Models/user');
 
-    //creating new user and store in database
-    User.create({
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        Email: req.body.email,
-        UserName: req.body.userName,
-        Password: ePassword,
-        Major: req.body.major,
-        Seeking: req.body.seeking,
-    }, function(err, user){
-        if(err){
-            console.log("there was an error");
-            console.log(err);
-        }
-        else{
-            console.log("User has been created!");
-            console.log(user);
-        }
-    });
+//Get the split page by rendering the split ejs file
+router.get('/', function(req, res, next) {
+    res.render('split.ejs', { title: 'Split page', user:req.user });
 });
+
 
 module.exports = router;

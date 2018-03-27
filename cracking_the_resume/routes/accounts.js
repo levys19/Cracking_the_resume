@@ -5,9 +5,12 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var port = process.env.PORT || 3000;
 
+
 router.get('/', function(req, res, next) {
-    res.render('account.ejs', { title: 'accounts page' });
+    res.render('account.ejs', { title: 'accounts page', user:req.user });
 });
+
+
 
 // app.get('/', function(req, res){
 //   res.sendFile(__dirname + '/account.html');
