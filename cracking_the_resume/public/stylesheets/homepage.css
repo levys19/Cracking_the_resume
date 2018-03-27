@@ -10,15 +10,13 @@ h1 {
   font-stretch: ultra-expanded;
   line-height: 14px;
   padding-bottom: 15px;
-  padding-top: 5px;
+  padding-top: 15px;
   font-size: 60px;
   z-index: 1;
   position:absolute;
-  /* text-align: center;
-  align-content: center; */
-  
+  text-align: center;
+  align-content: center; 
 }
-
 
 .btn-login{
   background-color: #999999;
@@ -62,4 +60,9 @@ h1 {
 .leftPic{
   /* height:1000px;
   width:100%; */
+}
+
+.theWhole{
+  position: relative;
+  left:25%;
 }
