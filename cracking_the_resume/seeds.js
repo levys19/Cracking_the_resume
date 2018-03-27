@@ -101,13 +101,13 @@ function seedDB(){
 	// });
 
 }
-Resume.find({}, function(err, resume){
-		if(err){
-			console.log("no resumes in the database");
-		}
-		console.log("this is the resume ids"); 
-		console.log(resume._id); 
-	})
+// Resume.find({}, function(err, resume){
+// 		if(err){
+// 			console.log("no resumes in the database");
+// 		}
+// 		console.log("this is the resume ids"); 
+// 		console.log(resume._id); 
+// 	})
 
 
 
