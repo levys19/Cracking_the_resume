@@ -86,7 +86,7 @@ var User = require('../Models/user');
 
 //Get the split page by rendering the split ejs file
 router.get('/', function(req, res, next) {
-    res.render('split.ejs', { title: 'Split page' });
+    res.render('split.ejs', { title: 'Split page',user:req.user });
 });
 
 
