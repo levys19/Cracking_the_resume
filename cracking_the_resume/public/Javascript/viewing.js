@@ -7,6 +7,11 @@ $(document).ready(function(){
 
   })
 
+$("#closeModal").click(function(event) {
+    $("#tallModal").modal("toggle");
+    $("#commentModal").modal("toggle");
+});
+
 
 
   $(function () {
