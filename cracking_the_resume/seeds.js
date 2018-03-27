@@ -4,36 +4,36 @@ var Resume = require("./Models/resume");
 
 //sample user data 
 var userData = [
-	{
-		firstName: "John",
-	    lastName: "Doe",
-	    Email: "jdoe@gmail.com",
-	    UserName: 'jdoe',
-	    Password: User.hashPassword('Test1'),
-	    Year: "Junior",
-	    Major: "Computer Science",
-	    Seeking:"Internship"
-	},
-	{
-		firstName: "Jane",
-	    lastName: "Smith",
-	    Email: "janeSmith@gmail.com",
-	    UserName: 'jSmithy',
-	    Password: User.hashPassword('Test2'),
-	    Year: "Freshman",
-	    Major: "Computer Engineering",
-	    Seeking:"Internship"
-	}, 	
-	{
-		firstName: "Martha",
-	    lastName: "Horton",
-	    Email: "mhorton@gmail.com",
-	    UserName: 'MartyTon',
-	    Password: User.hashPassword('Test3'),
-	    Year: "Senior",
-	    Major: "Computer Science",
-	    Seeking:"Full-Time"
-	},
+    {
+        firstName: "John",
+        lastName: "Doe",
+        Email: "jdoe@gmail.com",
+        UserName: 'jdoe',
+        Password: User.hashPassword('Test1'),
+        Year: "Junior",
+        Major: "Computer Science",
+        Seeking:"Internship"
+    },
+    {
+        firstName: "Jane",
+        lastName: "Smith",
+        Email: "janeSmith@gmail.com",
+        UserName: 'jSmithy',
+        Password: User.hashPassword('Test2'),
+        Year: "Freshman",
+        Major: "Computer Engineering",
+        Seeking:"Internship"
+    },
+    {
+        firstName: "Martha",
+        lastName: "Horton",
+        Email: "mhorton@gmail.com",
+        UserName: 'MartyTon',
+        Password: User.hashPassword('Test3'),
+        Year: "Senior",
+        Major: "Computer Science",
+        Seeking:"Full-Time"
+    },
 ]
 
 
@@ -108,6 +108,7 @@ Resume.find({}, function(err, resume){
 		console.log("this is the resume ids"); 
 		console.log(resume._id); 
 	})
+
 
 
 
