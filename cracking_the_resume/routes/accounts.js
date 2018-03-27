@@ -7,7 +7,7 @@ var port = process.env.PORT || 3000;
 
 
 router.get('/', function(req, res, next) {
-    res.render('account.ejs', { title: 'accounts page' });
+    res.render('account.ejs', { title: 'accounts page', user:req.user });
 });
 
 
