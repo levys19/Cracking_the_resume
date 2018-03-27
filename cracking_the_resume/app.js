@@ -14,14 +14,14 @@ var settings = require('./routes/settings');
 
 
 //Database set up: MONGOOSE
-var mongoose = require('mongoose'); 
+var mongoose = require('mongoose');
 mongoose.connect("mongodb://localhost/Cracking_the_Resume");
 
 //Seeds file
 seedDB = require("./seeds")
 
-// Remove all user data from the data 
-seedDB(); 
+// Remove all user data from the data
+seedDB();
 
 var app = express();
 
@@ -44,6 +44,7 @@ app.use('/accounts', accounts);
 app.use('/split', split);
 app.use('/resumeViewing', resumeViewing);
 app.use('/settings', settings);
+app.use(express.static("public"));
 
 
 
