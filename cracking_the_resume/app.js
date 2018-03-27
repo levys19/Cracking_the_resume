@@ -17,8 +17,6 @@ var accounts = require('./routes/accounts');
 var split = require('./routes/split');
 var resumeViewing = require('./routes/resumeViewing');
 var settings = require('./routes/settings');
-// test page for displaying resumes
-var resumeTest = require('./routes/resumeTest'); 
 
 var multer  = require('multer')
 
@@ -76,8 +74,6 @@ app.use('/accounts', accounts);
 app.use('/split', split);
 app.use('/resumeViewing', resumeViewing);
 app.use('/settings', settings);
-// test page for displaying resumes
-app.use('/resumeTest', resumeTest); 
 app.use('/redirect', redirect);
 
 

@@ -5,7 +5,7 @@ var User = require('../Models/user');
 
 
 router.get('/', function(req, res, next) {
-  res.render('signUp.ejs', { title: 'signup page' });
+  res.render('signUp.ejs', { title: 'signup page', user:req.user });
 });
 
 
