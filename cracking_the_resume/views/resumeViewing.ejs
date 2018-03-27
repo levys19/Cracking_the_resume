@@ -107,10 +107,113 @@
                     <div class="tile__media">
                       <img class="tile__img" src="https://i.pinimg.com/736x/e7/46/8c/e7468cb283e94e3ef7653074d11dad6f--sample-resume-resume-format.jpg" alt="" />
                     </div>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cracking The Resume</title>
+  <link href="stylesheets/viewing.css" rel="stylesheet">
+  <link href="stylesheets/lightbox.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="../javascript/viewing.js"></script>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        </button>
+        <a class="navbar-brand" href="/split">Cracking The Resume</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/acc">About</a></li>
+          <li><a href="/settings">Settings</a></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="commentModal">
+    <div class="modal-dialog commentModalD">
+      <div class="modal-content">
+        <div class="modal-body">
+            <div class="row">
+              <div class="col-md-2">
+              </div>
+              <div class="col-md-8">
+                <div class="page-header">
+                  <h1><small id="commentCount" class="pull-right">5 comments</small> Comments </h1>
                 </div>
+                <div class="comments-list">
+                  <div class="media">
+                    <p class="pull-right"><small>5 days ago</small></p>
+                    <a class="media-left" href="#">
+                  <img src="Cracking_the_resume\pictures\emptypfp.jpg">
+                </a>
+                    <div class="media-body">
+                      <h4 class="media-heading user_name">Liesel Vaidya</h4> Mine is better.
+                      <p><small><a href="">Like</a> - <a href="">Share</a></small></p>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <p class="pull-right"><small>5 days ago</small></p>
+                    <a class="media-left" href="#">
+                  <img src="http://lorempixel.com/40/40/people/2/">
+                </a>
+                    <div class="media-body">
+                      <h4 class="media-heading user_name">Levy Shi</h4> Wow! Awesome resume.
+                      <p><small><a href="">Like</a> - <a href="">Share</a></small></p>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <p class="pull-right"><small>5 days ago</small></p>
+                    <a class="media-left" href="#">
+                  <img src="http://lorempixel.com/40/40/people/3/">
+                </a>
+                    <div class="media-body">
+                      <h4 class="media-heading user_name">Sravanika Doddi</h4> Uhm, This can use some improvement.
+                      <p><small><a href="">Like</a> - <a href="">Share</a></small></p>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <p class="pull-right"><small>5 days ago</small></p>
+                    <a class="media-left" href="#">
+                  <img src="http://lorempixel.com/40/40/people/4/">
+                </a>
+                    <div class="media-body">
+                      <h4 class="media-heading user_name">YongJi C</h4> Wow! this is really great.
+                      <p><small><a href="">Like</a> - <a href="">Share</a></small></p>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <p class="pull-right"><small>5 days ago</small></p>
+                    <a class="media-left" href="#">
+                  <img src="http://lorempixel.com/40/40/people/3/">
+                </a>
+                    <div class="media-body">
+                      <h4 class="media-heading user_name">Shally Guo</h4> Take a look at mine too!
+                      <p><small><a href="">Like</a> - <a href="">Share</a></small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
           <div class="contain">
@@ -164,10 +267,178 @@
                     <div class="tile__media">
                       <img class="tile__img" src="https://wp.myperfectresume.com/wp-content/uploads/2014/05/human-resources-manager-human-resources-thumbnail2.jpg" alt="" />
                     </div>
+  <!-- Modal -->
+  <div class="modal fade modalSize" id="tallModal" tabindex="" role="" aria-labelledby="exampleModalLabel" aria-hidden="">
+    <div class="modal-dialog" role="">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12" style="text-align:center;">
+                <img id="imagePop" src="http://www.gfyork.com/wp-content/uploads/2017/09/resume-latex-template-latex-templates-curricula-vitaersums-templates-1.png" height="500" width="350">
+                <div class="row">
+                  <div class="col-md-12">
+                    <a class="like"><i class="fa fa-thumbs-o-up"></i>
+                         Like <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
+                     </a>
+                    <a class="dislike"><i class="fa fa-thumbs-o-down"></i>
+                         Dislike <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
+                     </a>
+                    <div class="form-group">
+                      <textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="Message" data-role="none"></textarea>
+                    </div>
                   </div>
                 </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <button type="submit" id="postIt" class="btn main-btn">Post Comment</button>
+                  </div>
+                </div>
+                <button type="button" class="pull-left" onclick="">Update Resume</button><br><br><br>
               </div>
             </div>
             <!--<script src="javascript/viewing.js"></script>-->
   </body>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <h1>Internships</h1>
+
+    <div class="row">
+      <div class="row__inner">
+
+        <div class="tile">
+          <div class="tile__media">
+            <img class="tile__img" data-lightbox="image-1" data-title="Looking for Data Science Internship" src="https://i.pinimg.com/736x/c1/9c/f4/c19cf4398e18e8bc9961f7f7a85bc0a7--objectives-sample-resume-objective-sample.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <img class="tile__img" src="https://wp.myperfectresume.com/wp-content/uploads/2014/05/human-resources-manager-human-resources-thumbnail2.jpg" alt="" />
+              <!-- <img class="tile__img" src="resumeTest.pdf"> -->
+              <!-- <embed src"resumeTest.pdf" alt="pdf" pluginspace="http://www.adobe.com/products/acrobat/readstep2.html"> -->
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <img class="tile__img" src="http://www.footrule.org/wp-content/uploads/2018/02/Lovely-Make-Resume-34-About-Remodel-Resume-Sample-with-Make-Resume.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <img class="tile__img" src="http://shalomhouse.us/wp-content/uploads/2018/02/resume-examples-templates-good-job-for-high.png" alt="" />
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <img class="tile__img" src="https://i.pinimg.com/736x/00/4f/b6/004fb64a04d13b09dd8b52a7ab4fbbf4--example-of-resume-student-resume.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <img class="tile__img" src="http://shalomhouse.us/wp-content/uploads/2018/02/sample-resume-admin-assistant-billing-clerk.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <img class="tile__img" src="https://i.pinimg.com/736x/92/ce/d1/92ced17c334acfe5abb6f8b974ac7950--high-school-resume-template-online-resume-template.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <img class="tile__img" src="http://recentresumes.com/wp-content/uploads/2016/05/Example-of-Standard-Resume-Senior-CS-Resume.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <img class="tile__img" src="http://soaringeaglecasino.us/wp-content/uploads/2018/02/free-resume-templates-5a7ecc04d7e21.png" alt="" />
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <img class="tile__img" src="https://i.pinimg.com/originals/12/c9/7f/12c97fd315b54583d10d562f34ab0097.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <img class="tile__img" src="https://i.pinimg.com/736x/e7/46/8c/e7468cb283e94e3ef7653074d11dad6f--sample-resume-resume-format.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="contain">
+    <h1>Full Time</h1>
+    <div class="row">
+      <div class="row__inner">
+
+        <div class="tile">
+          <div class="tile__media">
+            <img class="tile__img" src="http://www.gfyork.com/wp-content/uploads/2017/09/resume-latex-template-latex-templates-curricula-vitaersums-templates-1.png" alt="" />
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <img class="tile__img" src="https://i.pinimg.com/736x/e7/46/8c/e7468cb283e94e3ef7653074d11dad6f--sample-resume-resume-format.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <img class="tile__img" src="http://recentresumes.com/wp-content/uploads/2016/05/Example-of-Standard-Resume-Senior-CS-Resume.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <img class="tile__img" src="https://i.pinimg.com/736x/00/4f/b6/004fb64a04d13b09dd8b52a7ab4fbbf4--example-of-resume-student-resume.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <img class="tile__img" src="https://i.pinimg.com/originals/12/c9/7f/12c97fd315b54583d10d562f34ab0097.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <img class="tile__img" src="http://shalomhouse.us/wp-content/uploads/2018/02/resume-examples-templates-good-job-for-high.png" alt="" />
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <img class="tile__img" src="http://www.gfyork.com/wp-content/uploads/2017/09/resume-latex-template-latex-templates-curricula-vitaersums-templates-1.png" alt="" />
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="tile__media">
+            <img class="tile__img" src="https://wp.myperfectresume.com/wp-content/uploads/2014/05/human-resources-manager-human-resources-thumbnail2.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--<script src="javascript/viewing.js"></script>-->
+</body>
+
 </html>
