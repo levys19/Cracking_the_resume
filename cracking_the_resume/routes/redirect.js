@@ -82,8 +82,3 @@ router.post('/', function(req, res, next) {
 // console.log("this is the file path " + filePath );
 
 module.exports = router;
-
-var User = require('../Models/user');
-
-
-module.exports = router;
