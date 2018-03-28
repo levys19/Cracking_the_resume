@@ -2,6 +2,52 @@
 
 A web application where users can upload their resumes and have it reviewed by other users (specific to CS majors). Users also have the ability to upvote, downvote, and comment on other users’ resumes. 
 
+# Youtube line Aplha Release
+
+
+Youtube link Prototype
+https://www.youtube.com/watch?v=M_qznEGCp30
+
+The web app is now deployed on: https://www.reschk.me/
+
+# How to run the web application on your local machine
+
+Step 1:
+   * Install Node.js on your local machine: https://nodejs.org/en/
+   * Run and execute the file
+   * Now you have npm on your machine
+
+Step2:
+
+In your Mac (Mac) or Windows Terminal(Powershell):
+
+    $ git clone https://github.com/levys19/Cracking_the_resume.git
+
+After you cloned the repository, go inside the directory (~/Cracking_the_resume)
+
+    $ cd Cracking_the_resume
+
+Step 3: 
+
+From the Cracking_the_resume directory, enter the cracking_the_resume directory (~/Cracking_the_resume/cracking_the_resume)
+
+    $ cd cracking_the_resume
+
+Then run:
+
+    $ npm install
+
+to download all the dependencies.
+
+Lastly run:
+
+    $npm start
+
+to start the server
+
+Now, the web app can be launched in your local web browser on localhost:3000
+
+
 # MVP: 
 1) Users will first create a user account with the web application or log into their exisiting account:
   These are the fields they are required to fill out(when they first create an account):

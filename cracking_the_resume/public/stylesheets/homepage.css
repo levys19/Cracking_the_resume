@@ -1,0 +1,68 @@
+body{
+  overflow: hidden;
+}
+h1 {
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+	/* font-size: 24px; */
+	font-style: normal;
+	font-variant: small-caps;
+  font-weight: 800;
+  font-stretch: ultra-expanded;
+  line-height: 14px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-size: 60px;
+  z-index: 1;
+  position:absolute;
+  text-align: center;
+  align-content: center; 
+}
+
+.btn-login{
+  background-color: #999999;
+}
+
+.btn-signup{
+  background-color: #E8E6D9
+}
+
+.formRight{
+  padding-top: 35%;
+}
+
+.rightSide{
+  background-color: #D3C4BE;
+  height:1000px;
+}
+
+.col-md-6{
+  padding:0;
+}
+
+.bottomTextSize > ul > li {
+  font-size: 10px;
+}
+/* .navbar,.navbar-fixed-bottom,.navbar-brand{
+  height: 5px;
+}
+.navbar-toggle{
+  margin-top: 5px;
+} */
+.navbar-nav>li>a{
+  padding-top:5px !important;
+  padding-bottom: 5px !important;
+  line-height: 8px;
+}
+.navbar{
+  min-height: 20px !important;
+}
+
+.leftPic{
+  /* height:1000px;
+  width:100%; */
+}
+
+.theWhole{
+  position: relative;
+  left:25%;
+}
