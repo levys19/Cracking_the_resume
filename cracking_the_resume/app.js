@@ -77,6 +77,7 @@ app.use('/split', split);
 app.use('/resumeViewing', resumeViewing);
 app.use('/settings', settings);
 app.use('/redirect', redirect);
+app.use(express.static("../Resumes"));
 
 
 

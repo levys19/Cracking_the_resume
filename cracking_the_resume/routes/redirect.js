@@ -34,7 +34,7 @@ router.post('/', function(req, res, next) {
 
             //creating resume record
             var resumeRecord = new Resume({
-                resumeLink: req.file.filename
+                resumeName: req.file.filename
             });
 
             //saving resume record to the database

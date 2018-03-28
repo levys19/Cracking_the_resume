@@ -6,26 +6,58 @@ var mongoose = require('mongoose');
 //Retreiving the comment schema 
 var Comment = require('../Models/comments');
 var Resume = require("../Models/resume"); 
+var User = require('../Models/user'); 
+
 
 
 router.get('/', function(req, res, next) {
-    res.render('account.ejs', { title: 'accounts page', user:req.user });
-    // console.log(req.user); 
-    // console.log(req.user.Resume); 
-    // console.log(req.user.Resume._id);
-    // Resume.find({_id: req.user.Resume}, function(err, resumeRecord){
-    //   if(err){
-    //     console.log("resume could not be retrieved");
-    //   }
-    //   else{
-    //     console.log("resume was retrieved"); 
-    //     console.log(resumeRecord);
-    //   }
-    // })
+  console.log("this is the current user"); 
+  console.log(req.user); 
+  console.log("this is req.user.resume"); 
+  console.log(req.user.Resume)
+  var id = req.user.Resume; 
+  Resume.findById(id, function(err, resumeRecord){
+    if(err){
+      console.log("Resume could not be retrieved");
+    }
+    else{
+      console.log("Resume was retrieved from get request"); 
+      console.log(resumeRecord); 
+      //console.log(resumeRecord[resumeName]); 
+      res.render('account.ejs', {resumeRecord: resumeRecord}); 
+    }
+  });   
+
+  // User.find({}, function(err, data){
+  //   res.render('account.ejs', {
+  //     user: req.user, 
+  //     userSchema: data
+  //   });
+  // });
+
+    //res.render('account.ejs', { title: 'accounts page', user:req.user });
+
+    // retreiving the resume object ID for the current user
+    //var resumeID = req.user.Resume
+ 
+
+
+    //console.log(req.user); 
+    //console.log(req.user.Resume); 
+    //console.log(req.user.Resume._id);
+//     Resume.find({_id: req.user.Resume}, function(err, resumeRecord){
+//       if(err){
+//         console.log("resume could not be retrieved");
+//       }
+//       else{
+//         console.log("resume was retrieved"); 
+//         console.log(resumeRecord);
+//       }
+//     })
 });
 
 router.post('/', function(req, res, next){
-  res.render('account', { title: 'accounts page', user:req.user });
+  //res.render('account', { title: 'accounts page', user:req.user });
   console.log("this is from the post request")
   console.log(req.body.Message); 
 
@@ -42,9 +74,22 @@ router.post('/', function(req, res, next){
     }
     else{
       console.log("comment record was created"); 
-      console.log(comment); 
+      //console.log(comment); 
     }
   });
+    console.log("this is req.user.resume"); 
+    console.log(req.user.Resume)
+    Resume.find({_id: req.user.Resume}, function(err, resumeRecord){
+      if(err){
+        console.log("Resume could not be retrieved");
+      }
+      else{
+        console.log("Resume was retrieved"); 
+        console.log(resumeRecord); 
+
+        res.render('account.ejs', {resumeRecord: resumeRecord}); 
+      }
+    })
    
 })
 
