@@ -31,7 +31,7 @@ mongoose.connect("mongodb://localhost/Cracking_the_Resume");
 seedDB = require("./seeds");
 
 // Remove all user data from the data 
-seedDB(); 
+//seedDB(); 
 
 var app = express();
 
