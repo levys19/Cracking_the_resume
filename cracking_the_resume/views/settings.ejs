@@ -37,9 +37,6 @@
         </nav> 
 
         <div class="container">
-                <form class="form-horizontal">
-                <fieldset>
-                
                 <!-- Form Name -->
                 <legend>Account settings</legend>
         
@@ -52,29 +49,44 @@
                       </div>
                        -->
                 <!-- Text input-->
-                <div class="form-group">
-                  <label class="col-md-4 control-label" for="textinput">Change Email ID</label>  
-                  <div class="col-md-4">
-                  <input id="textinput" name="textinput" type="text" placeholder="your current email " class="form-control input-md">
-                  </div>
-                </div>
+                <!--<div class="form-group">-->
+                  <!--<label class="col-md-4 control-label" for="textinput">Change Email ID</label>  -->
+                  <!--<div class="col-md-4">-->
+                  <!--<input id="textinput" name="textinput" type="text" placeholder="your current email " class="form-control input-md">-->
+                  <!--</div>-->
+                <!--</div>-->
         
                 <!-- Password input-->
-                <div class="form-group">
-                  <label class="col-md-4 control-label" for="passwordinput">new password</label>
-                  <div class="col-md-4">
-                    <input id="passwordinput" name="passwordinput" type="password" placeholder="new password" class="form-control input-md">
-                    
-                  </div>
-                </div>
+                <!--<div class="form-group">-->
+                  <!--<label class="col-md-4 control-label" for="passwordinput">New Password</label>-->
+                  <!--<div class="col-md-4">-->
+                      <!--<-->
+                    <!--<input id="passwordinput" name="passwordinput" type="password" placeholder="new password" class="form-control input-md">-->
+                  <!--</div>-->
+                <!--</div>-->
+
+                    <form name="password" action = "/settings" class= "form-horizontal" role="form" method="post">
+                        <div class="form-group">
+                            <label for="new password" class="col-sm-3 control-label">New Password</label>
+                            <div class="col-sm-9">
+                                <!-- added a name tag to the input  -->
+                                <input type="password" name="newPassword" id="newPassword" placeholder="New Password" class="form-control" autofocus>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-9 col-sm-offset-3">
+                                <input type="submit" value="Save password"/>
+                            </div>
+                        </div>
+                    </form>
                
                 <!-- Save changes Button -->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="singlebutton"></label>
-                    <div class="col-md-4">
-                            <button id="singlebutton" name="singlebutton" class="btn btn-success btn-sm">Save</button>
-                    </div>
-                  </div>
+                <!--<div class="form-group">-->
+                    <!--<label class="col-md-4 control-label" for="singlebutton"></label>-->
+                    <!--<div class="col-md-4">-->
+                            <!--<button id="singlebutton" name="singlebutton" class="btn btn-success btn-sm">Save</button>-->
+                    <!--</div>-->
+                  <!--</div>-->
         
         
           
@@ -94,13 +106,5 @@
                             <button id="singlebutton" name="singlebutton" class="btn btn-success btn-sm">Logout</button>
                     </div>
                   </div> -->
-        
-        
-                   
-                </fieldset>
-                </form>
-                
-                </div>
-
   </body>
 </html>
