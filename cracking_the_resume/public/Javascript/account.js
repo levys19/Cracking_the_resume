@@ -11,8 +11,8 @@ $(function () {
     input.val(input.val() - 1);
   });
 
-  // var userName = "Random person";
-  // var commentCount = 5;
+  var userName = "Random person";
+  var commentCount = 5;
 
   // function triggerButton(){
   //     if(!$.trim($("#Message").val())){

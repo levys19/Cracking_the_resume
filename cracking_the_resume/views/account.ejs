@@ -59,6 +59,10 @@ fclose ($handle);}
 
           
          <h2> This is the resume record <%=resumeRecord.resumeName%></h2>
+         <h3>This is the content of the comments</h3>
+         <% resumeRecord.comments.forEach(function(comment){ %>
+            <h4> <%-JSON.stringify(comment.content)%> </h4> 
+       <% }) %>
 
           <!-- <img src="http://www.gfyork.com/wp-content/uploads/2017/09/resume-latex-template-latex-templates-curricula-vitaersums-templates-1.png" height="500" width="350"> -->
           <img src="<%=resumeRecord.resumeName%>" height="500" width="350">
@@ -89,13 +93,14 @@ fclose ($handle);}
               <h1><small id="commentCount" class="pull-right">5 comments</small> Comments </h1>
             </div>
             <div class="comments-list">
-
-              <div class="media">
-                <div class="media-body">
-                  <h4 class="media-heading user_name">Liesel Vaidya</h4>
-                  <p>Mine is better..</p>
+              <% resumeRecord.comments.forEach(function(comment){ %>
+                <div class="media">
+                  <div class="media-body">
+                    <h4 class="media-heading user_name"><%JSON.stringify(comment.userName)%> </h4>
+                    <p><%JSON.stringify(comment.content)%> </p>
+                  </div>
                 </div>
-              </div>
+              <% }) %>
 
               </div>
               </div>
@@ -107,7 +112,3 @@ fclose ($handle);}
     </div>
 
     <?php include "comments.html"; ?><br>
-
-
-
-  </body>

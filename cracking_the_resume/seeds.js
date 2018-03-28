@@ -126,6 +126,9 @@ function seedDB(){
 	//deleting the Resume collection 
 	Resume.collection.drop();
 
+    //deleting the comments collection
+    //Comments.collection.drop(); 
+
 	//Adding sample user data
 	userData.forEach(function(seed){
 		User.create(seed, function(err, data){
@@ -152,6 +155,8 @@ function seedDB(){
 			}
 		});		
 	});
+
+
 
 	//adding resumes object to each user: 
 
