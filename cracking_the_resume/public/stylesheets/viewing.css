@@ -40,8 +40,8 @@ a:hover {
 .tile {
   position: relative;
   display: inline-block;
-  width: 250px;
-  height: 240.625px;
+  width: 450px;
+  height: 440.625px;
   margin-right: 10px;
   font-size: 20px;
   cursor: pointer;
@@ -51,8 +51,8 @@ a:hover {
           transform-origin: center left;
 }
 .tile__img {
-  width: 250px;
-  height: 240.625px;
+  width: 450px;
+  height: 440.625px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -264,8 +264,8 @@ button:hover {
   overflow: auto;
   /* overflow-y: auto;
   overflow-x: hidden; */
-  height:600px;
-  width: 800px;
+  height:150px;
+  width: 200px;
 }
 
 .modal-xl{
@@ -292,6 +292,10 @@ button:hover {
 .image-class{
   height: 800px;
   width: 600px;
+}
+
+.user_name{
+  color:purple;
 }
 
 /* sdasd */

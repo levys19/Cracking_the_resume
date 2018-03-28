@@ -6,6 +6,7 @@ $(document).ready(function(){
     $("#tallModal").modal("toggle");
     $("#commentModal").modal("toggle");
     $("h3").text(String(clickedImg));
+    
   })
 
 $("#closeModal").click(function(event) {

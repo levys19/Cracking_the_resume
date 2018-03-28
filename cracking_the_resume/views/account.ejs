@@ -102,8 +102,8 @@ fclose ($handle);}
               <% resumeRecord.comments.forEach(function(comment){ %>
                 <div class="media">
                   <div class="media-body">
-                    <h4 class="media-heading user_name"><%-JSON.stringify(comment.userName)%> </h4>
-                    <p><%-JSON.stringify(comment.content)%> </p>
+                    <h4 class="media-heading user_name"><%JSON.stringify(comment.userName)%> </h4>
+                    <p><%JSON.stringify(comment.content)%> </p>
                   </div>
                 </div>
               <% }) %>

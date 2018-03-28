@@ -55,10 +55,6 @@ router.post('/', function(req, res, next){
 		if(!err){
 			console.log("these are the records"); 
 			console.log(records)
-			if(records.resumeName == filename){
-				console.log("this is the resume you're looking for")
-				console.log(records)
-			}
 			res.render("resumeViewing.ejs",{records, records}); 
 		}
 	});

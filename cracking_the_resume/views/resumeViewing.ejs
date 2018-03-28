@@ -133,19 +133,16 @@
               <img class="tile__img" src="#" alt="" />
             </div>
           </div>
-
           <div class="tile">
               <div class="tile__media">
                 <img class="tile__img" src="#" alt="" />
               </div>
             </div>
-
             <div class="tile">
                 <div class="tile__media">
                   <img class="tile__img" src="#" alt="" />
                 </div>
               </div>
-
               <div class="tile">
                   <div class="tile__media">
                     <img class="tile__img" src="#" alt="" />
@@ -154,7 +151,7 @@
       </div>
     </div>
   </div> -->
-  <div class="container-fluid" style="position:absolute; top:20%; left:20%;">
+  <div class="container-fluid" >
     <h1>Start Reviewing Resumes!</h1>
     <div class="row">
       <div class="row__inner">
@@ -162,8 +159,21 @@
             <div class="tile">
               <div class="tile__media">
                 <img class="tile__img" src=<%-JSON.stringify(record.resumeName)%> alt="" />
+                              <div class="comments-list">
+              <% record.comments.forEach(function(comment){ %>
+                <div class="media">
+                  <div class="media-body">
+                    <h6 class="media-heading user_name">User: <%-JSON.stringify(comment.userName)%> </h4>
+                    <p><%-JSON.stringify(comment.content)%> </p>
+                  </div>
+                </div>
+              <% }) %>
+
               </div>
+              </div>
+
             </div>
+
         <% })%>
       </div>
     </div>
