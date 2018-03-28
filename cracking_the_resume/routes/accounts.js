@@ -43,10 +43,9 @@ router.post('/', function(req, res, next){
     else{
       console.log("this is the current resume"); 
       console.log(resumeRecord);
-      //res.render('account.ejs', {resumeRecord: resumeRecord})
-
-      res.send({resumeRecord:resumeRecord});
-      res.redirect('accounts.js');
+      res.render('account.ejs', {resumeRecord: resumeRecord})
+      // res.redirect('accounts.js'); 
+      // res.send({resumeRecord:resumeRecord});
 
     }
   }); 
