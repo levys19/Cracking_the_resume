@@ -1,9 +1,11 @@
 var mongoose = require("mongoose");
 var User = require("./Models/user");
 var Resume = require("./Models/resume");
+var Comments = require("./Models/comments"); 
 
 //sample user data 
 var userData = [
+	//interns
     {
         firstName: "John",
         lastName: "Doe",
@@ -25,72 +27,110 @@ var userData = [
         Seeking:"Internship"
     },
     {
+        firstName: "Jody",
+        lastName: "Fanny",
+        Email: "jFanny@gmail.com",
+        UserName: 'jFanny',
+        Password: User.hashPassword('Test3'),
+        Year: "Freshman",
+        Major: "Computer Engineering",
+        Seeking:"Internship"
+    },
+    {
+        firstName: "Amy",
+        lastName: "Lee",
+        Email: "AmyLee@gmail.com",
+        UserName: 'ALee',
+        Password: User.hashPassword('Test4'),
+        Year: "Freshman",
+        Major: "Computer Engineering",
+        Seeking:"Internship"
+    },
+    //fulltimes 
+    {
         firstName: "Martha",
         lastName: "Horton",
         Email: "mhorton@gmail.com",
         UserName: 'MartyTon',
-        Password: User.hashPassword('Test3'),
+        Password: User.hashPassword('Test5'),
+        Year: "Senior",
+        Major: "Computer Science",
+        Seeking:"Full-Time"
+    },
+    {
+        firstName: "Cady",
+        lastName: "Huron",
+        Email: "cHuron@gmail.com",
+        UserName: 'cady',
+        Password: User.hashPassword('Test6'),
+        Year: "Senior",
+        Major: "Computer Science",
+        Seeking:"Full-Time"
+    },
+    {
+        firstName: "Glen",
+        lastName: "Coco",
+        Email: "coco@gmail.com",
+        UserName: 'GlenCoco',
+        Password: User.hashPassword('Test7'),
+        Year: "Senior",
+        Major: "Computer Science",
+        Seeking:"Full-Time"
+    },
+    {
+        firstName: "Regina",
+        lastName: "George",
+        Email: "regina@gmail.com",
+        UserName: 'QueenBee',
+        Password: User.hashPassword('Test8'),
         Year: "Senior",
         Major: "Computer Science",
         Seeking:"Full-Time"
     },
 ]
 
-
-// //sample resume data
-// var resumeData = [
-// 	{
-// 		resumeName: "r1.pdf"
-// 	},
-// 	{
-// 		resumeName: "r2.pdf"
-// 	},
-// 	{
-// 		resumeName: "r3.pdf"
-// 	},
-// ]
+//sample resume data
+var resumeData = [
+	{
+		resumeName: "r2.jpg"
+	},
+	{
+		resumeName: "r3.png"
+	},
+	{
+		resumeName: "r4.jpg"
+	},
+	{
+		resumeName: "r5.jpg"
+	},
+	{
+		resumeName: "r6.jpg"
+	},
+	{
+		resumeName: "r7.jpg"
+	},
+	{
+		resumeName: "r8.jpg"
+	},
+	{
+		resumeName: "r9.jpg"
+	},
+]
 
 
 function seedDB(){
-	//removing all user data from current database 
-	User.remove({}, function(err){
-		if(err){
-			console.log("There was an error");
-			console.log(err)
-		}
-		console.log("all user data have been removed"); 
-	}); 
 
-	//removing all resume data from current database
-	Resume.remove({}, function(err){
-		if(err){
-			console.log("There was an error"); 
-			console.log(err); 
-		}
-		console.log("All resume data have been removed"); 
-	});
+	//deleting the User collection 
+	User.collection.drop(); 
 
-	 
-	// 	//creating resume records
-	// resumeData.forEach(function(seed){
-	// 	//creating resume record
-	// 	var resumeRecord = new Resume(seed)
-    //
-	// 	resumeRecord.save(function(err, resume){
-	// 		if(err){
-	// 			console.log("There was an error in saving the resume");
-	// 		}
-	// 		else{
-	// 			console.log("Sucessfully created resume record");
-	// 			console.log(resume);
-	// 		}
-	// 	});
-	// });
+	//deleting the Resume collection 
+	Resume.collection.drop();
 
+	//Adding sample user data
 	userData.forEach(function(seed){
 		User.create(seed, function(err, data){
 			if(err){
-				console.log("There was an error");
+				console.log("There was an error in creating sample users");
 				console.log(err);
 			}
 			else{
@@ -100,8 +140,21 @@ function seedDB(){
 		});
 	});
 
+
+	//Adding sample resume data 
+	resumeData.forEach(function(seed){
+		Resume.create(seed, function(err, data){
+			if(err){
+				console.log("There was an error in creating sample resumes"); 
+			}
+			else{
+				console.log("Added a new resume!"); 
+			}
+		});		
+	});
+
+	//adding resumes object to each user: 
+
 }
-
-
 
 module.exports = seedDB; 
