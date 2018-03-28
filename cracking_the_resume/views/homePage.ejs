@@ -10,27 +10,30 @@
 </head>
 <body>
 
-     <h2> <%=UsernameError%></h2>
-     <h2> <%=PasswordError%></h2>
+     <!-- <h2> <%=UsernameError%></h2>
+     <h2> <%=PasswordError%></h2> -->
 
-  <div style="" class="row theWhole">
+     <div style="" class="theWhole">  
+      <div class="container" style="text-align:center;">
+          <h1>Cracking The Resume</h1>    
+      </div> </div>
     <div class="col-md-6 leftSide">
       <!-- <img class="img-responsive leftPic" src="https://img.etsystatic.com/il/48a2c6/914224541/il_fullxfull.914224541_ci1e.jpg" alt=""> -->
-      <img class="img-responsive leftPic" src="https://www.graphicsfuel.com/wp-content/uploads/2016/02/Resume-Template.jpg" alt="">
+      <img class="img-responsive leftPic" src="resumecopy.jpg" alt="">
     </div>
     <div class="col-md-6 rightSide">
       <div class="row">
         <div class="col-md-3">
         </div>
         <div style="text-align:center;" class="col-md-6">
-          <form class="formRight" method = "post" action="/">
+          <form class="formRight" method="post" action="/">
             <div class="form-group">
-             <label for="username"></label>
+             <label for="username"><%=UsernameError%></label>
              <input type="username" class="form-control" id="username1" placeholder="Enter username" name = "username">
             </div>
 
             <div class="form-group">
-             <label for="password"></label>
+             <label for="password"><%=PasswordError%></label>
              <input type="password" class="form-control" id="password1" placeholder="Enter password" name = "password">
             </div>
 
@@ -39,7 +42,7 @@
             </button>
           </form>
 
-          <h1>New to CTR?</h1>
+          <h2>New to CTR?</h2>
           <button onclick="window.location='signUp';" class="btn btn-signup btn-lg">
             Sign Up
           </button>

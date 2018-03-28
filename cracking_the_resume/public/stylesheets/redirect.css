@@ -1,0 +1,32 @@
+body{
+    padding-top: 130px;
+    overflow: hidden;
+    background-color: #D3C4BE;
+    position:absolute;
+
+  }
+  h1{
+     font-size: 33px;
+  }
+  .btn-signup{
+    background-color: #E8E6D9;
+  }
+  
+  .col-md-6{
+  
+    padding:80px;
+    left: 39%;
+  }
+  
+  .bottomTextSize > ul > li {
+    font-size: 10px;
+  }
+  .navbar-nav>li>a{
+    padding-top:5px !important;
+    padding-bottom: 5px !important;
+    line-height: 8px;
+  }
+  .navbar{
+    min-height: 20px !important;
+  }
+  

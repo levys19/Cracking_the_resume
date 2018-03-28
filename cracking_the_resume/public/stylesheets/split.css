@@ -21,4 +21,12 @@ body{
   .bottomTextSize > ul > li {
     font-size: 10px;
   }
+  .navbar-nav>li>a{
+    padding-top:5px !important;
+    padding-bottom: 5px !important;
+    line-height: 8px;
+  }
+  .navbar{
+    min-height: 20px !important;
+  }
   

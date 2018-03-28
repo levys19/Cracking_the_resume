@@ -1,31 +1,41 @@
 body {
-    background-color: #C4BDAC;
+  background-color: #C4BDAC;
 }
 
 .conForm{
-  padding-top: 1%;
+padding-top: 1%;
 }
 
 *[role="form"] {
-    max-width: 530px;
-    padding: 15px;
-    margin: 0 auto;
-    background-color: #fff;
-    border-radius: 0.3em;
+  max-width: 530px;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 0.3em;
 }
 
 *[role="form"] h2 {
-    margin-left: 5em;
-    margin-bottom: 1em;
+  margin-left: 5em;
+  margin-bottom: 1em;
 }
 
 .btn-register{
-  background-color: #999999;
+/* background-color: #999999; */
 }
 
 .form-horizontal{
-  width:100%;
+width:100%;
 }
 .bottomTextSize > ul > li {
-  font-size: 10px;
+font-size: 10px;
 }
+
+.navbar-nav>li>a{
+padding-top:5px !important;
+padding-bottom: 5px !important;
+line-height: 8px;
+}
+.navbar{
+min-height: 20px !important;
+}
+

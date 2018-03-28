@@ -77,10 +77,10 @@ router.get('/split', isLoggedIn, function(req, res, next) {
 
 
 //logout
-// router.get('/logout', function(req, res) {
-//     req.logout();
-//     res.redirect('/');
-// });
+router.get('/logout', function(req, res) {
+    req.logout();
+    res.redirect('/');
+});
 
 
 //Passport supports this function which allows only the users to log in
