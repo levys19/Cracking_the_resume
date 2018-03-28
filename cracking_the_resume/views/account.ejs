@@ -57,11 +57,9 @@ fclose ($handle);}
       <div class="row">
         <div class="col-md-6" style="text-align:center;">
 
-          
-         <h2> This is the resume record <%=resumeRecord.resumeName%></h2>
-         <h3>This is the content of the comments</h3>
+
          <% resumeRecord.comments.forEach(function(comment){ %>
-            <h4> <%-JSON.stringify(comment.content)%> </h4> 
+            <h4> <%-JSON.stringify(comment.content)%> </h4>
        <% }) %>
 
           <!-- <img src="http://www.gfyork.com/wp-content/uploads/2017/09/resume-latex-template-latex-templates-curricula-vitaersums-templates-1.png" height="500" width="350"> -->
