@@ -56,9 +56,8 @@ Now, the web app can be launched in your local web browser on localhost:3000
     * Major/year 
     * City 
     * What are you looking for? Internship/full-time
-2) Then, user uploads their resume to the web app (.pdf files only) 
-3) After the user uploads their resume, he/she can upvote, downvote or comment (comments can be upvoted or downvoted) on other users'      resumes.  
-4) Users will get notified whenever someone comments/upvote & downvote their resume
+2) Then, user uploads their resume to the web app 
+3) After the user uploads their resume, he/she can upvote, downvote or comment on other users' resumes.  
 
 # Add-on Features 
   * Making the resume anonymous so users do not see eath other's personal information
