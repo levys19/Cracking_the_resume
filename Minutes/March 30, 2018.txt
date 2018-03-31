@@ -1,0 +1,34 @@
+﻿Date: March 30, 2018
+Time: 2:00PM -  3:00PM
+
+
+Meeting Attendance: Shally Guo, YongJi Chen, Sravanika Doddi, Liesel Vaidya. Levy Shi
+
+
+Meeting Summary: 
+Bugs: 
+1. We need to convert pdf to png.
+2. There will be no pop up/ creating a new design with no pop ups.
+3. Comments on the account page, fix them
+4. Fix the the upvotes and downvotes and store them in the database
+
+
+Talked about changing the whole design for the resume Viewing Page. 
+4 resumes per page and scroll down as we keep adding more users. 
+Next Meeting: Saturday 2:30pm. 
+
+
+Accomplishments (since last meeting): 
+   * Liesel: Better navigation. Made the homepage more informative. Logout button. Created blank containers for viewing page. Changed layout.
+   * Sravanika: Helped Shally with database, and overall helped the backend team with creating comments and displaying on the web page. 
+   * Shally: Store all incoming resumes to a local directory. Display resume from the local directory to resume page. Connect comment collections from UI to database and vice versa. 
+   * YongJi: Made style changes and positioning changes on the frontend. Form validations.
+   * Levy Shi : I deployed the app on AWS.
+
+
+Tasks (to be completed before next meeting): 
+   * Liesel: Stretch the picture on home screen to fit to page (bug report). Fix the bug report on the homepage sign up. Remove terms. Change the layout of the viewing page.
+   * Sravanika: Make the logout button work on the resume viewing Page. 
+   * Yongji: Set file upload restrictions.
+   * Shally: Fix the upvote and downvotes and store them in the database. Fix comments display. Figure out routing for individual resume page. 
+   * Levy: Put resumes on the cloud, change the resume from png to pdf
