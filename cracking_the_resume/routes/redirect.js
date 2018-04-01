@@ -82,7 +82,7 @@ router.post('/', function(req, res, next) {
     });
     // uploading file to s3
     const fileName = Date.now().toString()
-    //^^^^ make this into whatever you want to name your files in s3
+    //^^^^ make this into whatever you want to name your files in s3 **has to be a string
     fs.readFile('../Resumes/temp.png', function (err, data) {
       if (err) { throw err; }
       var s3 = new AWS.S3();
