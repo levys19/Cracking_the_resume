@@ -1,24 +1,28 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-
+var AWS = require("aws-sdk")
+var fs = require("fs")
 
 //retrieving User and Resume schema from the database
 var User = require('../Models/user')
 var Resume = require('../Models/resume')
 
+AWS.config.update({ accessKeyId: 'AKIAJNGXZ6IAX7CSVWDQ', secretAccessKey: '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' });
 
 var multer = require('multer');
 var storage = multer.diskStorage({
     destination: function(req,file, cb){
-        cb(null, '../Resumes')
+        cb(null, './Resumes')
     },
     filename: function(req, file, db){
-        db(null, file.fieldname + '-' + Date.now() + '.png')
+        db(null, 'temp.png')
     }
 });
 
 var upload = multer({storage:storage}).single('resume');
+
+var toS3 =
 
 
 router.post('/', function(req, res, next) {
@@ -75,6 +79,21 @@ router.post('/', function(req, res, next) {
             });
         }
     });
+    fs.readFile('./Resumes/temp.png', function (err, data) {
+      if (err) { throw err; }
+      var s3 = new AWS.S3();
+      s3.putObject({
+        Bucket: 'crackingtheresume',
+        Key: "Bro",
+        Body: data,
+        ACL: 'public-read'
+      },function (resp) {
+        console.log(arguments);
+        console.log('Successfully uploaded package.');
+      });
+
+    });
+
 });
 
 // const host = req.host;
