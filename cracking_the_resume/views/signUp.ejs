@@ -6,7 +6,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheets/formpage.css">
-    <script src="../public/javascript/signup.js"></script>
+    <script src="../javascript/signup.js"></script>
 </head>
 <body>
   <div class="container">
@@ -74,8 +74,9 @@
                     <label class="control-label col-sm-3">Resume</label>
                     <div class="col-sm-9">
                       <label class="custom-file">
-                        <input type="file" id="file" class="custom-file-input" name = "resume" required="required">
-                        <p>(PNG)*</p>
+                        <input type="file" id="fileUpload" class="custom-file-input" name = "resume" required="required">
+                        <input type="checkbox" id="checkResume" name="checkbox" value="checkFile" required="required">Upload a PNG file<br>
+                        <!-- <p>(PNG)*</p> -->
                         <span class="custom-file-control"></span>
                       </label>
                     </div>
@@ -91,7 +92,7 @@
                 </div> <!-- /.form-group -->
                 <div class="form-group">
                     <div class="col-sm-9 col-sm-offset-3">
-                        <input type="submit" value="Sign Up"/>
+                        <input type="submit" id="submitForm" value="Sign Up"/>
                     </div>
                 </div>
             </form> <!-- /form -->
