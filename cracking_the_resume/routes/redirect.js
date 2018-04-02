@@ -8,7 +8,7 @@ var fs = require("fs")
 var User = require('../Models/user')
 var Resume = require('../Models/resume')
 //my personal AWS access key, don't share it please -levy
-AWS.config.update({ accessKeyId: 'AKIAJNGXZ6IAX7CSVWDQ', secretAccessKey: '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' });
+AWS.config.update({ accessKeyId: '....', secretAccessKey: '...' });
 
 var multer = require('multer');
 var storage = multer.diskStorage({
