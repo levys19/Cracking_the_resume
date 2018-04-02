@@ -71,11 +71,8 @@ router.post('/', function(req, res, next){
           //saving the updated version 
           resumeRecord.save(); 
           console.log(commentRecord)
+          //redirecting to the accounts page 
           res.redirect('/accounts');
-          
-
-          //rendering accounts page 
-          //res.render('account.ejs', {resumeRecord: resumeRecord})
         }
       }); 
     } 
