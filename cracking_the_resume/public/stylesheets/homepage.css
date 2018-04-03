@@ -1,5 +1,6 @@
 body{
   overflow: hidden;
+  background-size:cover; 
 }
 h1 {
 	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
