@@ -8,38 +8,44 @@ var fs = require("fs")
 var User = require('../Models/user')
 var Resume = require('../Models/resume')
 //my personal AWS access key, don't share it please -levy
+
+
 AWS.config.update({ accessKeyId: 'AKIAJNGXZ6IAX7CSVWDQ', secretAccessKey: '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' });
-
 var multer = require('multer');
-var storage = multer.diskStorage({
-    destination: function(req,file, cb){
-        cb(null, '../Resumes')
-    },
-    filename: function(req, file, db){
-//*** -levy Last night- changed the files from date to temp.png
-        db(null, 'temp.png')
-    }
-});
 
-var upload = multer({storage:storage}).single('resume');
 
-var toS3 =
 
+
+  const fileName =  Date.now() + '.pdf'
+  var storage = multer.diskStorage({
+      destination: function(req,file, cb){
+          cb(null, './Resumes')
+      },
+      filename: function(req, file, db){
+  //*** -levy Last night- changed the files from date to temp.png
+          db(null, "temp.pdf")
+      }
+  });
+
+  var upload = multer({storage:storage}).single('resume');
 
 router.post('/', function(req, res, next) {
     res.render('redirect', { title: 'Redirect page', user:req.user });
+    var upload = multer({storage:storage}).single('resume');
+
     upload(req, res, function(err) {
         if(err){
             console.log("file could not be uploaded");
         }
         else{
+
             //req.file.filename is the filename of the uploaded file
             console.log(req.file.filename);
             console.log("file upload successful");
 
             //creating resume record
             var resumeRecord = new Resume({
-                resumeName: req.file.filename
+                resumeName: "https://s3.amazonaws.com/crackingtheresume/" + fileName 
             });
 
             //saving resume record to the database
@@ -55,7 +61,7 @@ router.post('/', function(req, res, next) {
             //encrypting the password
             var password = req.body.password
             var ePassword = User.hashPassword(password)
-
+            console.log(req.body.firstName)
             //creating a user record
             var userRecord = new User({
                 firstName: req.body.firstName,
@@ -78,26 +84,31 @@ router.post('/', function(req, res, next) {
                     console.log(user);
                 }
             });
+
+
         }
-    });
-    // uploading file to s3
-    const fileName = Date.now().toString()
-    //^^^^ make this into whatever you want to name your files in s3 **has to be a string
-    fs.readFile('../Resumes/temp.png', function (err, data) {
-      if (err) { throw err; }
-      var s3 = new AWS.S3();
-      s3.putObject({
-        Bucket: 'crackingtheresume',
-        //change this to whatever you want to name each file please//look at above comment
-        Key: fileName,
-        Body: data,
-        ACL: 'public-read'
-      },function (resp) {
-        console.log(arguments);
-        console.log('Successfully uploaded package.');
-      });
+        fs.readFile('./Resumes/temp.pdf' , function (err, data) {
+          if (err) { throw err; }
+          var s3 = new AWS.S3();
+          s3.putObject({
+            Bucket: 'crackingtheresume',
+            //change this to whatever you want to name each file please//look at above comment
+            Key: fileName,
+            Body: data,
+            ACL: 'public-read'
+          },function (resp) {
+            console.log(arguments);
+            console.log('Successfully uploaded package.');
+          });
+
+        });
+
+
+
 
     });
+    // uploading file to s3
+    //^^^^ make this into whatever you want to name your files in s3 **has to be a string
 
 });
 
