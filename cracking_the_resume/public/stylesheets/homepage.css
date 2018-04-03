@@ -16,7 +16,7 @@ h1 {
   z-index: 1;
   position:absolute;
   text-align: center;
-  align-content: center; 
+  align-content: center;
 }
 
 .btn-login{
@@ -58,11 +58,24 @@ h1 {
   min-height: 20px !important;
 }
 
-.leftPic,img{
+.leftSide{
+  width: 50%;
+  float:left;
+}
+.rightSide{
+  width: 50%;
+  float: right;
 }
 
-.theWhole{
-  background-size:cover; 
+.leftPic{
+
+  height: 100%;
+  width: 100%;
+
+
+}
+
+.titleHead{
   position: relative;
-  left:25%;
+  left:35%;
 }
