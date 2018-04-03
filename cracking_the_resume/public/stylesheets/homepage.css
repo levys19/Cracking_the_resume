@@ -1,5 +1,6 @@
 body{
   overflow: hidden;
+  background-size:cover; 
 }
 h1 {
 	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
@@ -57,12 +58,11 @@ h1 {
   min-height: 20px !important;
 }
 
-.leftPic{
-  /* height:1000px;
-  width:100%; */
+.leftPic,img{
 }
 
 .theWhole{
+  background-size:cover; 
   position: relative;
   left:25%;
 }
