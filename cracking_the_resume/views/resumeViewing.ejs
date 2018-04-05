@@ -48,53 +48,15 @@
     </div>
 </nav>
 <!-- END OF NAVIGATION BAR  -->
+<%resumeRecord.forEach(function(resume){ %>
 <div class="gallery">
     <a target="_blank" href="img_fjords.jpg">
-        <img src="resume-1522266678209.png" alt="Trolltunga Norway" width="300" height="200">
+        <img src="<%=resume.resumeName%>" alt="Trolltunga Norway" width="300" height="200">
     </a>
-    <!--newresume is a new ejs file that I created for the individual resumes. For now it just has the same code as accounts-->
-    <a href="newresume" class="button">View</a>    
+
+    <a href="individual/<%=resume._id%>" class="button">View</a>    
 </div>
-
-
-<div class="gallery">
-    <a target="_blank" href="img_fjords.jpg">
-        <img src="resume-1522266678209.png" alt="Trolltunga Norway" width="300" height="200">
-    </a>
-    <a href="newresume" class="button">View</a>    
-</div>
-
-
-<div class="gallery">
-    <a target="_blank" href="img_fjords.jpg">
-        <img src="resume-1522266678209.png" alt="Trolltunga Norway" width="300" height="200">
-    </a>
-    <a href="newresume" class="button">View</a>    
-</div>
-
-
-<div class="gallery">
-    <a target="_blank" href="img_fjords.jpg">
-        <img src="resume-1522266678209.png" alt="Trolltunga Norway" width="300" height="200">
-    </a>
-    <a href="newresume" class="button">View</a>    
-</div>
-
-
-<div class="gallery">
-    <a target="_blank" href="img_fjords.jpg">
-        <img src="resume-1522266678209.png" alt="Trolltunga Norway" width="300" height="200">
-    </a>
-    <a href="newresume" class="button">View</a>    
-</div>
-
-
-<div class="gallery">
-    <a target="_blank" href="img_fjords.jpg">
-        <img src="resume-1522266678209.png" alt="Trolltunga Norway" width="300" height="200">
-    </a>
-    <a href="newresume" class="button">View</a>
-</div>
+<%})%>
 
 </body>
 </html>
