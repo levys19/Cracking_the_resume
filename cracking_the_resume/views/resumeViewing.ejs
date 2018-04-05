@@ -1,184 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Cracking The Resume</title>
-        <link href="stylesheets/viewing.css" rel="stylesheet">
-        <link href="stylesheets/lightbox.css" rel="stylesheet">
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <script src="https://code.jquery.com/jquery.min.js"></script>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script src="../javascript/viewing.js"></script>
+<!-- HTML HEADER   -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cracking The Resume</title>
+    <link href="stylesheets/viewing.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../javascript/account.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<!-- END OF HTML HEADER -->
 
-    </head>
-<!-- <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cracking The Resume</title>
-  <link href="stylesheets/viewing.css" rel="stylesheet">
-  <link href="stylesheets/lightbox.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <script src="https://code.jquery.com/jquery.min.js"></script>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src="../javascript/viewing.js"></script>
-</head> -->
-
+<!-- HTML BODY -->
 <body>
-  <nav class="navbar navbar-inverse navbar-static-top">
+
+<!-- NAVIGATION BAR  -->
+<nav id="navcol" class="navbar navbar-inverse navbar-static-top">
     <div class="container">
-      <div class="navbar-header">
-        </button>
-        <a class="navbar-brand" href="/split">Cracking The Resume</a>
-      </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="resumeViewing">View Other Resumes</a></li>
-                <li><a href="accounts">View Your Resume</a></li>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/split">Cracking The Resume </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="resumeViewing">View Other Resumes</a></li>
+                        <li><a href="accounts">View Your Resume</a></li>
+                    </ul>
+                </li>
+                <li><a href="settings">Settings</a></li>
+                <li><a href="/logout">Log Out</a></li>
             </ul>
-        </li>
-        <li><a href="settings">Settings</a></li>
-        <li><a href="/logout">Log Out</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class="modal fade" id="commentModal">
-    <div class="modal-dialog commentModalD">
-      <div class="modal-content">
-        <div class="modal-body">
-            <div class="row">
-              <div class="col-md-2">
-              </div>
-              <div class="col-md-8">
-                <div class="page-header">
-                  <h1><small id="commentCount" class="pull-right">5 comments</small> Comments </h1>
-                </div>
-                
-
-              </div>
-
-              <div class="col-md-2">
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
+</nav>
+<!-- END OF NAVIGATION BAR  -->
+<%resumeRecord.forEach(function(resume){ %>
+<div class="gallery">
+    <a target="_blank" href="img_fjords.jpg">
+        <img src="<%=resume.resumeName%>" alt="Trolltunga Norway" width="300" height="200">
+    </a>
 
-  <!-- Modal -->
-  <div class="modal fade modalSize" id="tallModal" tabindex="" role="" aria-labelledby="exampleModalLabel" aria-hidden="">
-    <div class="modal-dialog" role="">
-      <div class="modal-content">
-        <button id="closeModal">&#10006;</button>
-        <div class="modal-body">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-12" style="text-align:center;">
-                <h3>Name of the file: </h3>
-                <img class = "image-class" id="imagePop" src="http://www.gfyork.com/wp-content/uploads/2017/09/resume-latex-template-latex-templates-curricula-vitaersums-templates-1.png" height="500" width="350">
-                <div class="row">
-                  <div class="col-md-12">
-                    <a class="like"><i class="fa fa-thumbs-o-up"></i>
-                         Like <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
-                     </a>
-                    <a class="dislike"><i class="fa fa-thumbs-o-down"></i>
-                         Dislike <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
-                     </a>
-                  </div>
-                  <div class="form-group">
-                  <form method = "post" action = '/resumeViewing' role = 'form'> 
-                    <input type = 'text' class="form-control" rows="3" name="resumeName" id="resumeName" placeholder="Name of Resume" required="required">
-                    <input type = 'text' class="form-control" rows="3" name="Message" id="Message" placeholder="Message" required="required">
+    <a href="individual/<%=resume._id%>" class="button">View</a>    
+</div>
+<%})%>
 
-              </div>
-            </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-
-                <input type="submit" id="postIt" class="btn main-btn" value = "postComment" name=""/>
-              </div>
-            </div></form>
-            <!-- <button type="button" class="pull-left" onclick="">Update Resume</button><br><br><br> -->
-      </div>
-                </div>
-                <!-- <button type="button" class="pull-left" onclick="">Update Resume</button><br><br><br> -->
-              </div>
-            </div>
-            <!--<script src="javascript/viewing.js"></script>-->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-<!-- 
-  <div class="container-fluid">
-    <h1>Internships</h1>
-    <div class="row">
-      <div class="row__inner">
-        <div class="tile">
-            <div class="tile__media">
-              <img class="tile__img" src="#" alt="" />
-            </div>
-          </div>
-          <div class="tile">
-              <div class="tile__media">
-                <img class="tile__img" src="#" alt="" />
-              </div>
-            </div>
-            <div class="tile">
-                <div class="tile__media">
-                  <img class="tile__img" src="#" alt="" />
-                </div>
-              </div>
-              <div class="tile">
-                  <div class="tile__media">
-                    <img class="tile__img" src="#" alt="" />
-                  </div>
-                </div>
-      </div>
-    </div>
-  </div> -->
-  <div class="container-fluid" >
-    <h1>Start Reviewing Resumes!</h1>
-    <div class="row">
-      <div class="row__inner">
-        <%records.forEach(function(record){ %>
-            <div class="tile">
-              <div class="tile__media">
-                <img class="tile__img" src=<%-JSON.stringify(record.resumeName)%> alt="" />
-                              <div class="comments-list">
-              <% record.comments.forEach(function(comment){ %>
-                <div class="media">
-                  <div class="media-body">
-                    <h6 class="media-heading user_name">User: <%-JSON.stringify(comment.userName)%> </h4>
-                    <p><%-JSON.stringify(comment.content)%> </p>
-                  </div>
-                </div>
-              <% }) %>
-
-              </div>
-              </div>
-
-            </div>
-
-        <% })%>
-      </div>
-    </div>
-  </div>
-  <!--<script src="javascript/viewing.js"></script>-->
 </body>
-
 </html>
