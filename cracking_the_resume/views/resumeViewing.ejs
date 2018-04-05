@@ -48,15 +48,18 @@
     </div>
 </nav>
 <!-- END OF NAVIGATION BAR  -->
-<%resumeRecord.forEach(function(resume){ %>
-<div class="gallery">
-    <a target="_blank" href="img_fjords.jpg">
-        <img src="<%=resume.resumeName%>" alt="Trolltunga Norway" width="300" height="200">
-    </a>
-
-    <a href="individual/<%=resume._id%>" class="button">View</a>    
+<div class="container-fluid">
+  <div class="row">
+    <%resumeRecord.forEach(function(resume){ %>
+      <div class="gallery col-md-3 col-sm-4">
+          <!-- <a target="_blank" href="img_fjords.jpg"> -->
+              <img src="<%=resume.resumeName%>" alt="" width="300" height="200">
+          <!-- </a> -->
+          <a href="individual/<%=resume._id%>" class="button">View</a>
+      </div>
+    <%})%>
+  </div>
 </div>
-<%})%>
 
 </body>
 </html>
