@@ -11,7 +11,7 @@ var Resume = require('../Models/resume')
 var multer = require('multer');
 var storage = multer.diskStorage({
     destination: function(req,file, cb){
-        cb(null, '../Resumes')
+        cb(null, './Resumes')
     },
     filename: function(req, file, db){
         db(null, file.fieldname + '-' + Date.now() + '.png')
@@ -35,6 +35,8 @@ router.post('/', function(req, res, next) {
             //creating resume record
             var resumeRecord = new Resume({
                 resumeName: req.file.filename
+                //upvoteCount: 0, //intializing upvote count to 0 
+                //downvoteCount: 0 //initializing downvote count to 0 
             });
 
             //saving resume record to the database

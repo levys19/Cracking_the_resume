@@ -1,301 +1,48 @@
-h1,
-p {
-  text-align: center;
+body{
+  background-color: #ffffff !important;
 }
-p {
-  width: 100%;
-  max-width: 500px;
-  margin: auto;
-}
-a:link,
-a:hover,
-a:active,
-a:visited {
-  -webkit-transition: color 150ms;
-  transition: color 150ms;
-  color: #95a5a6;
-  text-decoration: none;
-}
-a:hover {
-  color: #7f8c8d;
-  text-decoration: underline;
-}
-.contain {
-  width: 100%;
-}
-.row {
-  overflow: scroll;
-  width: 100%;
-}
-.row__inner {
-  -webkit-transition: 450ms -webkit-transform;
-  transition: 450ms -webkit-transform;
-  transition: 450ms transform;
-  transition: 450ms transform, 450ms -webkit-transform;
-  font-size: 0;
-  white-space: nowrap;
-  margin: 70.3125px 0;
-  padding-bottom: 10px;
-}
-.tile {
+.gallery {
+  margin: 30px;
+  /* border: 1px solid #ccc;
+  border-radius: 4px; */
+  float: left;
+  left:4.5%;
   position: relative;
-  display: inline-block;
-  width: 450px;
-  height: 440.625px;
-  margin-right: 10px;
-  font-size: 20px;
-  cursor: pointer;
-  -webkit-transition: 450ms all;
-  transition: 450ms all;
-  -webkit-transform-origin: center left;
-          transform-origin: center left;
-}
-.tile__img {
-  width: 450px;
-  height: 440.625px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.tile__details {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  font-size: 10px;
-  opacity: 0;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,0.9)), to(rgba(0,0,0,0)));
-  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
-  -webkit-transition: 450ms opacity;
-  transition: 450ms opacity;
-}
-.tile__details:after,
-.tile__details:before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: #000;
-}
-.tile__details:after {
-  margin-top: -25px;
-  margin-left: -25px;
-  width: 50px;
-  height: 50px;
-  border: 3px solid #ecf0f1;
-  line-height: 50px;
+  width: 350px;
   text-align: center;
-  border-radius: 100%;
-  background: rgba(0,0,0,0.5);
-  z-index: 1;
-}
-.tile__details:before {
-  content: '▶';
-  left: 0;
-  width: 100%;
-  font-size: 30px;
-  margin-left: 7px;
-  margin-top: -18px;
-  text-align: center;
-  z-index: 2;
-}
-.tile:hover .tile__details {
-  opacity: 1;
-}
-.tile__title {
-  position: absolute;
-  bottom: 0;
   padding: 10px;
 }
-.row__inner:hover {
-  -webkit-transform: translate3d(-62.5px, 0, 0);
-          transform: translate3d(-62.5px, 0, 0);
-}
-.row__inner:hover .tile {
-  opacity: 0.3;
-}
-.row__inner:hover .tile:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  opacity: 1;
-}
-.tile:hover ~ .tile {
-  -webkit-transform: translate3d(125px, 0, 0);
-          transform: translate3d(125px, 0, 0);
-}
-/** LIGHTBOX MARKUP **/
 
-.lightbox {
-    /** Default lightbox to hidden */
-    display: none;
-    /** Position and style */
-    position: fixed;
-    z-index: 999;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    top: 0;
-    left: 0;
+.gallery:hover {
+  /* border: 1px solid #777; */
+  opacity: 0.7;
 }
 
-.lightbox img {
-    /** Pad the lightbox image */
-    max-width: 90%;
-    max-height: 80%;
-    margin-top: 2%;
+.gallery img {
+  width: 100%;
+  height: auto;
+  padding-bottom: 10px;
+  border-radius: 4px; 
+}
+a:hover, a:active {
+  background-color: rgb(2, 1, 1);
+} 
+
+a.button{
+  background-color: #c9b8b6;
+  color: rgb(8, 5, 5);
+  padding: 7px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+#navcol.navbar-inverse{
+  background-color: #4d4d4d;
+  border-color: transparent;
+}
+#navcol a{
+  color: #faeded;
 }
 
-.lightbox:target {
-    /** Remove default browser outline */
-    outline: none;
 
-    /** Unhide lightbox **/
-    display: block;
-}
-
-.modalSize{
-  width:100%
-}
-
-body{
-    /* text-align: center; */
-}
-img{
-    margin-top: 20px;
-}
-button{
-    -webkit-border-radius: 50;
-    -moz-border-radius: 50;
-    border-radius: 50px;
-    border:none;
-    font-family: Arial;
-    color: rgb(255, 255, 255);
-    font-size: 12px;
-    background: #a3967e;
-    padding: 6px 12px 6px 12px;
-    text-decoration: none;
-    margin-left: 560px;
-}
-button:hover {
-    background: #d1c6aa;
-    text-decoration: none;
-    color: aliceblue;
-}
-.like-content {
-    display: inline-block;
-    width: 100%;
-    margin: 40px 0 0;
-    padding: 40px 0 0;
-    font-size: 18px;
-    border-top: 10px dashed #eee;
-    text-align: center;
-}
-.like-content span {
-	color: #ffffff;
-	font-family: monospace;
-}
-.like-content .btn-secondary {
-	  display: block;
-	  margin: 40px auto 0px;
-    text-align: center;
-    background: #ceb8bd;
-    border-radius: 3px;
-    box-shadow: 0 10px 20px -8px rgb(218, 175, 185);
-    padding: 10px 17px;
-    font-size: 18px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    color: #ffffff;
-    text-decoration: none;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
-}
-.like-content .btn-secondary:hover {
-	  transform: translateY(-3px);
-}
-.like-content .btn-secondary .fa {
-	  margin-right: 5px;
-}
-.animate-like {
-	animation-name: likeAnimation;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
-	animation-duration: 0.65s;
-}
-@keyframes likeAnimation {
-  0%   { transform: scale(30); }
-  100% { transform: scale(1); }
-}
-
-.like, .dislike {
-    display: inline-block;
-    margin: 10px;
-    font-weight: normal;
-    color: rgb(85, 62, 62);
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    background: #a3967e;
-    border: 1px solid transparent;
-    white-space: nowrap;
-    padding: 3px 6px;
-    font-size: 12px;
-    line-height: 1.428571429;
-    border-radius: 18px;
-}
-.qty1, .qty2 {
-    border: none;
-    width:20px;
-    background: transparent;
-}
-.user_name{
-    font-size:14px;
-    font-weight: bold;
-}
-.comments-list .media{
-    border-bottom: 1px dotted #ccc;
-}
-
-.main-btn{ background:#00b09c; border-color:#00b09c; color:#fff;}
-.main-btn:hover{ background:#00a491;color:#fff;}
-
-.comments-list{
-  overflow: auto;
-  /* overflow-y: auto;
-  overflow-x: hidden; */
-  height:150px;
-  width: 200px;
-}
-
-.modal-xl{
-  margin-right: 500px;
-}
-
-/* #commentsWrapper{
-  overflow: hidden;
-  height:90%;
-  background-color: white;
-  position: absolute;
-  margin-left: 100%;
-  width:90%;
-} */
-
-.modal-dialog {
-  right:20%;
-}
-
-.commentModalD{
-  left:20%;
-}
-
-.image-class{
-  height: 800px;
-  width: 600px;
-}
-
-.user_name{
-  color:purple;
-}
-
-/* sdasd */
