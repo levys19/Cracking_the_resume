@@ -1,0 +1,37 @@
+﻿Date: April 6, 2018
+Time: 2:00PM -  3:00PM
+
+
+Meeting Attendance: Shally Guo, YongJi Chen, Sravanika Doddi, Liesel Vaidya, Levy Shi
+
+
+Meeting Summary: 
+Beta Release is due on Friday. Things to do: 
+* Linking with Amazon S3 bucket
+* PDF to image 
+* Like/Dislike functionality (database & front-end) 
+* Wrap comments 
+* Zoom in resume feature 
+* Fix Resume Viewing formatting (front end) 
+* Consistent layout/colors
+* Doesn’t open on a new tab when we comment(AJAX viewing). 
+* Update resume 
+* Differentiate viewing your own vs. other resumes.
+* Individual Nav Bar doesn’t work on other users individual resume
+* Don’t allow current user’s resumes to be displayed on the resume viewing page  
+
+
+Accomplishments (since last meeting): 
+   * Liesel: Better navigation. Logout button. Stretch the picture on home screen to fit to page (bug report). Fix the bug report on the homepage sign up. Remove terms. Change the layout of the viewing page.
+   * Sravanika: Fixed the logout button from the resume Viewing page. 
+   * Shally: Display resume from local directory to new resume viewing page. Linked resume viewing page to individual page of which the weblink is unique to the resume. Allow comment functionality & display resume picture in the newly created individual page. 
+   * YongJi: Made images on resumeViewing page unclickable. Fixed home page display in smaller screens. 
+   * Levy Shi : put resumes on the cloud
+
+
+Tasks (to be completed before next meeting): 
+   * Liesel: Zoom in resume feature. Fix Resume Viewing formatting. Consistent layout/colors. Like/Dislike functionality. Update resume button. Differentiate viewing your own vs. other resumes.
+   * Sravanika: Don’t allow current user’s resumes to be displayed on the resume viewing page, users should be not allowed to access the resumeViewing or the account page without logging in. 
+   * Yongji: Set like/dislike click restrictions to one. 
+   * Shally: Fix the upvote and downvotes and store them in the database. Fix new tabbing issue for comments on individual and accounts page 
+   * Levy: convert the PDF to PNG so we can display them as PNG.
