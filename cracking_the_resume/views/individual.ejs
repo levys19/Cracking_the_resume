@@ -24,7 +24,8 @@ fclose ($handle);}
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>        
+    
 </head>
 <!-- END OF HTML HEADER -->
 
@@ -66,9 +67,11 @@ fclose ($handle);}
 
         <div class="col-md-6" style="text-align:center;">            
             <!-- <img src="http://www.gfyork.com/wp-content/uploads/2017/09/resume-latex-template-latex-templates-curricula-vitaersums-templates-1.png" height="500" width="350"> -->
-
+            <div class="tiles">
+                    <div class="tile" data-scale="2.4" data-image="/<%=resumeRecord.resumeName%>"></div>
+            </div>
             <!-- RESUME IMAGE  -->
-            <img src= "/<%=resumeRecord.resumeName%>" height="500" width="350">
+            <!-- <img src= "/<%=resumeRecord.resumeName%>" height="500" width="350"> -->
 
             <div class="row">
                 <div class="col-md-12">

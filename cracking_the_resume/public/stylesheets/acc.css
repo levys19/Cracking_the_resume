@@ -1,6 +1,35 @@
 body{
+    margin:0;
     /* text-align: center; */
 }
+.tiles {
+    /* position: absolute;
+    top: 20px;
+    left: 0; */
+    width: 500px;
+    height: 670px;
+  }
+
+  .tile {
+    /* margin-top: 20px; */
+    position: relative;
+    float: both;
+    width: 500px;
+    height: 670px;
+    overflow: hidden;
+  }
+
+  .photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform .5s ease-out;
+  }
 img{
     margin-top: 20px;
 }
