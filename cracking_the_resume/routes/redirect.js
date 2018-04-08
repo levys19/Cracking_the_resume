@@ -1,3 +1,4 @@
+//MAKE SURE TO INSTALL IMAGE MAGICK
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
@@ -7,17 +8,18 @@ var fs = require("fs")
 //retrieving User and Resume schema from the database
 var User = require('../Models/user')
 var Resume = require('../Models/resume')
-//my personal AWS access key, don't share it please -levy
-AWS.config.update({ accessKeyId: '....', secretAccessKey: '...' });
+//converting pdf to images
 
+//my personal AWS access key, don't share it please -levy
 
 AWS.config.update({ accessKeyId: 'AKIAJNGXZ6IAX7CSVWDQ', secretAccessKey: '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' });
 var multer = require('multer');
 
 
+//for conversion
+  var PDFImage = require("pdf-image").PDFImage;
 
-
-  const fileName =  Date.now() + '.pdf'
+  const fileName =  Date.now() + '.png'
   var storage = multer.diskStorage({
       destination: function(req,file, cb){
           cb(null, './Resumes')
@@ -46,7 +48,7 @@ router.post('/', function(req, res, next) {
 
             //creating resume record
             var resumeRecord = new Resume({
-                resumeName: "https://s3.amazonaws.com/crackingtheresume/" + fileName 
+                resumeName: "https://s3.amazonaws.com/crackingtheresume/" + fileName
             });
 
             //saving resume record to the database
@@ -88,7 +90,18 @@ router.post('/', function(req, res, next) {
 
 
         }
-        fs.readFile('./Resumes/temp.pdf' , function (err, data) {
+
+
+        var pdfImage = new PDFImage("./Resumes/temp.pdf")
+        pdfImage.convertPage(0).then(function (imagePath) {
+           // 0-th page (first page) of the slide.pdf is available as slide-0.png
+           fs.existsSync("temp-0.png") // => true
+
+        },function(err){
+           console.log(err);
+        });
+//converted the image, can't find the path
+        fs.readFile('./Resumes/test-0.png' , function (err, data) {
           if (err) { throw err; }
           var s3 = new AWS.S3();
           s3.putObject({
@@ -108,8 +121,6 @@ router.post('/', function(req, res, next) {
 
 
     });
-    // uploading file to s3
-    //^^^^ make this into whatever you want to name your files in s3 **has to be a string
 
 });
 
