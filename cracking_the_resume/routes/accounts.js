@@ -8,11 +8,13 @@ var Comment = require('../Models/comments');
 //Retrieving the RESUME SCHEMA 
 var Resume = require("../Models/resume"); 
 //Retrieving the USER SCHEMA 
-var User = require('../Models/user'); 
+var User = require('../Models/user');
+//Retrieving the logIn middleware
+var logIn = require("../logIn");
 
 
 //DISPLAYING CURRENT RESUME & COMMENTS 
-router.get('/', function(req, res, next) {
+router.get('/', logIn.isLoggedIn, function(req, res, next) {
   //current user's resume's ID 
   var id = req.user.Resume; 
 
@@ -33,7 +35,7 @@ router.get('/', function(req, res, next) {
 
 
 //STORING NEW COMMENTS 
-router.post('/', function(req, res, next){
+router.post('/', logIn.isLoggedIn, function(req, res, next){
   //current user's resume's ID 
   var id = req.user.Resume; 
 
