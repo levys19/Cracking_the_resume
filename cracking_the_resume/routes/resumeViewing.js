@@ -3,15 +3,16 @@ var router = express.Router();
 const fs = require('fs'); 
 
 var mongoose = require('mongoose'); 
-var Resume = require('../Models/resume'); 
+var Resume = require('../Models/resume');
+var logIn = require("../logIn");
 
-router.get('/', function(req, res, next) {
+router.get('/', logIn.isLoggedIn, function(req, res, next) {
 	//finding all resumes in the database
 	Resume.find({}, function(err, resumeRecord){
 		if(!err){
 			console.log("these are the records"); 
 			console.log(resumeRecord)
-			res.render("resumeViewing.ejs",{resumeRecord, resumeRecord}); 
+			res.render("resumeViewing.ejs",{resumeRecord, resumeRecord, user:req.user});
 		}
 	});
 });  
