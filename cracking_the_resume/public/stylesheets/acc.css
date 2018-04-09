@@ -2,16 +2,20 @@ body{
     margin:0;
     /* text-align: center; */
 }
+h1{
+    font-variant: small-caps;
+    font-size: 30px !important;
+}
 .tiles {
     /* position: absolute;
     top: 20px;
     left: 0; */
     width: 500px;
     height: 670px;
+    border: 10px solid rgb(118, 116, 121);
   }
 
   .tile {
-    /* margin-top: 20px; */
     position: relative;
     float: both;
     width: 500px;
@@ -127,8 +131,16 @@ button:hover {
     border-bottom: 1px dotted #ccc;
 }
 
-.main-btn{ background:#00b09c; border-color:#00b09c; color:#fff;}
-.main-btn:hover{ background:#00a491;color:#fff;}
+.main-btn{ 
+    background:#917c86; 
+    border-color:#917c86; 
+    color:#fff;
+    margin: 8px;
+}
+.main-btn:hover{ 
+    background:#917c86;
+    color:rgb(189, 184, 184);
+}
 
 #commentsWrapper{
   overflow: hidden;
@@ -140,3 +152,20 @@ button:hover {
   height:600px;
   width: 800px;
 }
+#navcol.navbar-inverse{
+    /* background-color:rgba(146, 135, 142, 0.815); */
+    background-color:transparent; 
+    border-color: transparent;
+  }
+#navcol a{
+    color: #0e0c0c;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans";
+    font-style: normal;
+    font-variant: small-caps;
+    font-weight: 800;
+    font-stretch: ultra-expanded;
+    line-height: 18px;
+    /* background-color: transparent; */
+    margin-top: 10px;
+  }
+  

@@ -40,12 +40,27 @@ a.button{
   display: inline-block;
   border-radius: 4px;
 }
-#navcol.navbar-inverse{
+/* #navcol.navbar-inverse{
   background-color: #4d4d4d;
   border-color: transparent;
 }
 #navcol a{
   color: #faeded;
+} */
+#navcol.navbar-inverse{
+  background-color:transparent;
+  border-color: transparent;
+}
+#navcol a{
+  color: #0e0c0c;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans";
+  font-style: normal;
+  font-variant: small-caps;
+  font-weight: 800;
+  font-stretch: ultra-expanded;
+  line-height: 18px;
+  background-color: transparent;
+  margin-top: 10px;
 }
 
 
