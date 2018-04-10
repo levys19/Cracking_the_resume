@@ -12,7 +12,7 @@ var Resume = require('../Models/resume')
 
 //my personal AWS access key, don't share it please -levy
 
-AWS.config.update({ accessKeyId: 'AKIAJDGDONZM7QJOPYDQ', secretAccessKey: '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' });
+AWS.config.update({ accessKeyId: '....', secretAccessKey: '...' });
 var multer = require('multer');
 
 
