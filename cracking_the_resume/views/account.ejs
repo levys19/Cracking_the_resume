@@ -64,7 +64,7 @@ fclose ($handle);}
 <div class="container">
     <div class="row">
 
-        <div class="col-md-6" style="text-align:center;">            
+        <div class="col-md-6" style="text-align:center;">
             <!-- RESUME IMAGE  -->
             <img src="<%=resumeRecord.resumeName%>" height="500" width="350">
 
@@ -79,8 +79,9 @@ fclose ($handle);}
                         Dislike <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
                     </a>
                     <!-- COMMENT FORM BOX -->
-                    <form method = "post" action = '/accounts' role = 'form' target = "uploader_iframe">
-                        <input type = 'text' class="form-control" rows="3" name="Message" id="Message" placeholder="Message">
+                    <form id="submitForm" method = "post" action = '/accounts' role = 'form' target = "uploader_iframe">
+                        <textarea type = 'text' class="form-control" rows="3" name="Message" id="Message" placeholder="Message" required onsubmit="triggerButton()"></textarea>
+                        <h6 class="pull-right" id="count_message"></h6><h6 class="pull-left" id="countLeft"></h6>
                         <div class="row">
                             <div class="col-md-12">
                                 <!-- POSTCOMMENT BUTTON -->
@@ -89,11 +90,11 @@ fclose ($handle);}
                         </div> <!-- END OF class = "row" DIV TAG -->
                     </form>
                     <!-- <iframe id = "uploader_iframe" name = "uploader_iframe" style = "display: none;"></iframe> -->
-                    
+
                 </div> <!--END OF class = "col-md-12" DIV TAG -->
             </div> <!-- END OF class = "row" DIV TAG -->
 
-           
+
 
             <!-- <button type="button" class="pull-left" onclick="">Update Resume</button><br><br><br> -->
         </div>
