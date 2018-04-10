@@ -11,7 +11,7 @@ var Resume = require('../Models/resume')
 var multer = require('multer');
 var storage = multer.diskStorage({
     destination: function(req,file, cb){
-        cb(null, '../Resumes')
+        cb(null, './Resumes')
     },
     filename: function(req, file, db){
         db(null, file.fieldname + '-' + Date.now() + '.png')
@@ -26,6 +26,7 @@ router.post('/', function(req, res, next) {
     upload(req, res, function(err) {
         if(err){
             console.log("file could not be uploaded");
+            console.log(err);
         }
         else{
             //req.file.filename is the filename of the uploaded file

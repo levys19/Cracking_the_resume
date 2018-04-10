@@ -8,57 +8,64 @@ $(function () {
     input.val(input.val() - 1);
   });
 
-  var userName = "Random person";
-  var commentCount = 5;
+  //disables submit if comment is empty or contains all spaces only
+  $("#postIt").prop('disabled',true);
 
-  $('.tile')
-  // tile mouse actions
-  .on('mouseover', function(){
-    $(this).children('.photo').css({'transform': 'scale('+ $(this).attr('data-scale') +')'});
+  var text_max = 50;
+  $('#count_message').html(text_max + ' words remaining');
+  $('#countLeft').html(text_max + ' words left');
+
+  $("#Message").on('keyup', function(){
+    if($.trim($('#Message').val()).length > 0) {
+      $("#postIt").prop('disabled', false);
+    }
+    else{
+      $("#postIt").prop('disabled', true);
+    }
   })
-  .on('mouseout', function(){
-    $(this).children('.photo').css({'transform': 'scale(1)'});
-  })
-  .on('mousemove', function(e){
-    $(this).children('.photo').css({'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +'%'});
-  })
-  // tiles set up
-  .each(function(){
-    $(this)
-      // add a photo container
-      .append('<div class="photo"></div>')
-      // // some text just to show zoom level on current item in this example
-      // .append('<div class="txt"><div class="x">'+ $(this).attr('data-scale') +'x</div>ZOOM ON<br>HOVER</div>')
-      // set up a background image for each tile based on data-image attribute
-      .children('.photo').css({'background-image': 'url('+ $(this).attr('data-image') +')'});
-  })
-  
 
-  // function triggerButton(){
-  //     if(!$.trim($("#Message").val())){
-  //       return;
-  //     }
-  //     commentCount++;
-  //     $("#commentCount").text(commentCount + " comments");
+  $('#Message').keyup(function() {
+    // alert($("#Message").val().length);
 
-  //     var message = $("#Message").val();
-  //     message = $($.parseHTML(message)).text();
-  //     var media = "<div class='media'>";
-  //     var p1 = "<p class='pull-right'><small>5 days ago</small></p>";
-  //     var a1 = "<a class='media-left' href='#'><img src='http://lorempixel.com/40/40/people/1/'></a>";
-  //     var div1 = "<div class='media-body'><h4 class='media-heading user_name'>" + userName + "</h4>" + message + "<p><small><a href=''>Like</a> - <a href=''>Share</a></small></p></div></div>";
-  //     $("#Message").val("");
-  //     $(".comments-list").append(media + p1 + a1 + div1);
+    var text_length = $('#Message').val().length;
+    var text_remaining = text_max - text_length;
+    // $('#count_message').html(text_remaining + ' words remaining');
+    var words = this.value.match(/\S+/g).length;
 
-  // }
+    // if(!$.trim($("#Message").val())) {
+    //   alert("empty");
+    // }
 
-  // $("#postIt").click(function(){
-  //   triggerButton();
-  // });
+    // if($("#Message").val().trim() == " "){
+    //   // var trimmed = $(this).val().split(/\s+/, 50).join(" ");
+    //   // $(this).val(trimmed + " ");
+    //   // $("#Message").val() = "";
+    //   alert("uhh");
+    // }
 
-  // $("#Message").keypress(function(event){
-  //   if(event.which == 13){
-  //      triggerButton();
-  //   }
-  // });
+
+    // if($("#Message").val().length == 0){
+    //   $("#postIt").prop('disabled',true);
+    // }
+
+
+    if (words > 50) {
+      var trimmed = $(this).val().split(/\s+/, 50).join(" ");
+      $(this).val(trimmed + " ");
+      }
+      else {
+        var wordsLeft = 50-words;
+          $('#count_message').text("Total words: " + words);
+          $('#countLeft').text("Words left: " + wordsLeft);
+      }
+    });
+
+
+    //
+    // $("#postIt").click(function(){
+    //   if("#Message").val() == " " ){
+    //     $("#submitForm").preventDefault();
+    //   }
+    // });
+
 });

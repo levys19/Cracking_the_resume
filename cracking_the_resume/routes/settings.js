@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../Models/user');
+var logIn = require("../logIn");
 
-router.get('/', function(req, res, next) {
+router.get('/', logIn.isLoggedIn, function(req, res, next) {
     res.render('settings.ejs', { title: 'Settings page'});
 });
 
