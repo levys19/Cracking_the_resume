@@ -78,6 +78,41 @@ router.post('/:id', function(req, res, next){
       }); 
     } 
   }); 
-});  
+}); 
+
+//UPDATING THE LIKE BUTTON
+router.put('/:id/upvote', function(req, res){
+  Resume.update({_id: req.params.id}, {$addToSet:{upvotes:req.user._id}}, function(err, resume){
+    if(!err){
+      Resume.findById(req.user.Resume, function(err, resumeRecord){
+        if(!err){
+          resumeRecord.upvoteCount = resumeRecord.upvoteCount + 1; 
+          resumeRecord.save(); 
+        }
+      });
+      console.log("RESUME HAS BEEN UPDATED WITH UPVOTE!")
+      console.log(resume); 
+    }
+  });  
+  res.sendStatus(204); 
+});
+
+//UPDATING THE DISLIKE BUTTON
+router.put('/:id/downvote', function(req, res){
+  Resume.update({_id: req.params.id}, {$addToSet:{downvotes:req.user._id}}, function(err, resume){
+    if(!err){
+      Resume.findById(req.user.Resume, function(err, resumeRecord){
+        if(!err){
+          resumeRecord.downvoteCount = resumeRecord.downvoteCount + 1; 
+          resumeRecord.save(); 
+        }
+      });  
+      console.log("RESUME HAS BEEN UPDATED WITH DOWNVOTE!") 
+      console.log(resume); 
+    }
+  });  
+  res.sendStatus(204); 
+});
+
 
 module.exports = router;

@@ -70,14 +70,28 @@ fclose ($handle);}
 
             <div class="row">
                 <div class="col-md-12">
+
                     <!-- LIKE BUTTON  -->
-                    <a class="like"><i class="fa fa-thumbs-o-up"></i>
+                  <!--   <a class="like"><i class="fa fa-thumbs-o-up"></i>
                         Like <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
-                    </a>
+                    </a> -->
                     <!-- DISLIKE BUTTON  -->
-                    <a class="dislike"><i class="fa fa-thumbs-o-down"></i>
+                   <!--  <a class="dislike"><i class="fa fa-thumbs-o-down"></i>
                         Dislike <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
-                    </a>
+                    </a> -->
+
+
+                    <!-- NEW LIKE BUTTON -->
+                    <form class = 'upvote' action="/accounts/upvote?_method=PUT" method = "POST">
+                        <button type = "submit">LIKE</button>
+                    </form>
+
+                    <!-- NEW DISLIKE BUTTON --> 
+                    <form class = 'downvote' action="/accounts/downvote?_method=PUT" method = "POST">
+                        <button type = "submit">DISLIKE</button>
+                    </form>
+
+
                     <!-- COMMENT FORM BOX -->
                     <form method = "post" action = '/accounts' role = 'form' target = "uploader_iframe">
                         <input type = 'text' class="form-control" rows="3" name="Message" id="Message" placeholder="Message">

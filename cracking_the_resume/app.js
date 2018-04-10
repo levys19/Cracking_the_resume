@@ -22,8 +22,8 @@ var multer  = require('multer')
 
 var redirect = require('./routes/redirect');
 var individual = require('./routes/individual'); 
-
-
+//METHOD OVERRIDE 
+var methodOverride = require("method-override");
 //Database set up: MONGOOSE
 var mongoose = require('mongoose'); 
 mongoose.connect("mongodb://localhost/Cracking_the_Resume");
@@ -49,6 +49,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.static("../Resumes"));
 app.use(express.static("public"));
+
+//METHOD OVERRIDE 
+app.use(methodOverride("_method"));
 
 //add session middleware to save session in the database
 app.use(session({
