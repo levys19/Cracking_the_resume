@@ -65,7 +65,7 @@ fclose ($handle);}
 <div class="container">
     <div class="row">
 
-        <div class="col-md-6" style="text-align:center;">            
+        <div class="col-md-6" style="text-align:center;">
             <!-- <img src="http://www.gfyork.com/wp-content/uploads/2017/09/resume-latex-template-latex-templates-curricula-vitaersums-templates-1.png" height="500" width="350"> -->
             <div class="tiles">
                     <div class="tile" data-scale="2.4" data-image="/<%=resumeRecord.resumeName%>"></div>
@@ -85,7 +85,8 @@ fclose ($handle);}
                     </a>
                     <!-- COMMENT FORM BOX -->
                     <form method = "post" action = '/individual/<%=resumeRecord._id%>' role = 'form' target = "uploader_iframe">
-                        <input type = 'text' class="form-control" rows="3" name="Message" id="Message" placeholder="Message">
+                        <textarea type = 'text' class="form-control" rows="3" name="Message" id="Message" placeholder="Message" required onsubmit="triggerButton()"></textarea>
+                        <h6 class="pull-right" id="count_message"></h6><h6 class="pull-left" id="countLeft"></h6>
                         <div class="row">
                             <div class="col-md-12">
                                 <!-- POSTCOMMENT BUTTON -->
@@ -94,11 +95,11 @@ fclose ($handle);}
                         </div> <!-- END OF class = "row" DIV TAG -->
                     </form>
                     <!-- <iframe id = "uploader_iframe" name = "uploader_iframe" style = "display: none;"></iframe> -->
-                    
+
                 </div> <!--END OF class = "col-md-12" DIV TAG -->
             </div> <!-- END OF class = "row" DIV TAG -->
 
-           
+
 
             <!-- <button type="button" class="pull-left" onclick="">Update Resume</button><br><br><br> -->
         </div>
