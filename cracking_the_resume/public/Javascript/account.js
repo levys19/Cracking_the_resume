@@ -15,7 +15,17 @@ $(function () {
   $('#count_message').html(text_max + ' words remaining');
   $('#countLeft').html(text_max + ' words left');
 
+  $("#Message").on('keyup', function(){
+    if($.trim($('#Message').val()).length > 0) {
+      $("#postIt").prop('disabled', false);
+    }
+    else{
+      $("#postIt").prop('disabled', true);
+    }
+  })
+
   $('#Message').keyup(function() {
+    // alert($("#Message").val().length);
 
     var text_length = $('#Message').val().length;
     var text_remaining = text_max - text_length;
@@ -33,9 +43,11 @@ $(function () {
     //   alert("uhh");
     // }
 
-    if($.trim($('#Message').val()).length > 0) {
-      $("#postIt").prop('disabled',false);
-    }
+
+    // if($("#Message").val().length == 0){
+    //   $("#postIt").prop('disabled',true);
+    // }
+
 
     if (words > 50) {
       var trimmed = $(this).val().split(/\s+/, 50).join(" ");
