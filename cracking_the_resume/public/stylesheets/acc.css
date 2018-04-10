@@ -6,21 +6,22 @@ h1{
     font-variant: small-caps;
     font-size: 30px !important;
 }
-.tiles {
-    /* position: absolute;
-    top: 20px;
-    left: 0; */
-    width: 500px;
-    height: 670px;
-    border: 10px solid rgb(118, 116, 121);
-  }
-
-  .tile {
+.tile {
     position: relative;
     float: both;
-    width: 500px;
-    height: 670px;
+    width: 555px;
+    height: 700px;
     overflow: hidden;
+    border: 100px solid rgba(197, 173, 183, 0.363);
+    
+  }
+  .tileind{
+    position: relative;
+    float: both;
+    width: 555px;
+    height: 700px;    
+    overflow: hidden;
+    border: 100px solid rgba(83, 71, 76, 0.363);
   }
 
   .photo {
@@ -165,7 +166,7 @@ button:hover {
     font-weight: 800;
     font-stretch: ultra-expanded;
     line-height: 18px;
-    /* background-color: transparent; */
+    background-color: transparent;
     margin-top: 10px;
   }
   
