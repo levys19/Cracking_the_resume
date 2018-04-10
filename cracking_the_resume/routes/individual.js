@@ -12,7 +12,8 @@ var User = require('../Models/user');
 var logIn = require("../logIn");
 
 
-//DISPLAYING CURRENT RESUME & COMMENTS 
+//DISPLAYING CURRENT RESUME & COMMENTS
+//isLoggedIn is restricting users to individual page
 router.get('/:id', logIn.isLoggedIn, function(req, res, next) {
   //current user's resume's ID 
   //var id = req.user.Resume; 

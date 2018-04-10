@@ -15,6 +15,7 @@ module.exports = router;
 var User = require('../Models/user');
 
 //Get the split page by rendering the split ejs file
+//Restrict users to the ResumeViewing Page
 router.get('/', logIn.isLoggedIn, function(req, res, next) {
     res.render('split.ejs', { title: 'Split page', user:req.user });
 });

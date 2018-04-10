@@ -52,6 +52,8 @@
 <!-- END OF NAVIGATION BAR  -->
 <div class="container-fluid">
   <div class="row">
+      <!--Goes through each of the resumes and if the resume is not equal to the user then only it displays it on the resume-->
+      <!--Viewing Page-->
     <%resumeRecord.forEach(function(resume){ %>
       <% if (String(resume._id) !== String(user.Resume)) {%>
       <div class="gallery col-md-3 col-sm-4">

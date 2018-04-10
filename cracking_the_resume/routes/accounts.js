@@ -13,7 +13,8 @@ var User = require('../Models/user');
 var logIn = require("../logIn");
 
 
-//DISPLAYING CURRENT RESUME & COMMENTS 
+//DISPLAYING CURRENT RESUME & COMMENTS
+//used logIn to display the log in
 router.get('/', logIn.isLoggedIn, function(req, res, next) {
   //current user's resume's ID 
   var id = req.user.Resume; 
