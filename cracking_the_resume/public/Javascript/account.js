@@ -1,15 +1,23 @@
 $(function () {
-  $(".like").click(function () {
+  $(".like").click(function() {
     var input = $(this).find('.qty1');
-    input.val(parseInt(input.val())+ 1);
+      input.val(parseInt(input.val())+ 1);
+      $(".like").prop('disabled', true);
+      $(".dislike").prop('disabled', false);
+      $(".qty2").val(parseInt(input.val()) - 1);
+
   });
-  $(".dislike").click(function () {
+
+  $(".dislike").click(function() {
     var input = $(this).find('.qty2');
-    input.val(input.val() - 1);
+      input.val(parseInt(input.val())+ 1);
+      $(".dislike").prop('disabled', true);
+      $(".like").prop('disabled', false);
+      $(".qty1").val(parseInt(input.val()) - 1);
   });
 
   //disables submit if comment is empty or contains all spaces only
-  $("#postIt").prop('disabled',true);
+  $("#postIt").prop('disabled', true);
 
   var text_max = 50;
   $('#count_message').html(text_max + ' words remaining');

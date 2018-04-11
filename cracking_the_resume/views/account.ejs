@@ -71,13 +71,13 @@ fclose ($handle);}
             <div class="row">
                 <div class="col-md-12">
                     <!-- LIKE BUTTON  -->
-                    <a class="like"><i class="fa fa-thumbs-o-up"></i>
+                    <button class="like"><i class="fa fa-thumbs-o-up"></i>
                         Like <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
-                    </a>
+                    </button>
                     <!-- DISLIKE BUTTON  -->
-                    <a class="dislike"><i class="fa fa-thumbs-o-down"></i>
+                    <button class="dislike"><i class="fa fa-thumbs-o-down"></i>
                         Dislike <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
-                    </a>
+                    </button>
                     <!-- COMMENT FORM BOX -->
                     <form id="submitForm" method = "post" action = '/accounts' role = 'form' target = "uploader_iframe">
                         <textarea type = 'text' class="form-control" rows="3" name="Message" id="Message" placeholder="Message" required onsubmit="triggerButton()"></textarea>
