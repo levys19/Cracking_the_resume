@@ -102,17 +102,12 @@ button:hover {
 .main-btn:hover{ background:#00a491;color:#fff;}
 
 #commentsWrapper{
-  /* overflow: hidden; */
-  /* width: 20%; */
-
-}
-.media-body{
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .comments-list{
   overflow: auto;
   /* overflow-y: auto;
   overflow-x: hidden; */
-  height:500px;
-  width: 200%;
+  height:600px;
+  width: 800px;
 }
