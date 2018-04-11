@@ -11,7 +11,7 @@ var Resume = require('../Models/resume')
 var multer = require('multer');
 var storage = multer.diskStorage({
     destination: function(req,file, cb){
-        cb(null, './Resumes')
+        cb(null, '../Resumes')
     },
     filename: function(req, file, db){
         db(null, file.fieldname + '-' + Date.now() + '.png')
