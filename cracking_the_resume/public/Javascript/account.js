@@ -7,8 +7,8 @@ $(function () {
     var input = $(this).find('.qty1');
       input.val(parseInt(input.val())+ 1);
       $(".like").prop('disabled', true);
-      $(".dislike").prop('disabled', false);
-      $(".qty2").val(parseInt(input.val()) - 1);
+      $(".dislike").prop('disabled', true);
+      // $(".qty2").val(parseInt(input.val()) - 1);
       clicked = 1;
   });
 
@@ -16,8 +16,8 @@ $(function () {
     var input = $(this).find('.qty2');
       input.val(parseInt(input.val())+ 1);
       $(".dislike").prop('disabled', true);
-      $(".like").prop('disabled', false);
-      $(".qty1").val(parseInt(input.val()) - 1);
+      $(".like").prop('disabled', true);
+      // $(".qty1").val(parseInt(input.val()) - 1);
       clicked = 0;
   });
 
