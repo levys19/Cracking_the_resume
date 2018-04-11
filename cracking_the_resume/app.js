@@ -21,6 +21,7 @@ var settings = require('./routes/settings');
 var multer  = require('multer')
 
 var redirect = require('./routes/redirect');
+var individual = require('./routes/individual'); 
 
 
 //Database set up: MONGOOSE
@@ -48,6 +49,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.static("../Resumes"));
 app.use(express.static("public"));
+app.use(express.static("Resumes"))
 
 //add session middleware to save session in the database
 app.use(session({
@@ -77,6 +79,7 @@ app.use('/split', split);
 app.use('/resumeViewing', resumeViewing);
 app.use('/settings', settings);
 app.use('/redirect', redirect);
+app.use('/individual', individual); 
 app.use(express.static("../Resumes"));
 
 

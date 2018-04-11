@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Reschk</title>
   <script src="https://code.jquery.com/jquery.min.js"></script>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -9,23 +10,18 @@
   <script src="../routes/index.js"></script>
 </head>
 <body>
-
-     <!-- <h2> <%=UsernameError%></h2>
-     <h2> <%=PasswordError%></h2> -->
-
-     <div style="" class="theWhole">  
-      <div class="container" style="text-align:center;">
-          <h1>Cracking The Resume</h1>    
-      </div> </div>
-    <div class="col-md-6 leftSide">
-      <!-- <img class="img-responsive leftPic" src="https://img.etsystatic.com/il/48a2c6/914224541/il_fullxfull.914224541_ci1e.jpg" alt=""> -->
+     <div class="theWhole">
+       <div class="titleHead">
+         <h1>Cracking The Resume</h1>
+      </div>
+    <div class=" leftSide">
       <img class="img-responsive leftPic" src="resumecopy.jpg" alt="">
     </div>
-    <div class="col-md-6 rightSide">
+    <div class=" rightSide">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-xs-3">
         </div>
-        <div style="text-align:center;" class="col-md-6">
+        <div style="text-align:center;" class="col-xs-6">
           <form class="formRight" method="post" action="/">
             <div class="form-group">
              <label for="username"><%=UsernameError%></label>
@@ -46,45 +42,13 @@
           <button onclick="window.location='signUp';" class="btn btn-signup btn-lg">
             Sign Up
           </button>
+          <div class="bug">
+          <a href="https://github.com/levys19/Cracking_the_resume/issues">Report a bug</a>          
+          </div>
         </div>
-        <div class="col-md-3">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="navbar navbar-default navbar-fixed-bottom">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".bottom-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!-- <a class="navbar-brand" href="#">Resume</a> -->
-        </div>
-        <div class="navbar-collapse collapse bottom-collapse centerIt">
-          <div class="row">
-            <div class="col-md-2">
-            </div>
-            <div class="col-mid-8 bottomTextSize">
-              <ul class="nav navbar-nav">
-                <li><a href="#">Info</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Businesses</a></li>
-                <li><a href="#">Developers</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Advertisements</a></li>
-                <li><a href="#">Applications</a></li>
-                <li><a href="#">Marketing</a></li>
-                <li><a href="#">Directory</a></li>
-                <li><a href="#">2018 Cracking Resume</a></li>
-              </ul>
-            </div>
-            <div class="col-mid-2">
-            </div>
+        <h3>Cracking the Resume is a web application where you can upload your resume and have it reviewed by other users. You also have the ability to upvote, downvote, and comment on other users resumes.</h3>
+        
+        <div class="col-xs-3">
         </div>
       </div>
     </div>

@@ -9,12 +9,7 @@ var commentSchema = new mongoose.Schema({
             ref: "Resume"
         }
     ],
-    User: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "User"
-        }
-    ],
+    username: String,
     content: String,
     created: {type: Date, default: Date.now}
 });

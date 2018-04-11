@@ -38,6 +38,7 @@ router.post('/', function(req, res, next) {
     upload(req, res, function(err) {
         if(err){
             console.log("file could not be uploaded");
+            console.log(err);
         }
         else{
 

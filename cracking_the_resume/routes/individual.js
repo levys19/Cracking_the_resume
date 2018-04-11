@@ -1,4 +1,4 @@
-var express = require('express');;
+var express = require('express');
 var router = express.Router();
 
 var mongoose = require('mongoose'); 
@@ -9,18 +9,19 @@ var Comment = require('../Models/comments');
 var Resume = require("../Models/resume"); 
 //Retrieving the USER SCHEMA 
 var User = require('../Models/user');
-//Retrieving the logIn middleware
 var logIn = require("../logIn");
 
 
 //DISPLAYING CURRENT RESUME & COMMENTS
-//used logIn to display the log in
-router.get('/', logIn.isLoggedIn, function(req, res, next) {
+//isLoggedIn is restricting users to individual page
+router.get('/:id', logIn.isLoggedIn, function(req, res, next) {
   //current user's resume's ID 
-  var id = req.user.Resume; 
+  //var id = req.user.Resume; 
+  console.log("this is the id"); 
+  console.log(req.params.id) 
 
   //finding current resume 
-  Resume.findById(id).populate("comments").exec(function(err, resumeRecord){
+  Resume.findById(req.params.id).populate("comments").exec(function(err, resumeRecord){
     if(err){
       console.log("Resume could not be retrieved"); 
     }
@@ -28,25 +29,22 @@ router.get('/', logIn.isLoggedIn, function(req, res, next) {
       console.log("Resume was retrieved from get request"); 
       console.log(resumeRecord); 
       //rendering account.ejs 
-   
-      res.render('account.ejs', {resumeRecord: resumeRecord}); 
+      console.log("this is the resume name"); 
+      console.log(resumeRecord.resumeName); 
+      res.render('individual.ejs', {resumeRecord: resumeRecord}); 
     }
-  })
+  });  
 });
 
 
 //STORING NEW COMMENTS 
-router.post('/', logIn.isLoggedIn, function(req, res, next){
+router.post('/:id', logIn.isLoggedIn, function(req, res, next){
   //current user's resume's ID 
-  var id = req.user.Resume; 
+  // var id = req.user.Resume; 
+  var id = req.params.id; 
 
-// //updating the resume 
-//   Resume.update({_id: id}, {$push: {comments: [{userName: req.user.UserName, content: req.body.Message }]}}, function(err,  resume){
-//       if(!err){
-//         console.log("update function")
-//         console.log(resume); 
-//       }
-//     });
+  console.log("this is the current resume id")
+  console.log(id); 
 
   //Retrieve the current resume: 
   Resume.findById(id).populate("comments").exec(function(err, resumeRecord){
@@ -58,7 +56,7 @@ router.post('/', logIn.isLoggedIn, function(req, res, next){
       console.log(resumeRecord);
       // creating a new comment record 
       var commentRecord = new Comment({
-        Resume: resumeRecord._id, //current resume id 
+        Resume: id, //current resume id 
         username: req.user.UserName, //current user id 
         content: req.body.Message, //comment content 
       });
@@ -75,7 +73,9 @@ router.post('/', logIn.isLoggedIn, function(req, res, next){
           resumeRecord.save(); 
           console.log(commentRecord)
           //redirecting to the accounts page 
-          res.redirect('/accounts');
+          console.log("this is the resume id before redirect")
+          console.log(resumeRecord._id); 
+          res.redirect("/individual/" + resumeRecord._id);
         }
       }); 
     } 
