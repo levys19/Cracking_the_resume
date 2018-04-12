@@ -6,6 +6,7 @@ var mongoose = require('mongoose');
 var Resume = require('../Models/resume');
 var logIn = require("../logIn");
 
+//Added the isLoggenIn functionality to restrict users for the resumeViewing Page
 router.get('/', logIn.isLoggedIn, function(req, res, next) {
 	//finding all resumes in the database
 	Resume.find({}, function(err, resumeRecord){
