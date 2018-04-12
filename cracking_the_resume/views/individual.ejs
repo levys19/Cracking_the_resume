@@ -1,13 +1,4 @@
-<?php
-if ($_POST){
 
-$name = $_POST['name'];
-$content = $_POST['commentContent'];
-$handle = fopen("comments.html","a");
-fwrite ($handle,"" . $content . "");
-fclose ($handle);}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,13 +10,13 @@ fclose ($handle);}
     <title>Cracking The Resume</title>
     <link href="/stylesheets/acc.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="../javascript/account.js"></script>
+    <script src="../Javascript/account.js"></script>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>        
-    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 </head>
 <!-- END OF HTML HEADER -->
 
@@ -68,7 +59,7 @@ fclose ($handle);}
         <div class="col-md-6" style="text-align:center;">
             <!-- <img src="/<%=resumeRecord.resumeName%>" height="500" width="350"> -->
             <div class="tiles">
-                    <div class="tileind" data-scale="2.4" data-image="/<%=resumeRecord.resumeName%>"></div>
+                <div class="tileind" data-scale="2.4" data-image="/<%=resumeRecord.resumeName%>"></div>
             </div>
             <!-- RESUME IMAGE  -->
             <!-- <img src= "/<%=resumeRecord.resumeName%>" height="500" width="350"> -->
@@ -111,8 +102,8 @@ fclose ($handle);}
                         <h1><small id="commentCount" class="pull-right"></small> Comments </h1>
                     </div>
                     <div class="comments-list">
-                       <!-- for loop  -->
-                       <%resumeRecord.comments.forEach(function(comment){ %>
+                        <!-- for loop  -->
+                        <%resumeRecord.comments.forEach(function(comment){ %>
                         <div class="media">
                             <div class="media-body">
                                 <h4 class="media-heading user_name"><%=comment.username%></h4>
@@ -126,8 +117,6 @@ fclose ($handle);}
         </div>
     </div>
 </div>
-
-<?php include "comments.html"; ?><br>
 
 </body>
 </html>
