@@ -14,6 +14,15 @@ var Resume = require('../Models/resume')
 
 AWS.config.update({ accessKeyId: '...', secretAccessKey: '...' });
 var multer = require('multer');
+var storage = multer.diskStorage({
+    destination: function(req,file, cb){
+        cb(null, './Resumes')
+    },
+    filename: function(req, file, db){
+        db(null, file.fieldname + '-' + Date.now() + '.png')
+    }
+});
+
 
 
 //for conversion
