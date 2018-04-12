@@ -37,8 +37,8 @@
                 <li class="dropdown">
                     <a href="/accounts" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/resumeViewing">View Other Resumes</a></li>
-                        <li><a href="/accounts">View Your Resume</a></li>
+                        <li><a href="resumeViewing">View Other Resumes</a></li>
+                        <li><a href="accounts">View Your Resume</a></li>
                     </ul>
                 </li>
                 <li><a href="/settings">Settings</a></li>
@@ -52,7 +52,7 @@
 <!-- END OF NAVIGATION BAR  -->
 <div class="container-fluid">
   <div class="row">
-      <h1> <%=user.Resume%></h1>
+
     <%resumeRecord.forEach(function(resume){ %>
       <% if (String(resume._id) !== String(user.Resume)) {%>
       <div class="gallery col-md-3 col-sm-4">
