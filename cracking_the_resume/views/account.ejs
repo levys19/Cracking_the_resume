@@ -83,12 +83,25 @@ fclose ($handle);}
 
                     <!-- NEW LIKE BUTTON -->
                     <form class = 'upvote' action="/accounts/upvote?_method=PUT" method = "POST">
-                        <button type = "submit">LIKE</button>
+                        <button type = "submit">LIKE<%=resumeRecord.upvoteCount%></button>
+
+                        <!-- status  -->
+                        <%resumeRecord.upvotes.forEach(function(f){ %>
+                            <%if(String(f.votedBy) === String(user._id)){ %>
+                                <p>status: <%=f.status%></p>
+                            <%}%>
+                        <%}); %> 
                     </form>
 
                     <!-- NEW DISLIKE BUTTON --> 
                     <form class = 'downvote' action="/accounts/downvote?_method=PUT" method = "POST">
-                        <button type = "submit">DISLIKE</button>
+                        <button type = "submit">DISLIKE<%=resumeRecord.downvoteCount%></button>
+                        <!-- status -->
+                        <%resumeRecord.downvotes.forEach(function(f){ %>
+                            <%if(String(f.votedBy) === String(user._id)){ %>
+                                <p>status: <%=f.status%></p>
+                            <%}%>
+                        <%}); %>
                     </form>
 
 

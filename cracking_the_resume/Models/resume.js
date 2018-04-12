@@ -12,20 +12,24 @@ var resumeSchema = new mongoose.Schema({
     ],
     upvoteCount: Number, //total count of upvotes 
     //array of user objectIDs who upvoted 
-    upvotes: [
+    upvotes: [{
+        status: Number, // 1 indicates that the user has voted on the resume 
+        votedBy: 
         {
             type: mongoose.Schema.Types.ObjectId, 
             ref: "User"
         }
-    ], 
+    }], 
     downvoteCount: Number, //total count of downvotes 
     //array of user objectIDs who downvoted 
-    downvotes: [
+    downvotes: [{
+        status: Number, //1 indiccates that the user has voted on the resume 
+        votedBy:
         {
             type: mongoose.Schema.Types.ObjectId, 
             ref: "User"
         }
-    ] 
+    }] 
 });
 
 // //RESUME schema

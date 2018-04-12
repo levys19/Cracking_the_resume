@@ -36,7 +36,7 @@ router.post('/', function(req, res, next) {
             var resumeRecord = new Resume({
                 resumeName: req.file.filename,
                 upvoteCount: 0, //intializing upvote count to 0 
-                downvoteCount: 0 //initializing downvote count to 0 
+                downvoteCount: 0, //initializing downvote count to 0 
             });
 
             //saving resume record to the database

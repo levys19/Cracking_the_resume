@@ -14,6 +14,9 @@ $(function () {
   var userName = "Random person";
   var commentCount = 5;
 
+
+  
+
   // function triggerButton(){
   //     if(!$.trim($("#Message").val())){
   //       return;
