@@ -21,7 +21,7 @@ router.get('/:id', logIn.isLoggedIn, function(req, res, next) {
   console.log(req.params.id) 
 
   //finding current resume 
-  Resume.findById(req.params.id).populate("comments").exec(function(err, resumeRecord){
+  Resume.findById(req.params.id).populate("comments").populate("upvotes").populate("downvotes").exec(function(err, resumeRecord){
     if(err){
       console.log("Resume could not be retrieved"); 
     }
@@ -29,9 +29,7 @@ router.get('/:id', logIn.isLoggedIn, function(req, res, next) {
       console.log("Resume was retrieved from get request"); 
       console.log(resumeRecord); 
       //rendering account.ejs 
-      console.log("this is the resume name"); 
-      console.log(resumeRecord.resumeName); 
-      res.render('individual.ejs', {resumeRecord: resumeRecord}); 
+      res.render('individual.ejs', {resumeRecord: resumeRecord, user:req.user}); 
     }
   });  
 });
@@ -80,6 +78,52 @@ router.post('/:id', logIn.isLoggedIn, function(req, res, next){
       }); 
     } 
   }); 
-});  
+}); 
+
+//UPDATING THE LIKE BUTTON
+router.post('/:id/upvote', function(req, res){
+  Resume.update({_id: req.params.id}, {$addToSet:{upvotes:[{votedBy:req.user._id, status: 1}]}}, function(err, resume){
+    if(!err){
+      Resume.findById(req.params.id, function(err, resumeRecord){
+        if(!err){
+          resumeRecord.upvoteCount = resumeRecord.upvoteCount + 1; 
+          resumeRecord.save(function(err, resume){
+            res.redirect("/individual/" + resume._id);
+          });   
+        }
+      });
+      console.log("RESUME HAS BEEN UPDATED WITH UPVOTE!")
+      console.log(resume); 
+      
+    }
+  });  
+  
+  //res.sendStatus(204); 
+});
+
+//UPDATING THE DISLIKE BUTTON
+router.post('/:id/downvote', function(req, res){
+  Resume.update({_id: req.params.id}, {$addToSet:{downvotes:[{votedBy:req.user._id, status: 1}]}}, function(err, resume){
+    if(!err){
+      Resume.findById(req.params.id, function(err, resumeRecord){
+        if(!err){
+          resumeRecord.downvoteCount = resumeRecord.downvoteCount + 1; 
+          resumeRecord.save(function(err, resume){
+            res.redirect("/individual/" + resume._id);
+          }); 
+          //console.log("this is the resumeID inside find by: ")
+          //console.log(resumeRecord._id)
+          
+        }
+      });  
+      console.log("RESUME HAS BEEN UPDATED WITH DOWNVOTE!") 
+      console.log(resume); 
+      
+    }
+  });  
+  
+  //res.sendStatus(204); 
+});
+
 
 module.exports = router;
