@@ -1,4 +1,4 @@
-var express = require('express');;
+var express = require('express');
 var router = express.Router();
 
 var mongoose = require('mongoose'); 
@@ -8,11 +8,13 @@ var Comment = require('../Models/comments');
 //Retrieving the RESUME SCHEMA 
 var Resume = require("../Models/resume"); 
 //Retrieving the USER SCHEMA 
-var User = require('../Models/user'); 
+var User = require('../Models/user');
+var logIn = require("../logIn");
 
 
-//DISPLAYING CURRENT RESUME & COMMENTS 
-router.get('/:id', function(req, res, next) {
+//DISPLAYING CURRENT RESUME & COMMENTS
+//isLoggedIn is restricting users to individual page
+router.get('/:id', logIn.isLoggedIn, function(req, res, next) {
   //current user's resume's ID 
   //var id = req.user.Resume; 
   console.log("this is the id"); 
@@ -36,7 +38,7 @@ router.get('/:id', function(req, res, next) {
 
 
 //STORING NEW COMMENTS 
-router.post('/:id', function(req, res, next){
+router.post('/:id', logIn.isLoggedIn, function(req, res, next){
   //current user's resume's ID 
   // var id = req.user.Resume; 
   var id = req.params.id; 
