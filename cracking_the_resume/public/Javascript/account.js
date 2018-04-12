@@ -1,15 +1,28 @@
 $(function () {
-  $(".like").click(function () {
+
+  //1 for liked, 0 for disliked
+  var clicked = 0;
+
+  $(".like").click(function() {
     var input = $(this).find('.qty1');
-    input.val(parseInt(input.val())+ 1);
+      input.val(parseInt(input.val())+ 1);
+      $(".like").prop('disabled', true);
+      $(".dislike").prop('disabled', true);
+      // $(".qty2").val(parseInt(input.val()) - 1);
+      clicked = 1;
   });
-  $(".dislike").click(function () {
+
+  $(".dislike").click(function() {
     var input = $(this).find('.qty2');
-    input.val(input.val() - 1);
+      input.val(parseInt(input.val())+ 1);
+      $(".dislike").prop('disabled', true);
+      $(".like").prop('disabled', true);
+      // $(".qty1").val(parseInt(input.val()) - 1);
+      clicked = 0;
   });
 
   //disables submit if comment is empty or contains all spaces only
-  $("#postIt").prop('disabled',true);
+  $("#postIt").prop('disabled', true);
 
   var text_max = 50;
   $('#count_message').html(text_max + ' words remaining');
