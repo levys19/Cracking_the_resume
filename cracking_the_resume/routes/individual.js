@@ -79,14 +79,15 @@ router.post('/:id', function(req, res, next){
 }); 
 
 //UPDATING THE LIKE BUTTON
-router.put('/:id/upvote', function(req, res){
+router.post('/:id/upvote', function(req, res){
   Resume.update({_id: req.params.id}, {$addToSet:{upvotes:[{votedBy:req.user._id, status: 1}]}}, function(err, resume){
     if(!err){
-      Resume.findById(req.user.Resume, function(err, resumeRecord){
+      Resume.findById(req.params.id, function(err, resumeRecord){
         if(!err){
           resumeRecord.upvoteCount = resumeRecord.upvoteCount + 1; 
-          resumeRecord.save(); 
-          res.redirect("/individual/" + resumeRecord._id);
+          resumeRecord.save(function(err, resume){
+            res.redirect("/individual/" + resume._id);
+          });   
         }
       });
       console.log("RESUME HAS BEEN UPDATED WITH UPVOTE!")
@@ -99,14 +100,18 @@ router.put('/:id/upvote', function(req, res){
 });
 
 //UPDATING THE DISLIKE BUTTON
-router.put('/:id/downvote', function(req, res){
+router.post('/:id/downvote', function(req, res){
   Resume.update({_id: req.params.id}, {$addToSet:{downvotes:[{votedBy:req.user._id, status: 1}]}}, function(err, resume){
     if(!err){
-      Resume.findById(req.user.Resume, function(err, resumeRecord){
+      Resume.findById(req.params.id, function(err, resumeRecord){
         if(!err){
           resumeRecord.downvoteCount = resumeRecord.downvoteCount + 1; 
-          resumeRecord.save(); 
-          res.redirect("/individual/" + resumeRecord._id);
+          resumeRecord.save(function(err, resume){
+            res.redirect("/individual/" + resume._id);
+          }); 
+          //console.log("this is the resumeID inside find by: ")
+          //console.log(resumeRecord._id)
+          
         }
       });  
       console.log("RESUME HAS BEEN UPDATED WITH DOWNVOTE!") 
