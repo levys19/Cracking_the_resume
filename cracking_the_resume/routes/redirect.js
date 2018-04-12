@@ -30,7 +30,7 @@ var storage = multer.diskStorage({
 //for conversion
   var PDFImage = require("pdf-image").PDFImage;
 
-  const fileName =  Date.now() + '.png'
+  const fileName =  "public/" + Date.now() + '.png'
   var storage = multer.diskStorage({
       destination: function(req,file, cb){
           cb(null, './Resumes')
