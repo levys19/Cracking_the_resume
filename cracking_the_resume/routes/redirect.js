@@ -12,14 +12,14 @@ var Resume = require('../Models/resume')
 
 //my personal AWS access key, don't share it please -levy
 
-AWS.config.update({ accessKeyId: '...', secretAccessKey: '...' });
+AWS.config.update({ accessKeyId: 'AKIAIQVUQQ4AAXSVZTEA', secretAccessKey: '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' });
 var multer = require('multer');
 
 
 //for conversion
   var PDFImage = require("pdf-image").PDFImage;
 
-  const fileName =  Date.now() + '.png'
+  const fileName =  "public/" + Date.now() + '.png'
   var storage = multer.diskStorage({
       destination: function(req,file, cb){
           cb(null, './Resumes')
