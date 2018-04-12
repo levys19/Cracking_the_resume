@@ -22,6 +22,9 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "serve-favicon": "~2.4.5",
-    "socket.io": "^2.0.4"
+    "socket.io": "^2.0.4",
+    "aws-sdk": "*",
+    "pdf-image": "*",
+    "zoomove": "^1.2.1"
   }
 }
