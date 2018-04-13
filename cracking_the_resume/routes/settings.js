@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../Models/user');
+var logIn = require("../logIn");
 
-router.get('/', function(req, res, next) {
+//Restrict users to the settings page with isLoggedIn
+router.get('/', logIn.isLoggedIn, function(req, res, next) {
     res.render('settings.ejs', { title: 'Settings page'});
 });
 

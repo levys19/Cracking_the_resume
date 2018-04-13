@@ -2,21 +2,62 @@ body{
   overflow: hidden;
   background-size:cover; 
 }
-h1 {
-	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-	/* font-size: 24px; */
+h1{
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans";
 	font-style: normal;
 	font-variant: small-caps;
-  font-weight: 800;
+  font-weight: 900;
   font-stretch: ultra-expanded;
-  line-height: 14px;
+  line-height: 18px;
   padding-bottom: 15px;
   padding-top: 15px;
   font-size: 60px;
   z-index: 1;
-  position:absolute;
+  position: absolute;
   text-align: center;
-  align-content: center;
+  /* letter-spacing: 1px; */
+}
+h4{
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans";
+	/* font-style: normal;
+	font-variant: small-caps; */
+  font-weight: 900;
+  /* font-stretch: ultra-expanded; */
+  line-height: 18px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-size: 17px;
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  width:38%;
+  left:480px;
+  top:60px;
+  color: rgba(74, 76, 78, 0.829);
+  /* letter-spacing: 1px; */
+}
+h3{
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans";
+  line-height: 30px;
+  font-weight: bold;  
+  position: fixed;
+  bottom: 250px;
+  right: 74px;
+  font-size: 19px;
+  color: rgb(63, 51, 56);
+  text-align: center;
+  width:38%;
+  background-color: rgba(138, 111, 127, 0.336);
+  -moz-border-radius: 6px; 
+  border-radius: 6px;
+
+}
+.bug{
+  font-size: 18px;
+  position: fixed;
+  right:300px;
+  font-weight: 100px;
+  bottom: 50px;
 }
 
 .btn-login{
@@ -28,12 +69,13 @@ h1 {
 }
 
 .formRight{
-  padding-top: 35%;
+  padding-top: 50%;
 }
 
 .rightSide{
   background-color: #D3C4BE;
   height:1000px;
+
 }
 
 .col-md-6{
@@ -43,12 +85,7 @@ h1 {
 .bottomTextSize > ul > li {
   font-size: 10px;
 }
-/* .navbar,.navbar-fixed-bottom,.navbar-brand{
-  height: 5px;
-}
-.navbar-toggle{
-  margin-top: 5px;
-} */
+
 .navbar-nav>li>a{
   padding-top:5px !important;
   padding-bottom: 5px !important;

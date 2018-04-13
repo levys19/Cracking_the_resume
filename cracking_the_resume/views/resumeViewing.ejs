@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HTML HEADER   -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cracking The Resume</title>
+    <link href="stylesheets/viewing.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../Javascript/account.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<!-- END OF HTML HEADER -->
+
+<!-- HTML BODY -->
+<body>
+<!-- NAVIGATION BAR  -->
+<nav id="navcol" class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/split" style="font-size:30px">Cracking The Resume </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" style="font-size:19px">
+                <li class="dropdown">
+                    <a href="/accounts" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/resumeViewing">View Other Resumes</a></li>
+                        <li><a href="/accounts">View Your Resume</a></li>
+                    </ul>
+                </li>
+                <li><a href="/settings">Settings</a></li>
+                <li><a href="/logout">Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- END OF NAVIGATION BAR  -->
+<div class="container-fluid">
+  <div class="row">
+    <%resumeRecord.forEach(function(resume){ %>
+      <% if (String(resume._id) !== String(user.Resume)) {%>
+      <div class="gallery col-md-3 col-sm-4">
+          <!-- <a target="_blank" href="img_fjords.jpg"> -->
+              <img src="<%=resume.resumeName%>" alt="" width="300" height="200">
+          <!-- </a> -->
+          <a href="individual/<%=resume._id%>" class="button">View</a>
+      </div>
+      <% }%>
+    <%})%>
+
+  </div>
+</div>
+
+</body>
+</html>

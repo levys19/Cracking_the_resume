@@ -2,13 +2,12 @@
 
 A web application where users can upload their resumes and have it reviewed by other users (specific to CS majors). Users also have the ability to upvote, downvote, and comment on other users’ resumes. 
 
-# Youtube line Aplha Release
-https://youtu.be/9j23uwB0DDM
-
-Youtube link Prototype
-https://www.youtube.com/watch?v=M_qznEGCp30
-
 The web app is now deployed on: https://www.reschk.me/
+
+# Youtube link Beta Release
+
+https://youtu.be/kAYWaOM8UUg
+
 
 # How to run the web application on your local machine
 

@@ -22,17 +22,17 @@ var multer  = require('multer')
 
 var redirect = require('./routes/redirect');
 var individual = require('./routes/individual'); 
-
-
+//METHOD OVERRIDE 
+var methodOverride = require("method-override");
 //Database set up: MONGOOSE
-var mongoose = require('mongoose'); 
-mongoose.connect("mongodb://localhost/Cracking_the_Resume");
+var mongoose = require('mongoose');
+mongoose.connect("mongodb://levyshi:CSE442@ds119772.mlab.com:19772/cracking_the_resume");
 
 //Seeds file
 seedDB = require("./seeds");
 
-// Remove all user data from the data 
-//seedDB(); 
+// Remove all user data from the data
+//seedDB();
 
 var app = express();
 
@@ -49,6 +49,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.static("../Resumes"));
 app.use(express.static("public"));
+app.use(express.static("Resumes"))
+
+//METHOD OVERRIDE 
+app.use(methodOverride("_method"));
 
 //add session middleware to save session in the database
 app.use(session({
@@ -78,7 +82,7 @@ app.use('/split', split);
 app.use('/resumeViewing', resumeViewing);
 app.use('/settings', settings);
 app.use('/redirect', redirect);
-app.use('/individual', individual); 
+app.use('/individual', individual);
 app.use(express.static("../Resumes"));
 
 
