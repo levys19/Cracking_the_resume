@@ -12,7 +12,7 @@ h1{
     width: 555px;
     height: 700px;
     overflow: hidden;
-    border: 100px solid rgba(197, 173, 183, 0.363);
+    border: 50px solid rgba(197, 173, 183, 0.363);
     
   }
   .tileind{
@@ -21,7 +21,7 @@ h1{
     width: 555px;
     height: 700px;    
     overflow: hidden;
-    border: 100px solid rgba(83, 71, 76, 0.363);
+    border: 50px solid rgba(83, 71, 76, 0.363);
   }
 
   .photo {
@@ -46,13 +46,13 @@ button{
     font-family: Arial;
     color: rgb(255, 255, 255);
     font-size: 12px;
-    background: #a3967e;
+    background: #917c86;
     padding: 6px 12px 6px 12px;
     text-decoration: none;
     margin-left: 560px;
 }
 button:hover {
-    background: #d1c6aa;
+    background: rgb(189, 184, 184);
     text-decoration: none;
     color: aliceblue;
 }
@@ -107,11 +107,11 @@ button:hover {
     display: inline-block;
     margin: 10px;
     font-weight: normal;
-    color: rgb(85, 62, 62);
+    color: rgb(233, 233, 233);
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
-    background: #a3967e;
+    background: #917c86;
     border: 1px solid transparent;
     white-space: nowrap;
     padding: 3px 6px;

@@ -1,9 +1,9 @@
 body {
-  background-color: #C4BDAC;
+  background-color: rgb(165, 161, 163);
 }
 
 .conForm{
-padding-top: 1%;
+padding-top: 10%;
 }
 
 *[role="form"] {

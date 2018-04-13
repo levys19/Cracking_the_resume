@@ -57,23 +57,45 @@
     <div class="row">
 
         <div class="col-md-6" style="text-align:center;">
-            <!-- <img src="http://www.gfyork.com/wp-content/uploads/2017/09/resume-latex-template-latex-templates-curricula-vitaersums-templates-1.png" height="500" width="350"> -->
+            <!-- <img src="/<%=resumeRecord.resumeName%>" height="500" width="350"> -->
             <div class="tiles">
-                <div class="tileind" data-scale="2.4" data-image="/<%=resumeRecord.resumeName%>"></div>
+                <img class="tileind" data-scale="2.4" src="<%=resumeRecord.resumeName%>">
             </div>
             <!-- RESUME IMAGE  -->
             <!-- <img src= "/<%=resumeRecord.resumeName%>" height="500" width="350"> -->
 
             <div class="row">
                 <div class="col-md-12">
-                    <!-- LIKE BUTTON  -->
-                    <a class="like"><i class="fa fa-thumbs-o-up"></i>
-                        Like <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
-                    </a>
-                    <!-- DISLIKE BUTTON  -->
-                    <a class="dislike"><i class="fa fa-thumbs-o-down"></i>
-                        Dislike <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
-                    </a>
+
+                    <!-- NEW LIKE BUTTON -->
+                    <form class = 'upvote' action="/individual/<%=resumeRecord._id%>/upvote" method = "POST">
+                        <button class="like"><i class="fa fa-thumbs-o-up"></i>
+                        Like <input class="qty1" name="qty1" readonly="readonly" type="submit" 
+                        value="<%=resumeRecord.upvoteCount%>" 
+                        <%resumeRecord.upvotes.forEach(function(f){ %>
+                            <%if(String(f.votedBy) === String(user._id)){ %>
+                                id = "<%=f.status%>"
+                            <%}%>
+                        <%}); %> 
+                        />
+                        </button>
+                    </form>
+
+
+                    <!-- NEW DISLIKE BUTTON --> 
+                    <form class = 'downvote' action="/individual/<%=resumeRecord._id%>/downvote" method = "POST">
+                         <button class="dislike"><i class="fa fa-thumbs-o-up"></i>
+                        Dislike <input class="qty2" name="qty2" readonly="readonly" type="submit" 
+                        value="<%=resumeRecord.downvoteCount%>" 
+                        <%resumeRecord.downvotes.forEach(function(f){ %>
+                            <%if(String(f.votedBy) === String(user._id)){ %>
+                                id = "<%=f.status%>"
+                            <%}%>
+                        <%}); %> 
+                        />
+                        </button>
+                    </form>
+
                     <!-- COMMENT FORM BOX -->
                     <form method = "post" action = '/individual/<%=resumeRecord._id%>' role = 'form' target = "uploader_iframe">
                         <textarea type = 'text' class="form-control" rows="3" name="Message" id="Message" placeholder="Message" required onsubmit="triggerButton()"></textarea>
