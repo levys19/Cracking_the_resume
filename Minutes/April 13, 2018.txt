@@ -1,0 +1,34 @@
+﻿Date: April 13, 2018
+Time: 2:00PM -  3:00PM
+
+
+Meeting Attendance: Shally Guo, YongJi Chen, Sravanika Doddi, Liesel Vaidya, Levy Shi
+
+
+Meeting Summary: 
+* Since the deadline for Beta Release is today, we checked to make sure we meet all the requirements. 
+* Things we need to work on:
+1. Zoom feature
+2. Change the homepage picture micheal Johnshon 
+3. Pop on comments on a new page
+4. Update resume feature
+5. Implement an add on feature: Include other communities/majors instead of just computer science. Display users name, major and currently seeking information on individual resume page.
+6. FAQ page
+7. Error page
+8. Like/Dislike buttons changes:  everytime we like the page refreshes→ make it so that it doesn’t refresh. 
+
+
+Accomplishments (since last meeting): 
+   * Liesel: Fix Resume Viewing formatting. Consistent layout.  Differentiate viewing your own vs. other resumes. Created landing page. Zoom feature implemented but removed. 
+   * Sravanika: User resume is not displayed on the resume Viewing Page and users can’t access the resumeViewing page, settings page, and accounts page. 
+   * Shally: Upvote/ Downvote functionality from backend to front end 
+   * YongJi: Limited number of words you can comment, restrict empty spaces from posting. Limited likes/dislikes to one click.
+   * Levy Shi: convert the PDF to PNG so we can display them as PNG. make live server and give everyone access keys.
+
+
+Tasks (to be completed before next meeting): 
+   * Liesel: Update resume feature. Zoom feature for the current website. FAQ page. Error page. Maybe make the app mobile friendly. 
+   * Sravanika: Learn Ajax to fix make sure the comments don’t pop up on the new page. 
+   * Yongji: Create an error page template and learn AJAX.
+   * Shally: Fix new tabbing issue for comments on individual and accounts page 
+   * Levy: Make environment variables with secret access key for each team better.
