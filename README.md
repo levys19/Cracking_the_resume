@@ -6,7 +6,7 @@ The web app is now deployed on: https://www.reschk.me/
 
 # Youtube link Beta Release
 
-https://youtu.be/M7dxiE4CJeA
+https://youtu.be/kAYWaOM8UUg
 
 
 # How to run the web application on your local machine
