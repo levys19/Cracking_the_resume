@@ -87,9 +87,8 @@ router.post('/:id/upvote', function(req, res){
       Resume.findById(req.params.id, function(err, resumeRecord){
         if(!err){
           resumeRecord.upvoteCount = resumeRecord.upvoteCount + 1; 
-          resumeRecord.save(function(err, resume){
-            res.redirect("/individual/" + resume._id);
-          });   
+          resumeRecord.save(); 
+          res.redirect("/individual/" + resumeRecord._id);  
         }
       });
       console.log("RESUME HAS BEEN UPDATED WITH UPVOTE!")
@@ -108,9 +107,8 @@ router.post('/:id/downvote', function(req, res){
       Resume.findById(req.params.id, function(err, resumeRecord){
         if(!err){
           resumeRecord.downvoteCount = resumeRecord.downvoteCount + 1; 
-          resumeRecord.save(function(err, resume){
-            res.redirect("/individual/" + resume._id);
-          }); 
+          resumeRecord.save();  
+          res.redirect("/individual/" + resumeRecord._id);
           //console.log("this is the resumeID inside find by: ")
           //console.log(resumeRecord._id)
           
