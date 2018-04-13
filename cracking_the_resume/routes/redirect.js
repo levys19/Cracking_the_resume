@@ -14,6 +14,15 @@ var Resume = require('../Models/resume')
 
 AWS.config.update({ accessKeyId: 'AKIAIQVUQQ4AAXSVZTEA', secretAccessKey: '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' });
 var multer = require('multer');
+var storage = multer.diskStorage({
+    destination: function(req,file, cb){
+        cb(null, './Resumes')
+    },
+    filename: function(req, file, db){
+        db(null, file.fieldname + '-' + Date.now() + '.png')
+    }
+});
+
 
 
 //for conversion
@@ -49,6 +58,8 @@ router.post('/', function(req, res, next) {
 
             //creating resume record
             var resumeRecord = new Resume({
+                upvoteCount: 0, //intializing upvote count to 0 
+                downvoteCount: 0, //initializing downvote count to 0 
                 resumeName: "https://s3.amazonaws.com/crackingtheresume/" + fileName
             });
 
