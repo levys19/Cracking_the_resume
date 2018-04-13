@@ -25,14 +25,14 @@ var individual = require('./routes/individual');
 //METHOD OVERRIDE 
 var methodOverride = require("method-override");
 //Database set up: MONGOOSE
-var mongoose = require('mongoose'); 
-mongoose.connect("mongodb://localhost/Cracking_the_Resume");
+var mongoose = require('mongoose');
+mongoose.connect("mongodb://levyshi:CSE442@ds119772.mlab.com:19772/cracking_the_resume");
 
 //Seeds file
 seedDB = require("./seeds");
 
-// Remove all user data from the data 
-//seedDB(); 
+// Remove all user data from the data
+//seedDB();
 
 var app = express();
 
@@ -82,7 +82,7 @@ app.use('/split', split);
 app.use('/resumeViewing', resumeViewing);
 app.use('/settings', settings);
 app.use('/redirect', redirect);
-app.use('/individual', individual); 
+app.use('/individual', individual);
 app.use(express.static("../Resumes"));
 
 
