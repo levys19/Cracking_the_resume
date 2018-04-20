@@ -119,7 +119,7 @@ router.post('/', function(req, res, next) {
                 secure: false, // true for 465, false for other ports
                 auth: {
                     user: 'crackingtheresume@gmail.com', // generated ethereal user
-                    pass: '' // generated ethereal password
+                    pass: 'CSE4429945' // generated ethereal password
                 }
             });
 
