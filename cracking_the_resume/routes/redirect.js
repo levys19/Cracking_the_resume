@@ -147,67 +147,7 @@ router.post('/', function(req, res, next) {
         });    
         
 
-           /* var app = require('express')();
-              var mailer = require('express-mailer');
-
-
-              mailer.extend(app, {
-                      from: 'crackingtheresume@gmail.com',
-                      host: 'smtp.gmail.com', // hostname 
-                      secureConnection: true, // use SSL 
-                      port: 465, // port for secure SMTP 
-                      transportMethod: 'SMTP', // default is SMTP. Accepts anything that nodemailer accepts 
-                      auth: {
-                        user: 'crackingtheresume@gmail.com',
-                        pass: '12#$TY12'
-                      }
-                });
- 
-            app.mailer.send('email', {
-                from: 'crackingtheresume@gmail.com', // sender address
-                to: String(req.body.email), // list of receivers // REQUIRED. This can be a comma delimited string just like a normal email to field.  
-                subject: 'Test Email', // REQUIRED. 
-                otherProperty: 'Other Property' // All additional properties are also passed to the template as local variables. 
-              }, function (err) {
-                if (err) {
-                  // handle error 
-                  console.log(err);
-                  res.send('There was an error sending the email');
-                  return;
-                }
-                res.send('Email Sent');
-              });*/
-
-   
-/*
-            var transporter = nodemailer.createTransport({
-                 service: 'Gmail',
-                 auth: {
-                    user: 'crackingtheresume@gmail.com', // Your email id
-                    pass: '12#$TY12' // Your password
-                }
-            });
-
-             var mailOptions = {
-                from: 'crackingtheresume@gmail.com', // sender address
-                to: String(req.body.email), // list of receivers
-                subject: 'Welcome to crackingtheresume', // Subject line
-                text: 'Hello there! Welcome to Cracking the Resume' //, // plaintext body
-                // html: '<b>Hello world ✔</b>' // You can choose to send an HTML body instead
-            };
-
-            transporter.sendMail(mailOptions, function(error, info){
-                if(error){
-                    console.log(error);
-                res.json({yo: 'error'});
-                }else{
-                    console.log('Message sent: ' + info.response);
-                res.json({yo: info.response});
-                };
-            }); */
-
-
-        }
+          
 
 
         var pdfImage = new PDFImage("./Resumes/temp.pdf")
