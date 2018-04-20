@@ -1,0 +1,31 @@
+﻿Date: April 20, 2018
+Time: 2:00PM -  3:00PM
+
+
+Meeting Attendance: Shally Guo, YongJi Chen, Sravanika Doddi, Liesel Vaidya, Levy Shi
+
+
+Meeting Summary: 
+* Things we need to accomplish to fix the hotfix issues
+1. Only allow valid pdf files (Due Tuesday) 
+2. Fix the likes and dislikes (Due Sunday)
+3. Not make the comment show up on the new tab
+4. Display user name on account’s page 
+5. Update Resume 
+6. Comment count 
+7. Font for website 
+8. Resume Viewing boxes aligned 
+9. Machine learning to detect if the uploaded resume is an actual resume 
+10. FAQ & Error page
+Accomplishments (since last meeting): 
+   * Liesel: Made the presentation slides for front end.
+   * Sravanika: Learned a little bit of AJAX, made the presentation slides for server-client model. 
+   * Shally: Research upvote/downvote enhancements, presentation slides & script for database 
+   * YongJi: Created powerpoint for presentation on front end side section. Helped my help wanted person complete her task. 
+   * Levy Shi: I helped my help wanted guy complete his task. Helped on the presentation slides
+Tasks (to be completed before next meeting): 
+   * Liesel: Update resume feature. Zoom feature for the current website. FAQ page. Error page. Validate email address field. 
+   * Sravanika: Continue to learn Ajax to fix make sure the comments don’t pop up on the new page, add a update resume button and update resume in the database, display firstname on the accounts page. 
+   * Yongji: Work on layout bugs on homepage and like/dislike functionality. Remove email, seeking, and major. 
+   * Shally: Enhance upvote and downvote functionality 
+   * Levy: Validation whether the file is pdf or not.
