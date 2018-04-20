@@ -102,7 +102,9 @@ button:hover {
 .main-btn:hover{ background:#00a491;color:#fff;}
 
 #commentsWrapper{
-  overflow: hidden;
+  /*overflow: hidden;*/
+  /*collab-xinyuche*/
+  overflow-wrap: break-word;
 }
 .comments-list{
   overflow: auto;
