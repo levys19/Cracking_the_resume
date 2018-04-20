@@ -72,7 +72,7 @@ router.post('/', logIn.isLoggedIn, function(req, res, next){
       // getting the size of comments in the resumes.
       commentRecord.save(function(err, comment){
         //gets the size of the comment array.
-        for(var i = 0; i < comment.length; i++){
+        // for(var i = 0; i < comment.length; i++){
           if(err){
           console.log("Error: comment was not saved")
         } else {
@@ -88,7 +88,7 @@ router.post('/', logIn.isLoggedIn, function(req, res, next){
           console.log("The comment size is: " + commentFileSize + "In Bytes");
           res.redirect("/accounts");
             }
-          }
+          // }
       });
     }
   });

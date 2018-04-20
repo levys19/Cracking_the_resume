@@ -67,6 +67,7 @@ router.post('/:id', logIn.isLoggedIn, function(req, res, next){
           console.log("Comment was saved");
           //updating resume's comment array with new comment
           resumeRecord.comments.push(comment);
+
           //saving the updated version
           resumeRecord.save();
           console.log(commentRecord)
@@ -78,7 +79,7 @@ router.post('/:id', logIn.isLoggedIn, function(req, res, next){
       });
       // getting the size of comments in the resumes.
       commentRecord.save(function(err, comment){
-        for(var i = 0; i < comment.length; i++){
+        // for(var i = 0; i < comment.length; i++){
           if(err){
           console.log("Error: comment was not saved")
         } else {
@@ -94,7 +95,7 @@ router.post('/:id', logIn.isLoggedIn, function(req, res, next){
           console.log("The comment size is: " + commentFileSize + "Bytes");
           res.redirect("/individual" + resumeRecord._id);
           }
-        }
+        // }
       });
     }
   });
