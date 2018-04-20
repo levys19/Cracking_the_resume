@@ -12,7 +12,7 @@ var Resume = require('../Models/resume')
 
 //my personal AWS access key, don't share it please -levy
 
-AWS.config.update({ accessKeyId: process.env.ACCESS_KEY_ID, secretAccessKey: process.env.SECRET_ACCESS_KEY });
+AWS.config.update({ accessKeyId: process.env.KEY_ID, secretAccessKey: process.env.SECRET_KEY });
 var multer = require('multer');
 var storage = multer.diskStorage({
     destination: function(req,file, cb){
@@ -58,8 +58,8 @@ router.post('/', function(req, res, next) {
 
             //creating resume record
             var resumeRecord = new Resume({
-                upvoteCount: 0, //intializing upvote count to 0 
-                downvoteCount: 0, //initializing downvote count to 0 
+                upvoteCount: 0, //intializing upvote count to 0
+                downvoteCount: 0, //initializing downvote count to 0
                 resumeName: "https://s3.amazonaws.com/crackingtheresume/" + fileName
             });
 
