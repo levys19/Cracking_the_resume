@@ -50,11 +50,11 @@ Now, the web app can be launched in your local web browser on localhost:3000
 # MVP: 
 1) Users will first create a user account with the web application or log into their exisiting account:
   These are the fields they are required to fill out(when they first create an account):
-    * Name 
-    * Email
-    * Major/year 
-    * City 
-    * What are you looking for? Internship/full-time
+    * Firstname
+    * Lastname
+    * Username
+    * Password
+    * Upload Resume
 2) Then, user uploads their resume to the web app 
 3) After the user uploads their resume, he/she can upvote, downvote or comment on other users' resumes.  
 
