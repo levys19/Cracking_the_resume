@@ -21,8 +21,8 @@ var settings = require('./routes/settings');
 var multer  = require('multer')
 
 var redirect = require('./routes/redirect');
-var individual = require('./routes/individual'); 
-//METHOD OVERRIDE 
+var individual = require('./routes/individual');
+//METHOD OVERRIDE
 var methodOverride = require("method-override");
 //Database set up: MONGOOSE
 var mongoose = require('mongoose');
@@ -51,7 +51,7 @@ app.use(express.static("../Resumes"));
 app.use(express.static("public"));
 app.use(express.static("Resumes"))
 
-//METHOD OVERRIDE 
+//METHOD OVERRIDE
 app.use(methodOverride("_method"));
 
 //add session middleware to save session in the database
