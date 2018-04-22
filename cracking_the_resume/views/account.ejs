@@ -104,28 +104,28 @@ fclose ($handle);}
                     <!-- NEW LIKE BUTTON -->
                     <form class = 'upvote' action="/accounts/upvote?_method=PUT" method = "POST">
                         <button class="like"><i class="fa fa-thumbs-o-up"></i>
-                        Like <input class="qty1" name="qty1" readonly="readonly" type="submit" 
-                        value="<%=resumeRecord.upvoteCount%>" 
+                        Like <input class="qty1" name="qty1" readonly="readonly" type="submit"
+                        value="<%=resumeRecord.upvoteCount%>"
                         <%resumeRecord.upvotes.forEach(function(f){ %>
                             <%if(String(f.votedBy) === String(user._id)){ %>
                                 id = "<%=f.status%>"
                             <%}%>
-                        <%}); %> 
+                        <%}); %>
                         />
                         </button>
                     </form>
 
-                    <!-- NEW DISLIKE BUTTON --> 
+                    <!-- NEW DISLIKE BUTTON -->
                     <form class = 'downvote' action="/accounts/downvote?_method=PUT" method = "POST">
 
                         <button class="dislike"><i class="fa fa-thumbs-o-up"></i>
-                        Dislike <input class="qty2" name="qty2" readonly="readonly" type="submit" 
-                        value="<%=resumeRecord.downvoteCount%>" 
+                        Dislike <input class="qty2" name="qty2" readonly="readonly" type="submit"
+                        value="<%=resumeRecord.downvoteCount%>"
                         <%resumeRecord.downvotes.forEach(function(f){ %>
                             <%if(String(f.votedBy) === String(user._id)){ %>
                                 id = "<%=f.status%>"
                             <%}%>
-                        <%}); %> 
+                        <%}); %>
                         />
                         </button>
                     </form>
