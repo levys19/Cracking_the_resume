@@ -79,8 +79,8 @@
                 <div class="col-md-6">
                     <!-- NEW LIKE BUTTON -->
                     <form class = 'upvote' action="/individual/<%=resumeRecord._id%>/upvote" method = "POST">
-                        <button class="like"><i class="fa fa-thumbs-o-up"></i>
-                        Like <input class="qty1" name="qty1" readonly="readonly" type="submit"
+                        <button class="like">Like
+                         <input class="qty1" name="qty1" readonly="readonly"
                         <%resumeRecord.upvotes.forEach(function(f){ %>
                             <%if(String(f.votedBy) === String(user._id)){ %>
                                 id = "<%=f.status%>"
@@ -94,7 +94,7 @@
                     <!-- NEW DISLIKE BUTTON -->
                     <form class = 'downvote' action="/individual/<%=resumeRecord._id%>/downvote" method = "POST">
                          <button class="dislike"><i class="fa fa-thumbs-o-up"></i>
-                        Dislike <input class="qty2" name="qty2" readonly="readonly" type="submit"
+                        Dislike <input class="qty2" name="qty2" readonly="readonly"
                         <%resumeRecord.downvotes.forEach(function(f){ %>
                             <%if(String(f.votedBy) === String(user._id)){ %>
                                 id = "<%=f.status%>"
