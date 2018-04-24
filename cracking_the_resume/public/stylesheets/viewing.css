@@ -23,13 +23,13 @@ body{
 
 .gallery img {
   width: 100%;
-  height: auto;
+  height: 400px;
   padding-bottom: 10px;
-  border-radius: 4px; 
+  border-radius: 4px;
 }
 a:hover, a:active {
   background-color: rgb(2, 1, 1);
-} 
+}
 
 a.button{
   background-color: #c9b8b6;
@@ -62,5 +62,7 @@ a.button{
   background-color: transparent;
   margin-top: 10px;
 }
-
-
+.otherResume{
+  width: 350px;
+  height: 400px;
+}

@@ -54,7 +54,7 @@
   <div class="row">
     <%resumeRecord.forEach(function(resume){ %>
       <% if (String(resume._id) !== String(user.Resume)) {%>
-      <div class="gallery col-md-3 col-sm-4">
+      <div class="gallery col-md-3 col-sm-4 otherResume">
           <!-- <a target="_blank" href="img_fjords.jpg"> -->
               <img src="<%=resume.resumeName%>" alt="" width="300" height="200">
           <!-- </a> -->
