@@ -43,111 +43,107 @@ router.post('/', function(req, res, next) {
         }
         else{
 
-            //req.file.filename is the filename of the uploaded file
-            console.log(req.file.filename);
-            console.log("file upload successful");
+            var pdfImage = new PDFImage("./Resumes/temp.pdf")
+            var magic = new mmmagic.Magic(mmmagic.MAGIC_MIME_TYPE);
 
-            //creating resume record
-            var resumeRecord = new Resume({
-                upvoteCount: 0, //intializing upvote count to 0
-                downvoteCount: 0, //initializing downvote count to 0
-                resumeName: "https://s3.amazonaws.com/crackingtheresume/" + fileName
-            });
+            magic.detectFile("./Resumes/temp.pdf", function(err, result) {
+              if (err) throw err;
 
-            //saving resume record to the database
-            resumeRecord.save(function(err, resume){
-                if(err){
-                    console.log("Error: Resume could not be saved")
-                }
-                else{
-                    console.log("Resume was saved");
-                    console.log(resume);
-                }
-            });
-            //encrypting the password
-            var password = req.body.password
-            var ePassword = User.hashPassword(password)
-            console.log(req.body.firstName)
-            //creating a user record
-            var userRecord = new User({
-                firstName: req.body.firstName,
-                lastName: req.body.lastName,
-                Email: req.body.email,
-                UserName: req.body.userName,
-                Password: ePassword,
-                Major: req.body.major,
-                Seeking: req.body.seeking,
-                Resume: resumeRecord._id
-            });
+              // image/jpeg
+              if (result != "application/pdf"){
+                //sends an error if it's not a pdf
+                res.send("error bro")
+              }
+              else {
+                //renders the correct page if the image is actually a pdf
+                res.render('redirect', { title: 'Redirect page', user:req.user });
+                pdfImage.convertPage(0).then(function (imagePath) {
+                   // 0-th page (first page) of the slide.pdf is available as slide-0.png
+                   fs.existsSync("temp-0.png") // => true
+                   fs.readFile('./Resumes/temp-0.png' , function (err, data) {
+                     if (err) { throw err; }
+                     var s3 = new AWS.S3();
+                     s3.putObject({
+                       Bucket: 'crackingtheresume',
+                       //change this to whatever you want to name each file please//look at above comment
+                       Key: fileName,
+                       Body: data,
+                       ACL: 'public-read'
+                     },function (resp) {
+                       console.log(arguments);
+                       console.log('Successfully uploaded package.');
+                     });
 
-            //saving user record to the database
-            userRecord.save(function(err, user){
-                if(err){
-                    console.log("Error: User could not be saved")
-                }
-                else{
-                    console.log("User was saved");
-                    console.log(user);
-                }
+                   });
+
+                },function(err){
+                   console.log(err);
+                });
+                //req.file.filename is the filename of the uploaded file
+                console.log(req.file.filename);
+                console.log("file upload successful");
+
+                //creating resume record
+                var resumeRecord = new Resume({
+                    upvoteCount: 0, //intializing upvote count to 0
+                    downvoteCount: 0, //initializing downvote count to 0
+                    resumeName: "https://s3.amazonaws.com/crackingtheresume/" + fileName
+                });
+
+                //saving resume record to the database
+                resumeRecord.save(function(err, resume){
+                    if(err){
+                        console.log("Error: Resume could not be saved")
+                    }
+                    else{
+                        console.log("Resume was saved");
+                        console.log(resume);
+                    }
+                });
+                //encrypting the password
+                var password = req.body.password
+                var ePassword = User.hashPassword(password)
+                console.log(req.body.firstName)
+                //creating a user record
+                var userRecord = new User({
+                    firstName: req.body.firstName,
+                    lastName: req.body.lastName,
+                    Email: req.body.email,
+                    UserName: req.body.userName,
+                    Password: ePassword,
+                    Major: req.body.major,
+                    Seeking: req.body.seeking,
+                    Resume: resumeRecord._id
+                });
+
+                //saving user record to the database
+                userRecord.save(function(err, user){
+                    if(err){
+                        console.log("Error: User could not be saved")
+                    }
+                    else{
+                        console.log("User was saved");
+                        console.log(user);
+                    }
+                });
+
+              }
             });
 
 
         }
 
 
-        var pdfImage = new PDFImage("./Resumes/temp.pdf")
-        var magic = new mmmagic.Magic(mmmagic.MAGIC_MIME_TYPE);
-
-        magic.detectFile("./Resumes/temp.pdf", function(err, result) {
-          if (err) throw err;
-
-          // image/jpeg
-          if (result != "application/pdf"){
-            //sends an error if it's not a pdf
-            res.send("error bro")
-          }
-          else{
-            //renders the correct page if the image is actually a pdf
-            res.render('redirect', { title: 'Redirect page', user:req.user });
-            pdfImage.convertPage(0).then(function (imagePath) {
-               // 0-th page (first page) of the slide.pdf is available as slide-0.png
-               fs.existsSync("temp-0.png") // => true
-               fs.readFile('./Resumes/temp-0.png' , function (err, data) {
-                 if (err) { throw err; }
-                 var s3 = new AWS.S3();
-                 s3.putObject({
-                   Bucket: 'crackingtheresume',
-                   //change this to whatever you want to name each file please//look at above comment
-                   Key: fileName,
-                   Body: data,
-                   ACL: 'public-read'
-                 },function (resp) {
-                   console.log(arguments);
-                   console.log('Successfully uploaded package.');
-                 });
-
-               });
-
-            },function(err){
-               console.log(err);
-            });
-
-          }
-        });
 
 
 
 
     });
-    //converted the image, can't find the path
 
 
 
 
 });
 
-// const host = req.host;
-// const filePath = req.protocol + '://' + host + '/' + req.file.path;
-// console.log("this is the file path " + filePath );
 
 module.exports = router;
