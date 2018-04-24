@@ -64,10 +64,10 @@
 
             <div class="row displayLikes" style="display:none;">
               <h4>You have already voted</h4>
-              <div class="col-md-6 like-button">
+              <div class="col-md-6">
                 <h3>Likes: <%=resumeRecord.upvoteCount%></h3>
               </div>
-              <div class="col-md-6 dislike-button">
+              <div class="col-md-6">
                 <h3>Dislike: <%=resumeRecord.downvoteCount%></h3>
               </div>
             </div>
@@ -75,7 +75,6 @@
             <div class="row likeButtons">
               <h4>What do you think of this resume?</h4>
                 <div class="col-md-3">
-                  haha
                 </div>
                 <div class="col-md-3">
                     <!-- NEW LIKE BUTTON -->
@@ -95,7 +94,7 @@
                     <!-- NEW DISLIKE BUTTON -->
                     <form class = 'downvote' action="/individual/<%=resumeRecord._id%>/downvote" method = "POST">
                          <button class="dislike"><i class="fa fa-thumbs-o-up"></i>
-                        Disliksassaae <input class="qty2" name="qty2" readonly="readonly"
+                        Dislike <input class="qty2" name="qty2" readonly="readonly"
                         <%resumeRecord.downvotes.forEach(function(f){ %>
                             <%if(String(f.votedBy) === String(user._id)){ %>
                                 id = "<%=f.status%>"
@@ -106,7 +105,6 @@
                     </form>
                   </div>
                   <div class="col-md-3">
-                    <p>haha</p>
                   </div>
                 </div>
                   <div class="row">
