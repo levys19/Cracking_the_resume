@@ -13,13 +13,13 @@ h1{
     height: 700px;
     overflow: hidden;
     border: 50px solid rgba(197, 173, 183, 0.363);
-    
+
   }
   .tileind{
     position: relative;
     float: both;
     width: 555px;
-    height: 700px;    
+    height: 700px;
     overflow: hidden;
     border: 50px solid rgba(83, 71, 76, 0.363);
   }
@@ -132,32 +132,39 @@ button:hover {
     border-bottom: 1px dotted #ccc;
 }
 
-.main-btn{ 
-    background:#917c86; 
-    border-color:#917c86; 
+.main-btn{
+    background:#917c86;
+    border-color:#917c86;
     color:#fff;
     margin: 8px;
 }
-.main-btn:hover{ 
+.main-btn:hover{
     background:#917c86;
     color:rgb(189, 184, 184);
 }
 
 #commentsWrapper{
-  /*overflow: hidden;*/
-  /*collab-xinyuche*/
-  overflow-wrap: break-word;
+  overflow: hidden;
+  /* overflow-wrap: break-word; */
 }
+
+.break-word{
+  overflow-wrap:break-word;
+  width: 70%;
+  /* background: lime; */
+}
+
 .comments-list{
-  overflow: auto;
-  /* overflow-y: auto;
+  /* overflow: auto; */
+  /* overflow-y: auto;*/
   overflow-x: hidden; */
   height:600px;
   width: 800px;
+  /* overflow-wrap:break-word; */
 }
 #navcol.navbar-inverse{
     /* background-color:rgba(146, 135, 142, 0.815); */
-    background-color:transparent; 
+    background-color:transparent;
     border-color: transparent;
   }
 #navcol a{
@@ -171,4 +178,16 @@ button:hover {
     background-color: transparent;
     margin-top: 10px;
   }
-  
+
+  #Message{
+    min-width: 100%;
+    min-height: 50%;
+  }
+  .likeButtons,.displayLikes{
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans";
+    color: grey;
+  }
+  .like-button, .dislike-button, .like, .dislike{
+    margin-left: 10px !important;
+    /* margin-right: 10px !important; */
+  }
