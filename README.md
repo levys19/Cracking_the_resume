@@ -2,7 +2,7 @@
 
 A web application where users can upload their resumes and have it reviewed by other users (specific to CS majors). Users also have the ability to upvote, downvote, and comment on other users’ resumes. 
 
-The web app is now deployed on: https://reschk.me/
+The web app is now deployed on: https://crackingtheresume.herokuapp.com
 
 # Youtube link Beta Release
 
