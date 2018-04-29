@@ -16,7 +16,7 @@
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+    <script src='jquery.zoom.js'></script>
 </head>
 <!-- END OF HTML HEADER -->
 
@@ -59,7 +59,7 @@
         <div class="col-md-6" style="text-align:center;">
             <!-- <img src="/<%=resumeRecord.resumeName%>" height="500" width="350"> -->
             <div class="tiles">
-                <img class="tileind" data-scale="2.4" src="<%=resumeRecord.resumeName%>">
+                <img  id="zoom" class="tileind" data-scale="2.4" src="<%=resumeRecord.resumeName%>">
             </div>
 
             <div class="row displayLikes" style="display:none;">
@@ -112,7 +112,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <!-- POSTCOMMENT BUTTON -->
-                                <input type="submit" id="postIt" class="btn main-btn" value = "postComment"/>
+                                <input type="submit" id="postIt" class="btn main-btn" value = "Comment"/>
                             </div> <!--END OF class = "col-md-12" DIV TAG -->
                         </div> <!-- END OF class = "row" DIV TAG -->
                     </form>

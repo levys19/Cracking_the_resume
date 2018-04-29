@@ -183,9 +183,6 @@ button:hover {
     min-width: 100%;
     min-height: 50%;
   }
-.user-call{
-    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans";
-    text-align: left;
-    font-weight: 800;   
-    font-size: 10px; 
+#postIt{
+    margin-bottom: 30px;
 }
