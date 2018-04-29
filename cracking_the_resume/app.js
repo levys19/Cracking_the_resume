@@ -26,7 +26,7 @@ var individual = require('./routes/individual');
 var methodOverride = require("method-override");
 //Database set up: MONGOOSE
 var mongoose = require('mongoose');
-mongoose.connect("mongodb://levyshi:CSE442@ds147069.mlab.com:47069/cracking_the_resume");
+mongoose.connect("mongodb://levyshi:CSE442@ds147069.mlab.com:47069/cracking_the_test");
 
 //Seeds file
 seedDB = require("./seeds");
