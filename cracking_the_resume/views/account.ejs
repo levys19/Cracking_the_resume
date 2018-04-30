@@ -63,8 +63,8 @@
                 <img class="tileind" data-scale="2.4" src="<%=resumeRecord.resumeName%>">
             </div>
 
-            <div class="row displayLikes" style="display:none;">
-              <h3>You have already voted</h3>
+            <div class="row displayLikes">
+              <h3>Your votes</h3>
               <div class="col-md-6">
                 <h3>Likes: <%=resumeRecord.upvoteCount%></h3>
               </div>
@@ -72,38 +72,6 @@
                 <h3>Dislike: <%=resumeRecord.downvoteCount%></h3>
               </div>
             </div>
-
-            <div class="row likeButtons">
-              <h3>What do you think of this resume?</h3>
-                <div class="col-md-6">
-                    <!-- NEW LIKE BUTTON -->
-                    <form class = 'upvote' action="/individual/<%=resumeRecord._id%>/upvote" method = "POST">
-                        <button class="like">Like
-                         <input class="qty1" name="qty1" readonly="readonly"
-                        <%resumeRecord.upvotes.forEach(function(f){ %>
-                            <%if(String(f.votedBy) === String(user._id)){ %>
-                                id = "<%=f.status%>"
-                            <%}%>
-                        <%}); %>
-                        />
-                        </button>
-                    </form>
-                  </div>
-                  <div class="col-md-6">
-                    <!-- NEW DISLIKE BUTTON -->
-                    <form class = 'downvote' action="/individual/<%=resumeRecord._id%>/downvote" method = "POST">
-                         <button class="dislike"><i class="fa fa-thumbs-o-up"></i>
-                        Dislike <input class="qty2" name="qty2" readonly="readonly"
-                        <%resumeRecord.downvotes.forEach(function(f){ %>
-                            <%if(String(f.votedBy) === String(user._id)){ %>
-                                id = "<%=f.status%>"
-                            <%}%>
-                        <%}); %>
-                        />
-                        </button>
-                    </form>
-                  </div>
-                </div>
                   <div class="row">
                     <div class="col-md-12">
                     <!-- COMMENT FORM BOX -->
@@ -133,7 +101,9 @@
                               <%resumeRecord.comments.forEach(function(comment){ %>
                               <div class="media">
                                   <div class="media-body">
-                                      <h4 class="media-heading user_name"><%=comment.username%></h4>
+                                      <h4 style="display:inline;" class="media-heading user_name"><%=comment.username%></h4>
+
+                                      <span class="text-muted">5 minutes ago<!-- This for you shally! --></span>
                                       <p class="break-word"><%=comment.content%></p>
                                   </div>
                               </div>
@@ -148,9 +118,9 @@
 
             <!-- <button type="button" class="pull-left" onclick="">Update Resume</button><br><br><br> -->
         </div>
-		
+
 		<aside>
-		
+
 
 
     </div>

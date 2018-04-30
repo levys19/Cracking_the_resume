@@ -5,7 +5,8 @@ $(document).ready(function(){
     if(lastThree == "pdf" || lastThree == "PDF"){
       $("#checkResume").prop('checked', true);
     }else{
-      $("#checkResume").prop('checked', false)
+      $("#checkResume").prop('checked', false);
+      alert("Please upload a PDF file");
     }
   }
 
