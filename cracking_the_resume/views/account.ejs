@@ -74,7 +74,7 @@
                   <div class="row">
                     <div class="col-md-12">
                     <!-- COMMENT FORM BOX -->
-                    <form method = "post" action = '/individual/<%=resumeRecord._id%>' role = 'form'>
+                    <form method = "post" action = '/accounts' role = 'form'>
                         <textarea type = 'text' class="form-control" rows="3" name="Message" id="Message" placeholder="Message" required onsubmit="triggerButton()"></textarea>
                         <h6 class="pull-right" id="count_message"></h6><h6 class="pull-left" id="countLeft"></h6>
                         <div class="row">
@@ -93,7 +93,7 @@
                   <div class="row">
                       <div class="col-md-8">
                           <div class="page-header">
-                              <h1><small id="commentCount" class="pull-right"></small> Comments </h1>
+                              <h1><small id="commentCount" class="pull-right"></small><%=resumeRecord.commentCount%> Comments </h1>
                           </div>
                           <div class="comments-list">
                               <!-- for loop  -->
@@ -101,8 +101,7 @@
                               <div class="media">
                                   <div class="media-body">
                                       <h4 style="display:inline;" class="media-heading user_name"><%=comment.username%></h4>
-
-                                      <span class="text-muted">5 minutes ago<!-- This for you shally! --></span>
+                                      <span class="text-muted"><%=new Date(comment.created)%><!-- This for you shally! --></span>
                                       <p class="break-word"><%=comment.content%></p>
                                   </div>
                               </div>
