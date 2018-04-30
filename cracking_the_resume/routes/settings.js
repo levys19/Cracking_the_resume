@@ -96,12 +96,10 @@ router.post('/updateResume', function(req, res, next) {
                     console.log("Updated Resume, printing user from update")
                     console.log(user)
                     var pdfImage = new PDFImage("./Resumes/temp.pdf")
-                    console.log("wowza")
                     pdfImage.convertPage(0).then(function (imagePath) {
 
                         // 0-th page (first page) of the slide.pdf is available as slide-0.png
                         fs.existsSync("temp-0.png"); // => true
-                        console.log('running?')
                         fs.readFile('./Resumes/temp-0.png' , function (err, data) {
                             if (err) { throw err; }
                             var s3 = new AWS.S3();
@@ -121,7 +119,6 @@ router.post('/updateResume', function(req, res, next) {
                     },function(err){
                         console.log(err);
                     });
-                    console.log('the hell')
 
                 }
 
