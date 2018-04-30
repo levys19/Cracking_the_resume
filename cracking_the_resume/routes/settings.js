@@ -4,6 +4,7 @@ var User = require('../Models/user');
 var logIn = require("../logIn");
 var AWS = require("aws-sdk")
 var Resume = require('../Models/resume')
+var fs = require("fs")
 
 //Restrict users to the settings page with isLoggedIn
 router.get('/', logIn.isLoggedIn, function(req, res, next) {
@@ -36,15 +37,6 @@ router.post('/', function(req, res, next) {
 
 AWS.config.update({ accessKeyId: process.env.ACCESS_KEY_ID, secretAccessKey: process.env.SECRET_ACCESS_KEY });
 var multer = require('multer');
-var storage = multer.diskStorage({
-    destination: function(req,file, cb){
-        cb(null, './Resumes')
-    },
-    filename: function(req, file, db){
-        db(null, file.fieldname + '-' + Date.now() + '.png')
-    }
-});
-
 //for conversion
 var PDFImage = require("pdf-image").PDFImage;
 
@@ -101,40 +93,43 @@ router.post('/updateResume', function(req, res, next) {
                     console.log("Couldn't update entry")
                 }
                 else {
-                    console.log("Updated Password, printing user from update")
+                    console.log("Updated Resume, printing user from update")
                     console.log(user)
+                    var pdfImage = new PDFImage("./Resumes/temp.pdf")
+                    console.log("wowza")
+                    pdfImage.convertPage(0).then(function (imagePath) {
+
+                        // 0-th page (first page) of the slide.pdf is available as slide-0.png
+                        fs.existsSync("temp-0.png"); // => true
+                        console.log('running?')
+                        fs.readFile('./Resumes/temp-0.png' , function (err, data) {
+                            if (err) { throw err; }
+                            var s3 = new AWS.S3();
+                            s3.putObject({
+                                Bucket: 'crackingtheresume',
+                                //change this to whatever you want to name each file please//look at above comment
+                                Key: fileName,
+                                Body: data,
+                                ACL: 'public-read'
+                            },function (resp) {
+                                console.log(arguments);
+                                console.log('Successfully uploaded package.');
+                            });
+
+                        });
+
+                    },function(err){
+                        console.log(err);
+                    });
+                    console.log('the hell')
+
                 }
 
-                return user;
 
             });
 
         }
 
-
-        var pdfImage = new PDFImage("./Resumes/temp.pdf")
-        pdfImage.convertPage(0).then(function (imagePath) {
-            // 0-th page (first page) of the slide.pdf is available as slide-0.png
-            fs.existsSync("temp-0.png"); // => true
-            fs.readFile('./Resumes/temp-0.png' , function (err, data) {
-                if (err) { throw err; }
-                var s3 = new AWS.S3();
-                s3.putObject({
-                    Bucket: 'crackingtheresume',
-                    //change this to whatever you want to name each file please//look at above comment
-                    Key: fileName,
-                    Body: data,
-                    ACL: 'public-read'
-                },function (resp) {
-                    console.log(arguments);
-                    console.log('Successfully uploaded package.');
-                });
-
-            });
-
-        },function(err){
-            console.log(err);
-        });
 
 
         res.redirect('/settings');
@@ -146,4 +141,3 @@ router.post('/updateResume', function(req, res, next) {
 
 
 module.exports = router;
-
