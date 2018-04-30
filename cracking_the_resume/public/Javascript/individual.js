@@ -1,38 +1,16 @@
 $(function () {
 
-//   //1 for liked, 0 for disliked
-// if($(".qty1").attr("id") == 1){
-//         // $(".like").prop('disabled', true);
-//         // $(".dislike").prop('disabled', false);
-//         //
-//         // $(".upvote")  .prop('disabled', true);
-//         // $(".downvote").prop('disabled', false);
-//         //
-//         // $(".qty1").prop('disabled', true);
-//         // $(".qty2").prop('disabled', false);
-//
-//         $(".likeButtons").hide();
-//         $(".displayLikes").css({ 'display' : ''});
-//
-//
-//         // $(".like").css("background-color", "blue");
-//       }
-//
-//
-// if($(".qty2").attr("id") == 1){
-//         // $(".like").prop('disabled', false);
-//         // $(".dislike").prop('disabled', true);
-//         //
-//         // $(".upvote").prop('disabled', false);
-//         // $(".downvote").prop('disabled', true);
-//         //
-//         // $(".qty1").prop('disabled', false);
-//         // $(".qty2").prop('disabled', true);
-//         // $(".dislike").css("background-color", "blue");
-//
-//         $(".likeButtons").hide();
-//         $(".displayLikes").css({ 'display' : ''});
-//       }
+  //1 for liked, 0 for disliked
+if($(".qty1").attr("id") == 1){
+        $(".likeButtons").hide();
+        $(".displayLikes").css({ 'display' : ''});
+      }
+
+
+if($(".qty2").attr("id") == 1){
+        $(".likeButtons").hide();
+        $(".displayLikes").css({ 'display' : ''});
+      }
 
 
   //disables submit if comment is empty or contains all spaces only
