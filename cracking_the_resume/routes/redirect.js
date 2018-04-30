@@ -64,6 +64,8 @@ router.post('/', function(req, res, next) {
                 resumeName: "https://s3.amazonaws.com/crackingtheresume/" + fileName
             });
 
+            console.log(resumeRecord);
+
             //saving resume record to the database
             resumeRecord.save(function(err, resume){
                 if(err){
