@@ -183,3 +183,6 @@ button:hover {
     min-width: 100%;
     min-height: 50%;
   }
+#postIt{
+    margin-bottom: 30px;
+}
