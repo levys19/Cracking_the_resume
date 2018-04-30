@@ -3,6 +3,7 @@ var mongoose = require("mongoose");
 //RESUME schema
 var resumeSchema = new mongoose.Schema({
     resumeName: String, //Name of the resume file in s3 bucket 
+    commentCount: Number,
     comments:[
         //Object Reference
         {
