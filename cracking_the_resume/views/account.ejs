@@ -59,7 +59,7 @@
         <div class="col-md-6" style="text-align:center;">
             <!-- <img src="/<%=resumeRecord.resumeName%>" height="500" width="350"> -->
             <div class="tiles">
-                <img  id="zoom" class="tileind" data-scale="2.4" src="<%=resumeRecord.resumeName%>">
+                <img class="tileind" data-scale="2.4" src="<%=resumeRecord.resumeName%>">
             </div>
 
             <div class="row displayLikes" style="display:none;">
@@ -106,7 +106,7 @@
                   <div class="row">
                     <div class="col-md-12">
                     <!-- COMMENT FORM BOX -->
-                    <form method = "post" action = '/individual/<%=resumeRecord._id%>' role = 'form' target = "uploader_iframe">
+                    <form method = "post" action = '/individual/<%=resumeRecord._id%>' role = 'form'>
                         <textarea type = 'text' class="form-control" rows="3" name="Message" id="Message" placeholder="Message" required onsubmit="triggerButton()"></textarea>
                         <h6 class="pull-right" id="count_message"></h6><h6 class="pull-left" id="countLeft"></h6>
                         <div class="row">

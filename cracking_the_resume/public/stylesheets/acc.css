@@ -13,9 +13,8 @@ h1{
     height: 700px;
     overflow: hidden;
     border: 50px solid rgba(197, 173, 183, 0.363);
-
   }
-  .tileind{
+.tileind{
     position: relative;
     float: both;
     width: 555px;
@@ -23,6 +22,21 @@ h1{
     overflow: hidden;
     border: 50px solid rgba(83, 71, 76, 0.363);
   }
+
+  .zoom{
+    width:100%;
+    height:auto;
+    position:relative;
+    overflow:hidden
+  }
+ 
+ /* Zooming with just CSS - ghetto way
+  .tiles img {
+    transition:.5s ease-in-out;
+  }
+  .tiles:hover img {  
+    transform: scale(1.5);
+  } */
 
   .photo {
     position: absolute;

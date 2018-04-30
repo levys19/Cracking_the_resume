@@ -16,6 +16,13 @@
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="css/pinchzoomer.min.css" rel="stylesheet">
+    <script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+    <script src="js/modernizr.min.js" type="text/javascript"></script>
+    <script src="js/TweenMax.min.js" type="text/javascript"></script>
+    <script src="js/jquery.pinchzoomer.min.js" type="text/javascript"></script> 
 
 </head>
 <!-- END OF HTML HEADER -->
@@ -58,9 +65,12 @@
 
         <div class="col-md-6" style="text-align:center;">
             <!-- <img src="/<%=resumeRecord.resumeName%>" height="500" width="350"> -->
-            <div class="tiles">
-                <img class="tileind" data-scale="2.4" src="<%=resumeRecord.resumeName%>">
+            <div class="tiles zoom">
+                <img id="zooms" class="tileind" data-scale="2.4" src="<%=resumeRecord.resumeName%>" data-elem="pinchzoomer">
             </div>
+            <script>
+            $('#zooms').pinchzoomer();
+            </script>
 
             <!-- RESUME IMAGE  -->
             <!-- <img src= "/<%=resumeRecord.resumeName%>" height="500" width="350"> -->
@@ -109,7 +119,7 @@
                   <div class="row">
                     <div class="col-md-12">
                     <!-- COMMENT FORM BOX -->
-                    <form method = "post" action = '/individual/<%=resumeRecord._id%>' role = 'form' target = "uploader_iframe">
+                    <form method = "post" action = '/individual/<%=resumeRecord._id%>' role = 'form'>
                         <textarea type = 'text' class="form-control" rows="3" name="Message" id="Message" placeholder="Message" required onsubmit="triggerButton()"></textarea>
                         <h6 class="pull-right" id="count_message"></h6><h6 class="pull-left" id="countLeft"></h6>
                         <div class="row">
