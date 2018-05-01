@@ -16,7 +16,6 @@
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src='jquery.zoom.js'></script>
 </head>
 <!-- END OF HTML HEADER -->
 
@@ -45,6 +44,7 @@
                     </ul>
                 </li>
                 <li><a href="/settings">Settings</a></li>
+                <li><a href="/faq">Faq</a></li>                                
                 <li><a href="/logout">Log Out</a></li>
             </ul>
         </div>
@@ -58,8 +58,31 @@
 
         <div class="col-md-6" style="text-align:center;">
             <!-- <img src="/<%=resumeRecord.resumeName%>" height="500" width="350"> -->
+            <div class="easyzoom">
+                    <a href="images/zoom.jpg">
+                        <img src="images/standard.jpg" alt="" />
+                    </a>
+                </div>
+                <!-- <style>
+                /* Shrink wrap strategy 1 */
+.easyzoom {
+    float: left;
+}
+.easyzoom img {
+    display: block;
+}
+
+
+/* Shrink wrap strategy 2 */
+.easyzoom {
+    display: inline-block;
+}
+.easyzoom img {
+    vertical-align: bottom;
+}
+                </style> -->
             <div class="tiles">
-                <img  id="zoom" class="tileind" data-scale="2.4" src="<%=resumeRecord.resumeName%>">
+                <img class="tileind" data-scale="2.4" src="<%=resumeRecord.resumeName%>">
             </div>
 
             <div class="row displayLikes">
