@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheets/formpage.css">
     <script src="../Javascript/sign.js"></script>
+
 </head>
 <body>
   <div class="container">
@@ -19,7 +21,7 @@
                 <div class="form-group">
                     <label for="firstName" class="col-sm-3 control-label">First Name</label>
                     <div class="col-sm-9">
-                        <input type="text" name="firstName" id="firstName" placeholder="First Name" class="form-control" required="required">
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name" class="form-control" autofocus required="required">
                     </div>
                 </div>
                 <div class="form-group">
@@ -31,29 +33,47 @@
                 <div class="form-group">
                     <label for="userName" class="col-sm-3 control-label">User Name</label>
                     <div class="col-sm-9">
-                        <input type="text" name = "userName" id="userName" placeholder="User Name" class="form-control" autofocus required="required">
+                        <input type="text" name = "userName" id="userName" placeholder="User Name" class="form-control"  required="required">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="password" class="col-sm-3 control-label">Password</label>
                     <div class="col-sm-9">
                         <input type="password" name = "password" id="password" placeholder="Password" class="form-control" required="required">
+                        <meter max="4" id="password-strength-meter"></meter>
+                        <p id="password-strength-text"></p>
+                        <input type="checkbox" id="checkLength"  value="checkLength" required="required" style="display:none;">
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">Retype Password</label>
+                    <div class="col-sm-9">
+                        <input type="password" name = "confirm_password" id="confirm_password" placeholder="Retype your password" class="form-control" required="required">
+                        <span id='message' required="required"></span>
+                        <input type="radio" id="checkSame" name="gender" value="male" required="required" style="display:none;">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-sm-3">Resume</label>
                     <div class="col-sm-9">
                       <label class="custom-file" style="overflow:hidden;">
+<<<<<<< HEAD
                         <input type="file" id="fileUpload" class="custom-file-input" name = "resume" accept=".pdf" required="required">
                         <input type="checkbox" id="checkResume" name="checkbox" value="checkFile" required="required">Upload a PDF file<br>
                         <!-- <p>(PNG)*</p> -->
+=======
+                        <input type="file" id="fileUpload" class="custom-file-input" name = "resume" required="required">
+                        Upload a PDF file<br>
+                        <input type="checkbox" id="checkResume" value="checkFile" required="required" style="display:none;">
+>>>>>>> 3c676e241161f1c6756983ba026deb886303e535
                         <span class="custom-file-control"></span>
                       </label>
                     </div>
                 </div> <!-- /.form-group -->
                 <div class="form-group">
                     <div class="col-sm-9 col-sm-offset-3">
-                        <input type="submit" id="submitForm" value="Sign Up"/>
+                        <input style="width:70%; "class="btn btn-primary" type="submit" id="submitForm" value="Sign Up"/>
                     </div>
                 </div>
             </form> <!-- /form -->

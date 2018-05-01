@@ -1,0 +1,33 @@
+﻿Date: April 27, 2018
+Time: 2:00PM -  3:00PM
+
+
+Meeting Attendance: Shally Guo, YongJi Chen, Sravanika Doddi, Liesel Vaidya, Levy Shi
+
+
+Meeting Summary: 
+* Things we need to accomplish to fix the hotfix issues
+1. Not make the comment show up on the new tab
+2. Update Resume 
+3. Comment count 
+4. Font for website 
+5. Resume Viewing boxes aligned 
+6. Machine learning to detect if the uploaded resume is an actual resume 
+7. FAQ & Error page
+8. Beta feedback form: do zoom feature 
+
+
+Accomplishments (since last meeting): 
+   * Liesel: Prepared and presented the project. Created update resume button.
+   * Sravanika: Change the password feature on the settings page, displayed first name on the account page. 
+   * Shally: Comment count backend functionality 
+   * YongJi: Prepared and presented the project. Work on layout bugs on signup and like/dislike functionality. Remove email, seeking, and major. 
+   * Levy Shi: validated the pdf to not just check extension.
+
+
+Tasks (to be completed before next meeting): 
+   * Liesel: Zoom feature for the current website. FAQ page. Error page. Make font compatible in all browsers, computers. Resume viewing boxes restrict size. Change the layout of the hellooo “user” in accounts page. Update resume button.
+   * Sravanika: Continue to learn Ajax to fix make sure the comments don’t pop up on the new page and update resume in the database. 
+   * Yongji: Edit the accounts/individual comments to not be able to like/dislike if it’s your own resume. Create template for Shally to show comment times & total comments. Remove checkbox in sign up page under the attach resume button.
+   * Shally: Display comment counts and time on page, edit comment functionality, comment tabbing problem, update resume functionality,  enhance upvote and downvote functionality 
+   * Levy: use machine learning to determine if an image is actually a resume or not.

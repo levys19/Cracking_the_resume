@@ -61,6 +61,8 @@ router.post('/', logIn.isLoggedIn, function(req, res, next){
           console.log("Comment was saved"); 
           //updating resume's comment array with new comment 
           resumeRecord.comments.push(comment);
+          //updating comment count
+          resumeRecord.commentCount = resumeRecord.commentCount + 1; 
           //saving the updated version 
           resumeRecord.save(); 
           console.log(commentRecord)
@@ -73,44 +75,10 @@ router.post('/', logIn.isLoggedIn, function(req, res, next){
   }); 
 });  
 
-//UPDATING THE LIKE BUTTON
-router.put('/upvote', function(req, res){
-  Resume.update({_id: req.user.Resume}, {$addToSet:{upvotes:[{votedBy:req.user._id, status: 1}]}}, function(err, resume){
-    if(!err){
-      Resume.findById(req.user.Resume, function(err, resumeRecord){
-        if(!err){
-          resumeRecord.upvoteCount = resumeRecord.upvoteCount + 1;  
-          resumeRecord.save(); 
-        }
-      })
-      console.log("RESUME HAS BEEN UPDATED WITH UPVOTE!")
-      console.log(resume); 
-    }
-  });  
-  //res.sendStatus(204); 
-  res.redirect('/accounts'); 
-});
-
-//UPDATING THE DISLIKE BUTTON
-router.put('/downvote', function(req, res){
-  Resume.update({_id: req.user.Resume}, {$addToSet:{downvotes:[{votedBy:req.user._id, status: 1}]}}, function(err, resume){
-    if(!err){
-      Resume.findById(req.user.Resume, function(err, resumeRecord){
-        if(!err){
-          resumeRecord.downvoteCount = resumeRecord.downvoteCount + 1; 
-          resumeRecord.save(); 
-        }
-      });
-      console.log("RESUME HAS BEEN UPDATED WITH DOWNVOTE!") 
-      console.log(resume); 
-    }
-  });  
-  //res.sendStatus(204); 
-  res.redirect('/accounts'); 
-});
 
 module.exports = router;
 
+//zoom
 
 
 // //updating the resume 
