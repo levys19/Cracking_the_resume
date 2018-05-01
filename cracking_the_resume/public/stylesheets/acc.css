@@ -165,7 +165,7 @@ button:hover {
     background-color:transparent;
     border-color: transparent;
   }
-#navcol a{
+#navcol a {
     color: #0e0c0c;
     font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans";
     font-style: normal;
@@ -176,6 +176,18 @@ button:hover {
     background-color: transparent;
     margin-top: 10px;
   }
+
+  /* #navcol button {
+    color: #0e0c0c;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans";
+    font-style: normal;
+    font-variant: small-caps;
+    font-weight: 800;
+    font-stretch: ultra-expanded;
+    line-height: 18px;
+    background-color: transparent;
+    margin-top: 10px;
+} */
 
   #Message{
     min-width: 100%;

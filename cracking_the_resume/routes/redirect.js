@@ -58,10 +58,13 @@ router.post('/', function(req, res, next) {
 
             //creating resume record
             var resumeRecord = new Resume({
+                commentCount: 0, 
                 upvoteCount: 0, //intializing upvote count to 0 
                 downvoteCount: 0, //initializing downvote count to 0 
                 resumeName: "https://s3.amazonaws.com/crackingtheresume/" + fileName
             });
+
+            console.log(resumeRecord);
 
             //saving resume record to the database
             resumeRecord.save(function(err, resume){
