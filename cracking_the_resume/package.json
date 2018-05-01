@@ -6,6 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "aws-sdk": "*",
     "bcryptjs": "^2.4.3",
     "body-parser": "~1.18.2",
     "connect-mongo": "^2.0.1",
@@ -15,16 +16,16 @@
     "express": "^4.15.5",
     "express-flash": "0.0.2",
     "express-session": "^1.15.6",
+    "jquery-zoom": "^1.7.21",
     "method-override": "^2.3.10",
     "mongoose": "^5.0.8",
     "morgan": "~1.9.0",
     "multer": "^1.3.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
+    "pdf-image": "*",
     "serve-favicon": "~2.4.5",
     "socket.io": "^2.0.4",
-    "aws-sdk": "*",
-    "pdf-image": "*",
     "zoomove": "^1.2.1"
   }
 }

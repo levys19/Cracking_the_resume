@@ -13,3 +13,20 @@
     background-color: transparent;
     margin-top: 10px;
   }
+  a:hover, a:active {
+    background-color: rgb(2, 1, 1);
+  } 
+  
+  a.button{
+    background-color: #c9b8b6;
+    color: rgb(8, 5, 5);
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+  }
+  h3{
+    padding: 30px;
+    padding-left:0px;
+  }

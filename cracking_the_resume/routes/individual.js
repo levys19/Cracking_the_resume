@@ -36,7 +36,7 @@ router.get('/:id', logIn.isLoggedIn, function(req, res, next) {
 
 
 //STORING NEW COMMENTS 
-router.post('/:id', logIn.isLoggedIn, function(req, res, next){
+router.post('/:id/comment', logIn.isLoggedIn, function(req, res, next){
   //current user's resume's ID 
   // var id = req.user.Resume; 
   var id = req.params.id; 
@@ -67,6 +67,8 @@ router.post('/:id', logIn.isLoggedIn, function(req, res, next){
           console.log("Comment was saved"); 
           //updating resume's comment array with new comment 
           resumeRecord.comments.push(comment);
+          //updating comment count
+          resumeRecord.commentCount = resumeRecord.commentCount + 1; 
           //saving the updated version 
           resumeRecord.save(); 
           console.log(commentRecord)
