@@ -80,7 +80,8 @@ router.post('/updateResume', function(req, res, next) {
             var resumeRecord = new Resume({
                 upvoteCount: 0, //intializing upvote count to 0
                 downvoteCount: 0, //initializing downvote count to 0
-                resumeName: "https://s3.amazonaws.com/crackingtheresume/" + fileName
+                resumeName: "https://s3.amazonaws.com/crackingtheresume/" + fileName,
+                commentCount:0
             });
 
 
