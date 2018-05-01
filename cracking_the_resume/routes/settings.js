@@ -29,8 +29,6 @@ router.post('/', function(req, res, next) {
             console.log(user)
         }
 
-        return user;
-
     });
 
 });
@@ -76,6 +74,22 @@ router.post('/updateResume', function(req, res, next) {
                 resumeName: "https://s3.amazonaws.com/crackingtheresume/" + fileName
             });
 
+
+            Resume.remove( {_id:req.user.Resume}, function(err) {
+                if(!err) {
+                    console.log("deleted Resume")
+                    console.log("Updated User after delteting the Resume")
+                    console.log(req.user)
+
+                }
+
+                else{
+                    console.log("Resume not deleted")
+                }
+            });
+
+
+
             //saving resume record to the database
             resumeRecord.save(function(err, resume){
                 if(err){
@@ -84,6 +98,38 @@ router.post('/updateResume', function(req, res, next) {
                 else{
                     console.log("Resume was saved");
                     console.log(resume);
+                    User.update({'UserName': req.user.UserName}, {$set: {Resume:resumeRecord._id}},function(err, user) {
+                        if(err) {
+                            console.log("Couldn't update entry")
+                        }
+                        else {
+                            console.log("Updated Resume, printing user from update")
+                            var pdfImage = new PDFImage("./Resumes/temp.pdf")
+                            pdfImage.convertPage(0).then(function (imagePath) {
+                                // 0-th page (first page) of the slide.pdf is available as slide-0.png
+                                fs.existsSync("temp-0.png"); // => true
+                                fs.readFile('./Resumes/temp-0.png' , function (err, data) {
+                                    if (err) { throw err; }
+                                    var s3 = new AWS.S3();
+                                    s3.putObject({
+                                        Bucket: 'crackingtheresume',
+                                        //change this to whatever you want to name each file please//look at above comment
+                                        Key: fileName,
+                                        Body: data,
+                                        ACL: 'public-read'
+                                    },function (resp) {
+                                        console.log(arguments);
+                                        console.log('Successfully uploaded package.');
+                                    });
+
+                                });
+
+                            },function(err){
+                                console.log(err);
+                            });
+                        }
+
+                    });
                 }
             });
 
