@@ -141,7 +141,7 @@
                                   <div class="media-body">
                                       <h4 class="media-heading user_name"><%=comment.username%></h4>
                                       <span class="text-muted">
-                                        <%=new Date(comment.created).toDateString();%> <%=new Date(comment.created).getHours()%>:<%=new Date(comment.created).getMinutes();%>
+                                        <%=new Date(comment.created).toDateString();%> <%=new Date(comment.created).getHours()%>:<%=(new Date(comment.created).getMinutes()<10?'0':'') + new Date(comment.created).getMinutes();%>
                                       </span>
                                       <p><%=comment.content%></p>
                                   </div>
