@@ -44,7 +44,7 @@
                     </ul>
                 </li>
                 <li><a href="/settings">Settings</a></li>
-                <li><a href="/faq">Faq</a></li>                                
+                <li><a href="/faq">Faq</a></li>
                 <li><a href="/logout">Log Out</a></li>
             </ul>
         </div>
@@ -65,7 +65,7 @@
                 <div class="modal-dialog">
                   <div class="modal-content">
                       <div class="modal-body">
-                          <button data-dismiss="modal" class="close">×</button> 
+                          <button data-dismiss="modal" class="close">×</button>
                           <img src="<%=resumeRecord.resumeName%>" class="img-responsive">
                       </div>
                   </div>
@@ -76,7 +76,7 @@
               <h3>Your votes</h3>
               <div class="col-md-6">
                 <h3>Likes: <%=resumeRecord.upvoteCount%></h3>
-              </div>           
+              </div>
               <div class="col-md-6">
                 <h3>Dislike: <%=resumeRecord.downvoteCount%></h3>
               </div>
@@ -85,7 +85,7 @@
                     <div class="col-md-12">
                     <!-- COMMENT FORM BOX -->
                     <form method = "post" action = '/accounts' role = 'form'>
-                        <textarea type = 'text' class="form-control" rows="3" name="Message" id="Message" placeholder="Message" required onsubmit="triggerButton()"></textarea>
+                        <textarea maxlength="500" type = 'text' class="form-control" rows="3" name="Message" id="Message" placeholder="Message" required onsubmit="triggerButton()"></textarea>
                         <h6 class="pull-right" id="count_message"></h6><h6 class="pull-left" id="countLeft"></h6>
                         <div class="row">
                             <div class="col-md-12">
@@ -113,7 +113,7 @@
                                       <h4 style="display:inline;" class="media-heading user_name"><%=comment.username%></h4>
                                       <span class="text-muted">
                                         <%=new Date(comment.created).toDateString();%> <%=new Date(comment.created).getHours()%>:<%=(new Date(comment.created).getMinutes()<10?'0':'') + new Date(comment.created).getMinutes();%><!-- This for you shally! -->
-                                          
+
                                       </span>
                                       <p class="break-word"><%=comment.content%></p>
                                   </div>

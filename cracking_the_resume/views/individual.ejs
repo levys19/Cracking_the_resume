@@ -22,7 +22,7 @@
     <script src="js/jquery.hammer.min.js" type="text/javascript"></script>
     <script src="js/modernizr.min.js" type="text/javascript"></script>
     <script src="js/TweenMax.min.js" type="text/javascript"></script>
-    <script src="js/jquery.pinchzoomer.min.js" type="text/javascript"></script> 
+    <script src="js/jquery.pinchzoomer.min.js" type="text/javascript"></script>
 
 </head>
 <!-- END OF HTML HEADER -->
@@ -53,7 +53,7 @@
                     </ul>
                 </li>
                 <li><a href="/settings">Settings</a></li>
-                <li><a href="/faq">Faq</a></li>                
+                <li><a href="/faq">Faq</a></li>
                 <li><a href="/logout">Log Out</a></li>
             </ul>
         </div>
@@ -73,12 +73,12 @@
             <div class="tiles">
                 <img data-toggle="modal" data-target="#myModal" class="tileind" data-scale="2.4" src="<%=resumeRecord.resumeName%>" data-elem="pinchzoomer">
             </div>
-            
+
             <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                       <div class="modal-body">
-                          <button data-dismiss="modal" class="close">×</button>                            
+                          <button data-dismiss="modal" class="close">×</button>
                           <img src="<%=resumeRecord.resumeName%>" class="img-responsive">
                       </div>
                   </div>
@@ -87,10 +87,10 @@
             <!-- RESUME IMAGE  -->
 
             <div class="row displayLikes" style="display:none;">
-              <h3>You have already voted</h3>                           
+              <h3>You have already voted</h3>
               <div class="col-md-6">
                 <h3>Likes: <%=resumeRecord.upvoteCount%></h3>
-              </div>              
+              </div>
               <div class="col-md-6">
                 <h3>Dislike: <%=resumeRecord.downvoteCount%></h3>
               </div>
@@ -131,7 +131,7 @@
                     <div class="col-md-12">
                     <!-- COMMENT FORM BOX -->
                     <form method = "post" action = '/individual/<%=resumeRecord._id%>/comment' role = 'form'>
-                        <textarea type = 'text' class="form-control" rows="3" name="Message" id="Message" placeholder="Message" required onsubmit="triggerButton()"></textarea>
+                        <textarea maxlength="500" type = 'text' class="form-control" rows="3" name="Message" id="Message" placeholder="Message" required onsubmit="triggerButton()"></textarea>
                         <h6 class="pull-right" id="count_message"></h6><h6 class="pull-left" id="countLeft"></h6>
                         <div class="row">
                             <div class="col-md-12">
