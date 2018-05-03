@@ -139,7 +139,7 @@
                               <%resumeRecord.comments.forEach(function(comment){ %>
                               <div class="media">
                                   <div class="media-body">
-                                      <h4 class="media-heading user_name"><%=comment.username%></h4>
+                                      <h4 style="display:inline;" class="media-heading user_name"><%=comment.username%></h4>
                                       <span class="text-muted">
                                         <%=new Date(comment.created).toDateString();%> <%=new Date(comment.created).getHours()%>:<%=(new Date(comment.created).getMinutes()<10?'0':'') + new Date(comment.created).getMinutes();%>
                                       </span>
