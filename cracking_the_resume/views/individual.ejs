@@ -140,7 +140,9 @@
                               <div class="media">
                                   <div class="media-body">
                                       <h4 class="media-heading user_name"><%=comment.username%></h4>
-                                      <span class="text-muted"><%=new Date(comment.created)%><!-- This for you shally! --></span>
+                                      <span class="text-muted">
+                                        <%=new Date(comment.created).toDateString();%> <%=new Date(comment.created).getHours()%>:<%=new Date(comment.created).getMinutes();%>
+                                      </span>
                                       <p><%=comment.content%></p>
                                   </div>
                               </div>
