@@ -71,20 +71,26 @@
         <div class="col-md-6" style="text-align:center;">
             <!-- <img src="/<%=resumeRecord.resumeName%>" height="500" width="350"> -->
             <div class="tiles">
-                <img class="tileind" data-scale="2.4" src="<%=resumeRecord.resumeName%>" data-elem="pinchzoomer">
+                <img data-toggle="modal" data-target="#myModal" class="tileind" data-scale="2.4" src="<%=resumeRecord.resumeName%>" data-elem="pinchzoomer">
             </div>
-            <script>
-            $('#zooms').pinchzoomer();
-            </script>
-
+            
+            <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-body">
+                          <button data-dismiss="modal" class="close">×</button>                            
+                          <img src="<%=resumeRecord.resumeName%>" class="img-responsive">
+                      </div>
+                  </div>
+                </div>
+              </div>
             <!-- RESUME IMAGE  -->
-            <!-- <img src= "/<%=resumeRecord.resumeName%>" height="500" width="350"> -->
 
             <div class="row displayLikes" style="display:none;">
-              <h3>You have already voted</h3>
+              <h3>You have already voted</h3>                           
               <div class="col-md-6">
                 <h3>Likes: <%=resumeRecord.upvoteCount%></h3>
-              </div>
+              </div>              
               <div class="col-md-6">
                 <h3>Dislike: <%=resumeRecord.downvoteCount%></h3>
               </div>
