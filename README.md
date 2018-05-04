@@ -58,6 +58,9 @@ Now, the web app can be launched in your local web browser on localhost:3000
 2) Then, user uploads their resume to the web app 
 3) After the user uploads their resume, he/she can upvote, downvote or comment on other users' resumes.  
 
+# 100 Level Add-on Feature
+Displayed comment time each timer a user comments 
+
 # Add-on Features 
   * Making the resume anonymous so users do not see eath other's personal information
   * Meet up with other users (virtually) and practice for coding interviews through the web app
