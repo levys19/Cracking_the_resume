@@ -112,3 +112,8 @@ height:100%;
   left:35%;
   right:35%;
 }
+.faq{
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans";
+  font-weight: bolder;
+  color: rgb(46, 46, 46);
+}

@@ -29,4 +29,20 @@
   h3{
     padding: 30px;
     padding-left:0px;
+    text-align: center;
+  }
+  .homebutton{
+    margin: 30px;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans";
+    color: rgb(49, 49, 49) !important;    
+    font-size: 20px;
+    size: 20px;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+  }
+  .homepage{
+    color: rgb(49, 49, 49) !important;        
+  }
+  .homepage:hover,.ing:hover{
+    background-color:transparent!important;        
   }
