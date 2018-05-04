@@ -108,7 +108,9 @@ $(document).ready(function() {
   });
 
 
-
+  $("#newPassButton").click(function(){
+     alert("Your password have been updated");
+   })
 
 
 

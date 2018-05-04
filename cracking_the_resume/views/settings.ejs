@@ -8,11 +8,11 @@
         <link href="stylesheets/viewing.css" rel="stylesheet">
         <link href="stylesheets/setting.css" rel="stylesheet">
         <link href="stylesheets/lightbox.css" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
-          <script src="https://code.jquery.com/jquery.min.js"></script>
-          <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-          <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="../Javascript/setting.js"></script>
     </head>
     <body>
@@ -43,24 +43,13 @@
                 <!-- Form Name -->
                 <legend>Account settings</legend>
                     <form name="password" action = "/settings" class= "form-horizontal" role="form" method="post">
-                      <div class="form-group">
-                          <label for="password" class="col-sm-3 control-label">Password</label>
-                          <div class="col-sm-9">
-                              <input type="password" name = "password" id="password" placeholder="Password" class="form-control" required>
-                              <meter max="4" id="password-strength-meter"></meter>
-                              <p id="password-strength-text" class="textMeter" style="font-size:11px;"></p>
-                              <input type="checkbox" id="checkLength"  value="checkLength" required="required" style="display:none;">
-
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          <label for="password" class="col-sm-3 control-label">Retype Password</label>
-                          <div class="col-sm-9">
-                              <input type="password" name = "confirm_password" id="confirm_password" placeholder="Retype your password" class="form-control" required="required">
-                              <span id='message' required="required"></span>
-                              <input type="radio" id="checkSame" name="gender" value="male" required="required" style="display:none;">
-                          </div>
-                      </div>
+                        <div class="form-group">
+                            <label for="new password" class="col-sm-3 control-label">New Password</label>
+                            <div class="col-sm-9">
+                                <!-- added a name tag to the input  -->
+                                <input style="width:70%;" type="password" name="newPassword" id="newPassword" placeholder="New Password" class="form-control" autofocus>
+                            </div>
+                        </div>
 
                         <div class="form-group">
                             <div class="col-sm-9 col-sm-offset-3">
