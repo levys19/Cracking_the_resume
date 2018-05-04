@@ -25,11 +25,11 @@ body{
   width: 100%;
   height: auto;
   padding-bottom: 10px;
-  border-radius: 4px; 
+  border-radius: 4px;
 }
 a:hover, a:active {
   background-color: rgb(2, 1, 1);
-} 
+}
 
 a.button{
   background-color: #c9b8b6;
@@ -47,6 +47,13 @@ a.button{
 #navcol a{
   color: #faeded;
 } */
+
+.comments-list{
+  /* overflow-x: hidden; */
+  /* height:600px;
+  width: 800px; */
+}
+
 #navcol.navbar-inverse{
   background-color:transparent;
   border-color: transparent;
@@ -62,5 +69,3 @@ a.button{
   background-color: transparent;
   margin-top: 10px;
 }
-
-
