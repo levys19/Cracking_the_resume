@@ -110,4 +110,33 @@ height:100%;
 .titleHead{
   position: relative;
   left:35%;
+  right:35%;
+}
+.faq{
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans";
+  font-weight: bolder;
+  color: rgb(46, 46, 46);
+}
+@media (max-width:1200px)  {
+  .subhead{
+      display: inline;
+  }
+  .titleHead{
+  display: inline-block;
+    position: absolute;
+    left:30%;
+    right:0%;
+  }
+   .leftSide{
+      display: none;  
+  }
+  .rightSide{
+    display: inline-block;
+    width: 100%;
+  }
+  .bug{
+    display: inline-block;
+    left:0%;
+    right:0%;
+  }
 }

@@ -17,6 +17,8 @@ var accounts = require('./routes/accounts');
 var split = require('./routes/split');
 var resumeViewing = require('./routes/resumeViewing');
 var settings = require('./routes/settings');
+var faq = require('./routes/faq');
+var faqhome = require('./routes/faqhome');
 
 var multer  = require('multer')
 
@@ -83,6 +85,8 @@ app.use('/resumeViewing', resumeViewing);
 app.use('/settings', settings);
 app.use('/redirect', redirect);
 app.use('/individual', individual);
+app.use('/faq', faq);
+app.use('/faqhome',faqhome);
 app.use(express.static("../Resumes"));
 
 

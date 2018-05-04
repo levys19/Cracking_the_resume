@@ -2,11 +2,11 @@
 
 A web application where users can upload their resumes and have it reviewed by other users (specific to CS majors). Users also have the ability to upvote, downvote, and comment on other users’ resumes. 
 
-The web app is now deployed on: https://reschk.me/
+The web app is now deployed on: https://crackingtheresume.herokuapp.com
 
-# Youtube link Beta Release
+# Youtube link Official Release
 
-https://youtu.be/kAYWaOM8UUg
+https://youtu.be/YzdJ5D0T4SU
 
 
 # How to run the web application on your local machine
@@ -57,6 +57,9 @@ Now, the web app can be launched in your local web browser on localhost:3000
     * Upload Resume
 2) Then, user uploads their resume to the web app 
 3) After the user uploads their resume, he/she can upvote, downvote or comment on other users' resumes.  
+
+# 100 Level Add-on Feature
+Displayed comment time each timer a user comments 
 
 # Add-on Features 
   * Making the resume anonymous so users do not see eath other's personal information

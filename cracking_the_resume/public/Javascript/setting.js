@@ -1,26 +1,35 @@
 $(document).ready(function() {
 
+  var passCriteria = false;
 
-  function pngOnly() {
+  function pdfOnly() {
     var lastThree = $("#fileUpload").val().substr($("#fileUpload").val().length - 3);
     if (lastThree == "pdf" || lastThree == "PDF") {
       $("#checkResume").prop('checked', true);
+      alert("You have updated your resume!");
     } else {
       $("#checkResume").prop('checked', false);
       alert("Please upload a PDF file");
     }
   }
 
+  $("#submitForm").click(function() {
+    pdfOnly();
+  });
+
   var passMatch = "Matching";
 
 
-  $("#submitForm").click(function() {
-    console.log(passMatch + " wtff");
+  $("#newPassButton").click(function() {
 
-    pngOnly();
+    // pdfOnly();
     console.log($("#message").html() + " and " + passMatch);
+
     if (passMatch === $("#message").html()) {
       $("#checkSame").prop('checked', true);
+      if(passCriteria){
+        alert("Your password have been updated");
+      }
     } else
       $("#checkSame").prop('checked', false);
   });
@@ -28,7 +37,7 @@ $(document).ready(function() {
 
 
   $("#checkResume").click(function() {
-    pngOnly();
+    pdfOnly();
   });
 
 
@@ -51,9 +60,9 @@ $(document).ready(function() {
   		2: "Weak ☹",
   		3: "Good ☺",
   		4: "Strong ☻",
-      5: "Password must have at least 6 characters",
-      6: "Include a special character",
-      7: "Include a number"
+      5: "Please create a longer password",
+      6: "Please include a special character",
+      7: "Please include a number"
 
   }
 
@@ -88,6 +97,8 @@ $(document).ready(function() {
             if(val.match(regularExpression)){
               text.innerHTML = "";
               $("#checkLength").prop('checked', true);
+              passCriteria = true;
+
             }
           }
       }
@@ -95,6 +106,12 @@ $(document).ready(function() {
           text.innerHTML = "";
       }
   });
+
+
+  $("#newPassButton").click(function(){
+     alert("Your password have been updated");
+   })
+
 
 
 });

@@ -1,28 +1,3 @@
-body {
-  background-color: rgb(165, 161, 163);
-}
-
-.conForm{
-padding-top: 10%;
-}
-
-*[role="form"] {
-  max-width: 530px;
-  padding: 15px;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 0.3em;
-}
-
-*[role="form"] h2 {
-  margin-left: 5em;
-  margin-bottom: 1em;
-}
-
-.form-horizontal{
-width:100%;
-}
-
 .btn-primary{
   background-color: #917c86;
 }
@@ -37,7 +12,7 @@ width:100%;
 
 meter {
   /* Reset the default appearance */
-  /* -webkit-appearance: none; */
+  /* -webkit-appearance: none; *//
      -moz-appearance: none;
           appearance: none;
 

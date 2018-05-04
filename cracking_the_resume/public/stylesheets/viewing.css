@@ -47,6 +47,13 @@ a.button{
 #navcol a{
   color: #faeded;
 } */
+
+.comments-list{
+  /* overflow-x: hidden; */
+  /* height:600px;
+  width: 800px; */
+}
+
 #navcol.navbar-inverse{
   background-color:transparent;
   border-color: transparent;
@@ -62,7 +69,9 @@ a.button{
   background-color: transparent;
   margin-top: 10px;
 }
+
 .otherResume{
   width: 350px;
   height: 400px;
 }
+
