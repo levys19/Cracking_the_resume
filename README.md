@@ -4,9 +4,9 @@ A web application where users can upload their resumes and have it reviewed by o
 
 The web app is now deployed on: https://crackingtheresume.herokuapp.com
 
-# Youtube link Beta Release
+# Youtube link Official Release
 
-https://youtu.be/kAYWaOM8UUg
+https://youtu.be/YzdJ5D0T4SU
 
 
 # How to run the web application on your local machine
