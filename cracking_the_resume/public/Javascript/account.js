@@ -36,7 +36,7 @@ $(function () {
 
 
   //disables submit if comment is empty or contains all spaces only
-  $("#postIt").prop('disabled', true);
+  // $("#postIt").prop('disabled', true);
 
   var text_max = 50;
   $('#count_message').html(text_max + ' words remaining');
