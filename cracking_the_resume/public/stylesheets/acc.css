@@ -108,18 +108,19 @@ button:hover {
 }
 
 .like, .dislike {
+    padding-left: 20px !important;
     display: inline-block;
     margin: 10px;
     font-weight: normal;
     color: rgb(233, 233, 233);
-    text-align: center;
+    text-align: center !important;
     vertical-align: middle;
     cursor: pointer;
     background: #917c86;
     border: 1px solid transparent;
     white-space: nowrap;
     padding: 3px 6px;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.428571429;
     border-radius: 18px;
 }
