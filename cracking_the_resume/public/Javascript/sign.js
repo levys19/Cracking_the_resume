@@ -51,9 +51,9 @@ $(document).ready(function() {
   		2: "Weak ☹",
   		3: "Good ☺",
   		4: "Strong ☻",
-      5: "Please create a longer password",
-      6: "Please include a special character",
-      7: "Please include a number"
+      5: "Password must have at least 6 characters",
+      6: "Include a special character",
+      7: "Include a number"
 
   }
 
