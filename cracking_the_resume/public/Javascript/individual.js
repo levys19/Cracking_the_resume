@@ -14,7 +14,7 @@ if($(".qty2").attr("id") == 1){
 
 
   //disables submit if comment is empty or contains all spaces only
-  $("#postIt").prop('disabled', true);
+  // $("#postIt").prop('disabled', true);
 
   // var text_max = 50;
   // $('#count_message').html(text_max + ' words remaining');
@@ -72,14 +72,22 @@ if($(".qty2").attr("id") == 1){
     //     $("#submitForm").preventDefault();
     //   }
     // });
+    $("#Message").on('keyup', function(){
+      if($.trim($('#Message').val()).length > 0) {
+        $("#postIt").prop('disabled', false);
+      }
+      else{
+        $("#postIt").prop('disabled', true);
+      }
+    })
 
     var letterLimit = 250;
     var textarea = document.getElementById("Message");
 
-    document.getElementById("count_message").innerHTML  = letterLimit;
+    document.getElementById("count_message").innerHTML  =letterLimit;
 
     textarea.addEventListener('input', function() {
-      document.getElementById("count_message").innerHTML = letterLimit - textarea.value.length;
+      document.getElementById("count_message").innerHTML =letterLimit - textarea.value.length;
     }, false);
 
 });
