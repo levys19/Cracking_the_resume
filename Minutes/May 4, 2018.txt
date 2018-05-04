@@ -1,0 +1,27 @@
+﻿Date: May 4, 2018
+Time: 2:00PM -  3:00PM
+
+
+Meeting Attendance: Shally Guo, YongJi Chen, Sravanika Doddi, Liesel Vaidya, Levy Shi
+
+
+Meeting Summary: 
+* Prepared to do the official release 
+* Also talked about future improvements to the web app
+* Maybe implement some add on features over the summer 
+
+
+Accomplishments (since last meeting): 
+   * Liesel: Modal pop up feature for resumes. Fixed padding in buttons. Fixed navbar. Fixed character count. Fixed settings page design. Coded FAQ page. Made the homepage semi-responsive. 
+   * Sravanika: Created the update resume feature. 
+   * Shally: Comment time add-on feature, comment tabbing issue, comment counts
+   * YongJi: Edit the accounts/individual comments to not be able to like/dislike if it’s your own resume. Create template for Shally to show comment times & total comments. Remove checkbox in sign up page under the attach resume button. Created password criteria. 
+   * Levy Shi: Prepared for final release, wrote the FAQ page content
+
+
+Tasks (to be completed before next meeting): 
+   * Liesel: Maintain the website and fix reported bugs 
+   * Sravanika: Maintain the website and fix reported bugs. 
+   * Yongji:  Maintain the website.
+   * Shally: Maintain the website and fix any bug issues 
+   * Levy: maintain for final release.
